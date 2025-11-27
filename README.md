@@ -11,14 +11,6 @@ This repository contains the user interface for the "Egypt Landmarks" website bu
 
 > Note: The project you are working on is located inside the `client/` folder in this repo.
 
-## Running the Project Locally (PowerShell)
-```powershell
-cd e:\masget\client
-npm install
-npm run dev
-# Open http://localhost:3000
-```
-
 ## Useful Commands
 - Build for production: `npm run build`
 - Run production version locally: `npm start`
