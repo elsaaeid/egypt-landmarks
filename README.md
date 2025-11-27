@@ -1,56 +1,56 @@
-# منارة الهدى — واجهة العميل (Next.js)
+# Updated Project Documentation
 
-هذا المستودع يحوي واجهة المستخدم لموقع "منارة الهدى" مبنية بـ Next.js (App Router) وTypeScript.
+This repository contains the user interface for the "Manarat Al-Huda" website built with Next.js (App Router) and TypeScript.
 
-## ملخص سريع
+## Quick Summary
 - Framework: Next.js (App Router)
 - Language: TypeScript + React
 - Icons: react-icons
 - Styling: CSS Modules + globals.css
 - App entry: `client/app/`
 
-> ملاحظة: المشروع الذي تعمل عليه موجود داخل المجلد `client/` في هذا الريبو.
+> Note: The project you are working on is located inside the `client/` folder in this repo.
 
-## تشغيل المشروع محلياً (PowerShell)
+## Running the Project Locally (PowerShell)
 ```powershell
 cd e:\masget\client
 npm install
 npm run dev
-# افتح http://localhost:3000
+# Open http://localhost:3000
 ```
 
-## أوامر مفيدة
-- بناء الإنتاج: `npm run build`
-- تشغيل نسخة الإنتاج محليًا: `npm start`
-- فحص TypeScript: `npx tsc --noEmit -p .`
-- فحص ESLint: `npm run lint`
+## Useful Commands
+- Build for production: `npm run build`
+- Run production version locally: `npm start`
+- TypeScript check: `npx tsc --noEmit -p .`
+- ESLint check: `npm run lint`
 
-## بنية المجلدات المهمة
-- `client/app/` — صفحات App Router
-- `client/components/` — مكونات قابلة لإعادة الاستخدام
-- `client/public/assets/images/` — صور وأصول
-- `client/styles/` — ملفات CSS Modules
+## Important Folder Structure
+- `client/app/` — App Router pages
+- `client/components/` — Reusable components
+- `client/public/assets/images/` — Images and assets
+- `client/styles/` — CSS Modules files
 
-## صفحات ومكونات بارزة
-- `app/register/page.tsx` — صفحة نموذج التسجيل
-- `app/courses/` — صفحات تفاصيل الدورات (`course1`, `course2`, `course3`, `shariah-studies`)
-- `components/Navbar.tsx` — navbar مع دعم الهاتف والرابط النشط
-- `components/Footer.tsx` — تذييل الموقع مع روابط الدورات والتواصل
-- `components/ScrollToTop.tsx` — زر العودة للأعلى
-- `components/StudentTestimonials.tsx` — آراء الطلاب (يستخدم react-icons)
+## Notable Pages and Components
+- `app/register/page.tsx` — Registration form page
+- `app/courses/` — Course detail pages (`course1`, `course2`, `course3`, `shariah-studies`)
+- `components/Navbar.tsx` — Navbar with mobile support and active link
+- `components/Footer.tsx` — Footer with course links and contact
+- `components/ScrollToTop.tsx` — Scroll to top button
+- `components/StudentTestimonials.tsx` — Student testimonials (uses react-icons)
 
-## النشر إلى Vercel
-1. ادفع التغييرات إلى GitHub.
-2. في Vercel Dashboard اختر Import Project.
-3. اضبط Root Directory إلى `client` (مهم إن كان الريبو يحوي أكثر من مشروع).
-4. تأكد من إعداد المتغيّرات البيئية في Settings إن لزم.
+## Deployment to Vercel
+1. Push changes to GitHub.
+2. In Vercel Dashboard select Import Project.
+3. Set Root Directory to `client` (important if the repo contains multiple projects).
+4. Ensure to set environment variables in Settings if needed.
 
-## نصائح وحلول لمشاكل شائعة
-- ENOSPC / EPERM: تحقق من مساحة القرص وأذونات المجلدات، واحذف `node_modules` ثم `npm install` إن لزم.
-- dev server locked: اغلق أي عملية Node التي تشغل المنفذ 3000 أو احذف `.next/dev/lock` ثم شغّل `npm run dev`.
-- صور خارجية مع `next/image`: أضف `remotePatterns` في `next.config.js` أو ضع الصور في `public/assets/images`.
+## Tips and Solutions for Common Issues
+- ENOSPC / EPERM: Check disk space and folder permissions, delete `node_modules` then `npm install` if needed.
+- dev server locked: Close any Node process running on port 3000 or delete `.next/dev/lock` then run `npm run dev`.
+- External images with `next/image`: Add `remotePatterns` in `next.config.js` or place images in `public/assets/images`.
 
-## كيف تساهم
-1. ابدأ فرعًا جديدًا للميزة/التصحيح.
-2. شغّل الاختبارات/الفحوص (TypeScript / lint) محليًا.
-3. افتح Pull Request إلى `main` مع وصف التغييرات.
+## How to Contribute
+1. Start a new branch for the feature/fix.
+2. Run tests/lint checks locally.
+3. Open a Pull Request to `main` with a description of the changes.
