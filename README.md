@@ -23,25 +23,6 @@ This repository contains the user interface for the "Egypt Landmarks" website bu
 - `client/public/assets/images/` — Images and assets
 - `client/styles/` — CSS Modules files
 
-## Notable Pages and Components
-- `app/register/page.tsx` — Registration form page
-- `app/courses/` — Course detail pages (`course1`, `course2`, `course3`, `shariah-studies`)
-- `components/Navbar.tsx` — Navbar with mobile support and active link
-- `components/Footer.tsx` — Footer with course links and contact
-- `components/ScrollToTop.tsx` — Scroll to top button
-
-
-## Deployment to Vercel
-1. Push changes to GitHub.
-2. In Vercel Dashboard select Import Project.
-3. Set Root Directory to `client` (important if the repo contains multiple projects).
-4. Ensure to set environment variables in Settings if needed.
-
-## Tips and Solutions for Common Issues
-- ENOSPC / EPERM: Check disk space and folder permissions, delete `node_modules` then `npm install` if needed.
-- dev server locked: Close any Node process running on port 3000 or delete `.next/dev/lock` then run `npm run dev`.
-- External images with `next/image`: Add `remotePatterns` in `next.config.js` or place images in `public/assets/images`.
-
 ## How to Contribute
 1. Start a new branch for the feature/fix.
 2. Run tests/lint checks locally.
