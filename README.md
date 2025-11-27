@@ -1,5 +1,4 @@
-# Project Documentation
-
+# Project Overview
 This repository contains the user interface for the "Egypt Landmarks" website built with Next.js (App Router) and TypeScript.
 
 ## Quick Summary
