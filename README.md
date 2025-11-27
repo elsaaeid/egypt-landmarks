@@ -53,4 +53,4 @@ npm run dev
 ## How to Contribute
 1. Start a new branch for the feature/fix.
 2. Run tests/lint checks locally.
-3. Open a Pull Request to `main` with a description of the changes.
+3. Open a Pull Request to `master` with a description of the changes.
