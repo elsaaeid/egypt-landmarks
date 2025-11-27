@@ -29,7 +29,7 @@ This repository contains the user interface for the "Egypt Landmarks" website bu
 - `components/Navbar.tsx` — Navbar with mobile support and active link
 - `components/Footer.tsx` — Footer with course links and contact
 - `components/ScrollToTop.tsx` — Scroll to top button
-- `components/StudentTestimonials.tsx` — Student testimonials (uses react-icons)
+
 
 ## Deployment to Vercel
 1. Push changes to GitHub.
