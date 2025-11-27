@@ -1,6 +1,6 @@
-# Updated Project Documentation
+# Project Documentation
 
-This repository contains the user interface for the "Manarat Al-Huda" website built with Next.js (App Router) and TypeScript.
+This repository contains the user interface for the "Egypt Landmarks" website built with Next.js (App Router) and TypeScript.
 
 ## Quick Summary
 - Framework: Next.js (App Router)
