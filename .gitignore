@@ -50,3 +50,8 @@ public/krpano/**/tools/**
 public/krpano/**/panos/**
 public/krpano/**/pano/**
 public/krpano/**/tiles/**
+
+# Allow specific example panos that we want deployed (whitelist)
+# This keeps the broad ignore for large exports but lets us commit
+# the Abu Simbel example panos used by the site so Vercel won't 404.
+!public/krpano/viewer/examples/depthmap/abu-simbel-tempel-tour/panos/**
