@@ -4,7 +4,7 @@ This repository contains the user interface for the "Egypt Landmarks" website bu
 
 ## Quick Summary
 - Framework: Next.js (App Router)
-- Language: TypeScript + React
+- Language: TypeScript
 - Icons: react-icons
 - Styling: CSS Modules + globals.css
 - App entry: `client/app/`
