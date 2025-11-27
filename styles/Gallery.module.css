@@ -1,0 +1,122 @@
+.gallerySection {
+  /* small custom tweaks (Tailwind handles most layout) */
+  margin-bottom: 0.25rem;
+  width: 100%;
+}
+
+.galleryGrid {
+  /* gap and columns are handled by Tailwind; this keeps a fallback for non-Tailwind environments */
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .galleryGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.item {
+  border-radius: 0.5rem; /* rounded-lg */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 15rem; /* 60 */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--overlay-color);
+}
+
+.overlayInner {
+    width: 100%;
+    padding: 0.75rem; /* p-3 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.title {
+  color: #fff;
+  font-size: 0.875rem; /* text-sm */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Modal styles */
+.modalContainer {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.modalBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+.modalContent {
+  position: relative;
+  width: 90%;
+  max-width: 24rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(2,6,23,0.25);
+  margin-top: 110px;
+}
+.modalHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+.modalClose {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: #374151;
+  cursor: pointer;
+}
+.modalImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.modalBody {
+    padding: 1rem;
+    text-align: center;
+    direction: rtl;
+}
+.modalTitle {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.modalDesc {
+  color: #4b5563;
+}
+
+.button {
+  margin-top: 0.5rem;
+  padding: 5px;
+  color: var(--main-accent);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-weight: bold;
+}
+.button:hover {
+  border-bottom: 1px solid var(--main-accent);
+}

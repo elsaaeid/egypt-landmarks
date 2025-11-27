@@ -1,0 +1,796 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="design.css"/>
+	<title>krpano Documentation</title>
+	<script>
+		function toggle_mobile_nav(){var t=document,n=t.getElementById("krpano_contentnav"),m=t.getElementById("krpano_mobile_menu_bg");t=n.state!=2;n.state=t?2:1;n.style.height=t?"auto":"24px";m.style.display=t?"block":"none";t=t?"add":"remove";n.classList[t]("krpano_contentnav_opened");t+="EventListener";n[t]("click",toggle_mobile_nav,false);m[t]("mousedown",toggle_mobile_nav,false);}
+	</script>
+</head>
+<body>
+	<div id="krpano_root">
+		<div id="krpano_headerwrapper">
+			<div id="krpano_header">
+				<div id="krpano_mainmenu">
+					krpano 1.23.2 <span class="smallcomment">(build 2025-09-22)</span>
+				</div>
+			</div>
+			<div id="krpano_imagebar"></div>
+			
+			<div id="krpano_logo_container">
+				<a id="krpano_logo" href="https://krpano.com"><span>krpano.com</span></a>
+			</div>
+			
+			<div id="krpano_imagebar_links">
+				Documentation
+			</div>
+		</div>
+		
+		<div id="krpano_contentwrapper">
+			<div id="krpano_mobile_menuicon" onclick="toggle_mobile_nav();"><span class="burgermenu"></span></div>
+			<div id="krpano_mobile_menu_bg"></div>
+			<div id="krpano_content">
+				<div id="krpano_contentnav">
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('doc_section');">Documentation</h2>
+					<ul class="sidemenu_section " id="doc_section">
+						<li><a href="embedpano.html#top">Embedding</a></li>
+						<li><a href="xml.html#top">XML Reference</a>
+							<ul>
+								<li class="lisd"><a href="textfield.html#top">Textfield</a></li>
+								<li class="lisd"><a href="plugins/scrollarea.html#top">ScrollArea</a></li>
+							</ul>
+						</li>
+						<li><a href="actions.html#top">Actions / Scripting</a></li>
+						<li><a href="js_api.html#top">Javascript Interface</a></li>
+						<li><a href="localusage.html#top">Local / Offline Usage</a></li>
+						<li><a href="coordinates.html#top">Coordinate Systems</a></li>
+						<li><a href="../license.html#top">License Agreement</a></li>
+						<li><a href="releasenotes.html#top">Release Notes</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('plugins_section');">Plugins</h2>
+					<ul class="sidemenu_section hidden" id="plugins_section">
+						<li><a href="plugins/bingmaps.html#top">Bing Maps</a></li>
+						<li><a href="plugins/googlemaps.html#top">Google Maps</a></li>
+						<li><a href="plugins/gyro2.html#top">Gyro2</a></li>
+						<li><a href="plugins/krpanomaps.html#top">krpano Maps</a></li>
+						<li><a href="plugins/postprocessing.html#top">Postprocessing</a></li>
+						<li><a href="plugins/radar.html#top">Radar</a></li>
+						<li><a href="plugins/snow.html#top">Snow / Rain</a></li>
+						<li><a href="plugins/soundinterface.html#top">Soundinterface</a></li>
+						<li><a href="plugins/threejs.html#top">ThreeJS</a></li>
+						<li><a href="plugins/videoplayer.html#top">Videoplayer</a></li>
+						<li><a href="plugins/webvr.html#top">WebVR</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('xmlext_section');">XML Extensions</h2>
+					<ul class="sidemenu_section hidden" id="xmlext_section">
+						<li><a href="plugins/xml_extensions.html#controls3d">controls3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#cursor3d">cursor3d.xml</a></li>
+						<li><a href="plugins/combobox.html#top">combobox.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#contextmenu">contextmenu.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#copy_to_clipboard">copy_to_clipboard.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#drag3d">drag3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#measure3d">measure3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#fps">fps.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#ios_iframe_fullscreen">ios_iframe_fullscreen.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#iphone_fullscreen_swipe">iphone_fullscreen_swipe.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#minimap_zoomrect">minimap_zoomrect.xml</a></li>
+						<li><a href="plugins/showtext.html#top">showtext.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#stateurls">stateurls.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#vr_and_anaglyph_buttons">vr_and_anaglyph_buttons.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#wakelock">wakelock.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#webvr">webvr.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#webvr_autozoom">webvr_autozoom.xml</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('tools_section');">Tools</h2>
+					<ul class="sidemenu_section hidden" id="tools_section">
+						<li><a href="tools/krpanotools.html#makepano">Makepano</a><br>
+							<ul><li><a href="tools/config.html#top">Config File Reference</a></li></ul>
+						</li>
+						<li><a href="tools/krpanotools.html#maketiles">Maketiles</a></li>
+						<li><a href="tools/krpanotools.html#makepreview">Makepreview</a></li>
+						<li><a href="tools/krpanotools.html#spheretocube">SphereToCube</a></li>
+						<li><a href="tools/krpanotools.html#cubetosphere">CubeToSphere</a></li>
+						<li><a href="tools/krpanotools.html#protect">Protect Tool</a></li>
+						<li><a href="tools/krpanotools.html#encrypt">Encrypt Tool</a></li>
+						<li><a href="tools/krpanotools.html#register">Registration Tool</a></li>
+						<li><a href="tools/testingserver.html#top">krpano Testing Server</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('examples_section');">Examples</h2>
+					<ul class="sidemenu_section hidden" id="examples_section">
+						<li><a href="examples.html#top">Show All</a></li>
+						<li><a href="examples.html?vtour#top">Virtual Tours</a></li>
+						<li><a href="examples.html?3d#top">3D Examples</a></li>
+						<li><a href="examples.html?splats#top">Gaussian Splatting</a></li>
+						<li><a href="examples.html?depthmap#top">Depthmap</a></li>
+						<li><a href="examples.html?threejs#top">ThreeJS</a></li>
+						<li><a href="examples.html?multires#top">Multiresolution</a></li>
+						<li><a href="examples.html?layers#top">Layers</a></li>
+						<li><a href="examples.html?plugins#top">Plugins</a></li>
+						<li><a href="examples.html?hotspots#top">Hotspots</a></li>
+						<li><a href="examples.html?maps#top">Maps</a></li>
+						<li><a href="examples.html?video#top">Video</a></li>
+						<li><a href="examples.html?webvr#top">WebVR</a></li>
+						<li><a href="examples.html?js#top">Javascript</a></li>
+					</ul>
+				</div>
+				<a name="top" class="toplink">&nbsp;</a>
+				<div id="krpano_contenttext">
+
+					<noscript>
+						<table style="width:100%; height:400px; position:fixed; left:95px; top:220px;"><tr valign="middle"><td><center><h1>
+							<span style="color:#FFFFFF; background:#FF0000; padding:15px;">
+								Javascript must be activated for this page!
+							</span>
+						</h1></center></td></tr></table>
+					</noscript>
+					
+					<script>
+						function toggle_section(id)
+						{
+							var element = document.getElementById(id);
+							if (element)
+							{
+								element.classList.toggle("hidden")
+							}
+						}
+					</script>
+
+					
+
+<h1>Release Notes
+	
+</h1>
+
+
+<h2><a href="#krpano123_2" name="krpano123_2" class="selflink">krpano 1.23.2</a> <span class="smallcomment">(2025-09-22)</span></h2>
+<ul>
+	
+	
+	
+	<li><span class="rn_new">New:</span>
+		iOS 26 Support (iPhone Safari Landscape-Fullscreen-Mode).
+	</li>
+
+	<li><span class="rn_new">New:</span>
+		More Adjust Controls (Temperature, Tint, Vibrance, Levels) in the
+		<a href="examples.html?splats#3d-gaussian-splatting-shaders">3D Gaussian Splats Shaders</a> example.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		Improved Javascript in Actions performance (cache the Javascript code parsing).
+	</li>
+	
+	<li><span class="rn_mod">Change:</span>
+		When rendering a frame, do the CSS3D/SVG hotspot rendering before the WebGL rendering (to allow using the CSS3D/SVG output in custom WebGL renderings).
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		In some .ply files the quaternions were not normalized, resulting in strange-looking splats.
+		Therefore normalization is now always applied on loading.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		Wrong rendering distortion at the end of the normal to fisheye view transition
+		(<a href="https://krpano.com/forum/wbb/index.php?thread/20616-intro-littleplanetintro-verzerrung-beim-ladevorgang/&postID=96676#post96676">report</a>).
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		Polygonal hotspots with 3D points could not be displayed in some cases if the polygon was almost parallel to the Y-axis
+		(<a href="https://krpano.com/forum/wbb/index.php?thread/20611-polygon-in-3d-coordinates/&postID=96647#post96647">report</a>).
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		Prevent that zIndex styles used inside the viewer affect outer HTML elements
+		(<a href="https://krpano.com/forum/wbb/index.php?thread/20618-version-1-23-1-a-new-z-index-1-div-obscures-the-button-in-html-causing-it-to-be/&postID=96733#post96733">report</a>).
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		The view.ox offset was inverted in flat hotspots
+		(<a href="https://krpano.com/forum/wbb/index.php?thread/20628-hotspots-move-in-the-wrong-direction-when-changing-view-ox-of-a-depthmap-scene/">report</a>).
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		<a href="tools/testingserver.html#top">krpano Testing Server</a> - 
+		Content-Length mismatch in HTTP Range responses.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		<a href="plugins/krpanomaps.html#top">krpano Maps Plugin</a> - 
+		The radar heading wasn't updated to the spot heading.
+	</li>
+	
+</ul>
+
+<br>
+
+
+<h2><a href="#krpano123_1" name="krpano123_1" class="selflink">krpano 1.23.1</a> <span class="smallcomment">(2025-07-21)</span></h2>
+<ul>
+	<li><span class="rn_new">New:</span>
+		Improved MacOS package: new Installer (.pkg instead of .dmg), improved code-signing and notarisation 
+		to avoid Gatekeeper problems.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		Add an additional Saturate control in the 
+		<a href="examples.html?splats#3d-gaussian-splatting-shaders">3D Gaussian Splats Shaders</a> example.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		A 'Get XML' button has been added to the splattools.xml to make it easier to
+		get the current <a href="xml.html#image.splats">&lt;splats&gt;</a> image settings.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		Clamp the color values in the <a href="examples.html?splats#3d-gaussian-splatting-shaders">3D Gaussian Splats Shaders</a>
+		example (Adjust, RGB Cube).
+		On some GPUs (iOS, Mac) the colors can 'wrap around' on negative color values.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		Add a workaround for a 'flickering splats' GPU bug on the Meta Quest 
+		(was only visible in the RGB Cube example).
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		<a href="plugins/xml_extensions.html#webvr">webvr.xml</a> - the Meta Quest 'Web Lanuch' 
+		(to send urls to the VR headset) wasn't correctly encoding the url in some cases.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		The <a href="embedpano.html#xml">xml</a> url can now use escaped characters
+		(required for the Meta Quest 'Web Lanuch' to send urls to the VR headset).
+	</li
+	
+	<li><span class="rn_fix">Fix:</span>
+		Javascript event listeners did not receive the event object as the first argument.
+	</li>
+</ul>
+
+<br>
+
+<h2><a href="#krpano123" name="krpano123" class="selflink">krpano 1.23</a> <span class="smallcomment">(2025-09-22)</span></h2>
+<ul>
+	<li><a href="#krpano123_gaussian_splats">3D Gaussian Splatting Support</a></li>
+	<li><a href="#krpano123_3d_controls">Improved 3D Controls</li>
+	<li><a href="#krpano123_depthmap">Improved Depthmap / 3D-Model Support</a></li>
+	<li><a href="#krpano123_hotspot_rendering">Hotspot Rendering Filters</a></li>
+	<li><a href="#krpano123_embedpano">embedpano()</a></li>
+	<li><a href="#krpano123_api_improvements">API Improvements</a></li>
+	<li><a href="#krpano123_plugins">Plugins</a></li>
+	<li><a href="#krpano123_tools">Tools</a></li>
+	<li><a href="#krpano123_examples">Examples</a></li>
+</ul>
+<br>
+
+
+<h2><a href="#krpano123_gaussian_splats" name="krpano123_gaussian_splats" class="selflink">3D Gaussian Splatting Support</a></h2>
+<ul>
+	<li><span class="rn_new">New:</span>
+		Render <a href="xml.html#splats">3D&nbsp;Gaussian&nbsp;Splat</a> models directly inside krpano.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		krpano offers a new <u>unique</u> high-quality <a href="xml.html#display.splats.rendermode">perspective-mode</a> 
+		for rendering the <a href="xml.html#splats">3D&nbsp;Gaussian&nbsp;Splats</a>.
+		This ensures accurate and stable visuals, especially in wide-angle views,
+		where 'normal' Gaussian Splats rendering-modes get visual problems.<br>
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		With this <a href="xml.html#display.splats.rendermode">perspective-rendering-mode</a>
+		krpano can render the Gaussian Splats also using the typical krpano projections / view-distortions, 
+		such as Fisheye, Stereographic, Architectural, Pannini or Little-Planet-View.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		The loading of the Gaussian Splats is done very efficiently using an advanced buffered 
+		<a href="xml.html#display.splats.streaming">streaming</a>,
+		which transfers the loaded Splats as directly as possible to the GPU. 
+		This reduces the memory usage and ensures better stability on mobile devices. 
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		With full support for VR and stereo/anaglyph rendering.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		krpano supports these Gaussian Splats <a href="xml.html#image.splats.url">file formats</a>:
+		<ul>
+			<li><a href="xml.html#image.splats.url" class="pre selflink2">.splat</a> (32 byte / splat)</li>
+			<li><a href="xml.html#image.splats.url" class="pre selflink2">.ply</a> (232 byte / splat)</li>
+			<li><a href="xml.html#image.splats.url" class="pre selflink2">.compressed.ply</a> (16 byte / splat)</li>
+		</ul>
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		For better understanding, analysing the structure a Gaussian Splat model, there are 
+		several <a href="xml.html#display.splats.debug">debug visualizations</a> available.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		For further customization there is <a href="examples.html#3d-gaussian-splatting-shaders">shader</a> support to modify the Spalts in realtime.
+		Such <a href="xml.html#image.splats.shader">shaders</a> can be used for various effects, e.g. unveil animations, lighting, color changes.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		See the included <a href="examples.html?splats">3D Gaussian Splats Examples</a>
+		for comparing the rendering-modes and try your own 3D Gaussian Splat Models with it
+		(by using <b>Drag-and-Drop</b> with your own files).
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		The <a href="examples.html?splats#3d-gaussian-splatting">3D Gaussian Splats Example</a>
+		includes also a small helper tool (Viewpoints Tool) for creating animated camera-paths.
+	</li>
+</ul>
+
+<br>
+
+
+<h2><a href="#krpano123_3d_controls" name="krpano123_3d_controls" class="selflink">Improved 3D Controls</a></h2>
+<ul>
+	<li><span class="rn_new">New:</span>
+		<a href="plugins/xml_extensions.html#controls3d">controls3d.xml</a> - a new helper script to extend krpano 
+		with controls for 3D environments (replaces the <a href="plugins/xml_extensions.html#depthmap_navigation">depthmap_navigation.xml</a>).
+		Supports mouse, keyboard and touch usage and provides also onscreen-controls.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="plugins/xml_extensions.html#cursor3d">cursor3d.xml</a> 
+		- add a 3D navigation cursor, with mouse, touch and VR support.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="xml.html#control.dragscale">control.dragscale</a> - with this setting a custom
+		pano-dragging/panning scale can be set.
+		This is used in 3D-controls when using orbit-like controls to avoid that the dragging/moving
+		speed depends on the field-of-view (as it would otherwise).
+	</li>
+</ul>
+
+<br>
+
+
+<h2><a href="#krpano123_depthmap" name="krpano123_depthmap" class="selflink">Improved Depthmap / 3D-Model Support</a></h2>
+<ul>
+	<li><span class="rn_new">New:</span>
+		To differante better between depthmapped pano-images and textured 3D-models there is the new 
+		<a href="xml.html#image.model" class="pre selflink2">&lt;model&gt;</a> xml declaration.
+		Technically this is just an alias for <a href="xml.html#image.depthmap" class="pre selflink2">&lt;depthmap&gt;</a> and both names 
+		can be used at any time and vice versa, however for clarity, the actually right name should be used.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		The <a href="xml.html#image.prealign">image.prealign</a> setting for rotating pano images or 3D models
+		has been replaced with individual <a href="xml.html#image.rx">image.rx</a>,
+		<a href="xml.html#image.ry">image.ry</a>,
+		<a href="xml.html#image.rz">image.rz</a> and
+		<a href="xml.html#image.rotationorder">image.rotationorder</a> settings.
+		These new settings offer easier usage and more flexibility
+		(using the old <a href="xml.html#image.prealign">image.prealign</a> setting is still supported and 
+		automatically mapped to the new settings).
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		The <a href="xml.html#depthmap.align">depthmap.align</a> setting for rotating the pano image that gets depthmapped onto
+		a 3D-model also has been replaced with individual <a href="xml.html#depthmap.rx">depthmap.rx</a>,
+		<a href="xml.html#depthmap.ry">depthmap.ry</a>,
+		<a href="xml.html#depthmap.rz">depthmap.rz</a> and
+		<a href="xml.html#depthmap.rotationorder">depthmap.rotationorder</a> settings
+		(the old <a href="xml.html#depthmap.align">depthmap.align</a> setting is also still supported and 
+		automatically mapped to the new settings).
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		The <a href="xml.html#depthmap.origin">depthmap.origin</a> setting for defining the origin
+		of a 3D-model has been replaced with individual <a href="xml.html#depthmap.ox">depthmap.ox</a>,
+		<a href="xml.html#depthmap.oy">depthmap.oy</a>,
+		<a href="xml.html#depthmap.oz">depthmap.oz</a> settings
+		(the old <a href="xml.html#depthmap.origin">depthmap.origin</a> setting is still supported and
+		automatically mapped to the new settings).
+	</li>
+	
+	<li><span class="rn_mod">Change:</span>
+		The <a href="xml.html#depthmap.cubemapsize">depthmap.cubemapsize</a> default value has been increased from 512 to 1024 for more accurate depthmapping.
+	</li>
+	
+	<li><span class="rn_mod">Change:</span>
+		The <a href="xml.html#display.depthrange">display.depthrange</a> setting has been replaced by 
+		the new <a href="xml.html#display.depthrange">display.depthnear</a> 
+		and <a href="xml.html#display.depthfar">display.depthfar</a> settings 
+		(but the old depthrange setting is supported).<br>
+		Additionally the default value for depthnear has been increased from 0.1 to 1.0
+		to provide more rendering accuracy in 3D scenes.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		The <a href="xml.html#depthmap.align">depthmap.align</a> setting was working differently (wrong) in version 1.22.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		The 3D-Model depthmapping accuracy was very low in some cases.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		Support url placeholders in the depthmap.backgroundurl setting.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		Exclude text-based 3D-Model formats (obj/mtl, stl, depth) from the <a href="embedpano.html#sameorigin">sameorigin</a> check.
+		Handle them like image-resources, they can't contain any code anyway.
+	</li>
+</ul>
+
+<br>
+
+
+<h2><a href="#krpano123_hotspot_rendering" name="krpano123_hotspot_rendering" class="selflink">Hotspot Rendering Filters</a></h2>
+<ul>
+	<li><span class="rn_new">New:</span>
+		Support the <a href="xml.html#hotspot.colorize">colorize</a>,
+		<a href="xml.html#hotspot.colormatrix">colormatrix</a>,
+		<a href="xml.html#hotspot.brightness">brightness</a>,
+		<a href="xml.html#hotspot.contrast">contrast</a>,
+		<a href="xml.html#hotspot.saturate">saturate</a>,
+		<a href="xml.html#hotspot.hue">hue</a>,
+		<a href="xml.html#hotspot.invert">invert</a> and 
+		<a href="xml.html#hotspot.sepia">sepia</a> effect filters also for WebGL-rendered hotspots.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="xml.html#hotspot.behindcolormatrix">behindcolormatrix</a> - 
+		use a special <a href="xml.html#hotspot.colormatrix">colormatrix</a> for hotspots that are 
+		'behind' the 3D-model geometry (e.g. behind walls or objects).
+		This can be used to show hotspots in a special color or form when normally not visible because being covered.
+	</li>
+</ul>
+
+<br>
+
+
+<h2><a href="#krpano123_embedpano" name="krpano123_embedpano" class="selflink">embedpano()</a></h2>
+<ul>
+	<li><span class="rn_new">New:</span>
+		Optionally limit the viewer to 'WebGL 2.0 only' by changing the <a href="embedpano.html#webgl">webgl</a> embedpano() setting to 2.0.
+		Then the viewer will only start when WebGL 2.0 is available, otherwise an error will be shown.
+		This could be used for examples that specifically require WebGL 2.0 features to work.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		The embedpano() <a href="embedpano.html#target">target</a> setting
+		can now also be null or unset. In this case automatically the parent element of the current &lt;script&gt; element is used.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		It is now possible to set the <a href="embedpano.html#bgcolor">bgcolor</a> and 
+		<a href="embedpano.html#webglsettings">WebGL</a> settings (e.g. antialias) by <a href="embedpano.html#queryparameters">URL query parameters</a>.
+		This can be usefully for iframe-embedding or specific rendering cases.
+	</li>
+</ul>
+
+<br>
+
+
+<h2><a href="#krpano123_api_improvements" name="krpano123_api_improvements" class="selflink">API Improvements</a></h2>
+<ul>
+	<li><span class="rn_new">New:</span>
+		<a href="js_api.html#registerattribute">registerattribute()</a> 
+		now supports a versatile new mode: A single handler function can serve as both setter and getter.
+		The attribute value is stored internally, can be modified in the handler during setting or getting,
+		and can be shared across multiple attributes by checking the attribute name within the function.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		Actions for easier adding and removing events:
+		<a href="actions.html#events.add">events.add()</a>, 
+		<a href="actions.html#events.remove">events.remove()</a>,
+		<a href="actions.html#events.once">events.once()</a>.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="actions.html#cursorraycast">cursorraycast()</a> function
+		for doing a raycast from the current mouse cursor position. As special feature this function 
+		also supports the VR mode, in this case automatically the current VR controller or VR cursor is used.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		The <a href="actions.html#raycast">raycast()</a> and
+		The <a href="actions.html#screenraycast">screenraycast()</a> functions
+		are now also also callable in expressions code. This allows directly using the return value.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="xml.html#view.adjustoffset">view.adjustoffset(ox, oy ,oz)</a>
+		- change the <a href="xml.html#view.ox">view.ox / oy / oz</a> values without changing the current view.
+		To compensate, the view.tx / ty / tz position will be adjusted to keep the view!
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		Update the <a href="xml.html#view.ox">view.ox_rotated / oy_rotated / oz_rotated</a> values ​​immediately in a 
+		<a href="xml.html#view.update">view.update()</a> call rather than later in the next frame update.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="xml.html#view.camera.x">view.camera.x/y/z</a> object for
+		getting the actual 3D positon of the view camera.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="xml.html#events.onviewinteraction">onviewinteraction</a> event to track interactions of the user with the view,
+		and a new <a href="actions.html#lastviewinteraction">lastviewinteraction</a> variable
+		to shows what the last user interaction with the view was.
+	</li>
+
+	<li><span class="rn_new">New:</span>
+		<a href="xml.html#display.wireocclusion">display.wireocclusion</a> setting
+		for customizing the wireframe display (enable or disable the occlusion of hidden wireframe lines).
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="xml.html#display.currentfps_int">display.currentfps_int</a> for getting the current framerate as rounded Integer value.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="actions.html#expr.formatnumber">formatnumber()</a> expression function for
+		formating numbers with custom thousand- and comma-separators.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="actions.html#expressions.mathematical" class="pre selflink2">MOD</a> operator for expressions (modulate, remainder of division).
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="actions.html#expr.mix" class="pre selflink2">mix(a,b,m)</a> expression function
+		for blending from a to b by factor m.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="actions.html#expr.istweening" class="pre selflink2">istweening()</a> expression function
+		for checking if a specific variable is currently tweened.
+	</li>
+	
+	
+	
+	
+	<li><span class="rn_new">New:</span>
+		Textfield <a href="textfield.html#relinktemplate">relinktemplate()</a> function for
+		linking the variables from the <a href="#template">template</a> again.
+		This could be used when linking to variables that have still the same names/addresses, 
+		but are different objects now, e.g. when linking to image.* properties and loading a new pano.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		The Array <a href="js_api.html#array.addChangeListener">addChangeListener()</a> callback function
+		reports now also the changed element and the type of change.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="js_api.html#saveLocalFile">krpano.saveLocalFile()</a> 
+		- a new built-in API for saving contents to local files.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="js_api.html#utils.objtoxml">utils.objtoxml()</a>
+		- generates a XML String representation of an object.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="actions.html#xml.sceneindex">xml.sceneindex</a> for getting the index of the current scene.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="actions.html#keyboard.physicalkey">keyboard.physicalkey</a> and 
+		<a href="actions.html#keyboard.pressedphysical">keyboard.pressedphysical</a> for
+		checking for the physical key positions. This allows controls independent of the keyboard layout.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="actions.html#gesture.startx">gesture.startx / starty</a> for getting the center where the multi-touch gesture started.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		Hierarchical <a href="js_api.html#customParsePath">customParsePath</a> support - sub-krpano-layers
+		are calling also the customParsePath function from parent krpano viewers.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<span class="pre">blob:</span> URL support.
+		If a filename is required for the blob file (e.g. because the file-extension is important), 
+		it can be defined by adding <span class="pre">#filename.ext</span> to the blob URL.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		Support using Javascript Arrays for the polygonal hotspot <a href="xml.html#hotspot.points">points</a>
+		and <a href="xml.html#hotspot.points3d">points3d</a> settings.
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="xml.html#display.antialias">display.antialias</a> variable for checking
+		if rendering with WebGL anti-aliasing.
+	</li>
+
+	<li><span class="rn_mod">Change:</span>
+		Do the controls friction calculations before running animations and scripts, 
+		this way scripts can use or control the actual view values before rendering the frame.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		parent="OVERLAY" elements might have been behind other elements
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		The tween() action pre-resolved all array indices in the done and update callback codes 
+		to allow array indices to be used in the variable being tweened. 
+		But this pre-resolving could lead to strange errors if the array indices there had no relation to the tweening variable. 
+		Now, only the array indices actually used in the tweening variable are resolved in the callback codes.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		krpano Array items can now only be created sequentially if an index-value is used to create them.
+		This prevents the creation of krpano Arrays that have 'holes', which can cause unexpected problems.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		<a href="js_api.html#setvars">setvars()</a> did not set attributes that were not lowercase.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		Textual operators like <a href="actions.html#expressions.comparison">AND, OR, ...</a> were not working in certain nested expressions.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		<a href="textfield.html#text">Textfield</a> - skip the BBCode [] to &lt;&gt; conversion inside Strings (e.g. in attributes).
+		This avoids problems when trying to use event code that uses [] characters.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		Using &lt;if&gt; inside &lt;layer&gt; elements wasn't working.
+	</li>
+		
+	<li><span class="rn_fix">Fix:</span>
+		There was a wrong local scope in events when the event was dispatched from a localscope action.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		There could a be Javascript crash when using setting the parent setting of a hotspot to another hotspot.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		If an expression variable evaluates to a value that begins or ends with characters that are also used for expression operators,
+		the expression may have wrongly caused an 'invalid expression' error.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		The default value for <a href="xml.html#hotspot.capturewheel">capturewheel</a> wasn't initialized for polygonal hotspots.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		The transition from normal-view to fisheye-view has been smoothed.
+		Previously there was a short initial 'step' before the actual distortions were added.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		The text in the krpano-log inside sub-krpano layers was not selectable.
+	</li>
+</ul>
+
+<br>
+
+
+<h2><a href="#krpano123_plugins" name="krpano123_plugins" class="selflink">Plugins</a></h2>
+<ul>
+	<li><span class="rn_new">New:</span>
+		<a href="plugins/webvr.html">WebVR</a> plugin - 
+		new <a href="plugins/webvr.html#activevrcontroller">activevrcontroller</a> variable to 
+		get the currently active VR controller (the one on which certain buttons,
+		defined by <a href="plugins/webvr.html#vr_controller_activationbuttons">vr_controller_activationbuttons</a>,
+	 	were pressed most recently).
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		Disable any custom <a href="xml.html#display.safearea">safearea</a> sizes in WebVR mode and use the full-screen.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		<a href="plugins/xml_extensions.html#webvr">webvr.xml</a> - when entering VR mode, 
+		hide only the 'root-level' layers without vr="false".
+		Hiding also children layers is not necessary and can be even unwanted.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		<a href="plugins/xml_extensions.html#minimap_zoomrect">minimap_zoomrect.xml</a> - using stagescale wasn't supported.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		<a href="plugins/googlemaps.html">Googlemaps</a> plugin - hide also the default UI controls if no control settings are set.
+	</li>
+	
+	<li><span class="rn_fix">Fix:</span>
+		<a href="plugins/combobox.html#top">combobox.xml</a> - wrong opening height inside some layers.
+	</li>
+</ul>
+
+<br>
+
+
+<h2><a href="#krpano123_tools" name="krpano123_tools" class="selflink">Tools</a></h2>
+<ul>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="tools/testingserver.html#top">krpano Testing Server</a> - 
+		add support for more mime-types, especially for many modern web files (mjs, webp, ...).
+	</li>
+	
+	
+	<li><span class="rn_new">New:</span>
+		<a href="tools/krpanotools.html#spheretocube">SphereToCube</a> tool - support a new 
+		<a href="tools/krpanotools.html#spheretocube" class="pre selflink2">-prealign=...</a> setting for the spheretocube tool for
+		directly using the viewer image <a href="xml.html#image.prealign">prealign</a> values.
+	</li>
+	
+	<li><span class="rn_mod">Change:</span>
+		<a href="tools/krpanotools.html#spheretocube">SphereToCube</a> tool - 
+		the sign of the Y value in the <a href="tools/krpanotools.html#spheretocube" class="pre selflink2">-rotate=...</a>
+		setting has been inverted to match the image <a href="xml.html#image.rx">rx, ry, rz, rotationorder</a> values of the viewer.
+	</li>
+
+</ul>
+
+<br>
+
+
+<h2><a href="#krpano123_examples" name="krpano123_examples" class="selflink">Examples</a></h2>
+<ul>
+	
+	<li><span class="rn_new">New:</span>
+		<a href="examples.html?splats">3D Gaussian Splats Examples</a>
+	</li>
+	
+	<li><span class="rn_new">New:</span>
+		The <a href="examples.html#minimap_zoomrect">Minimap</a> and 
+		<a href="examples.html#threejs_tesla">ThreeJS Tesla</a> examples are now included in the download package.
+	</li>
+		
+	<li><span class="rn_mod">Change:</span>
+		The <a href="examples.html#makescreenshot-api">Make-Screenshot Example</a> 
+		is using now the new <a href="js_api.html#saveLocalFile">saveLocalFile()</a> API instead of the FileSaver.js script.
+	</li>
+</ul>
+
+
+
+<br>
+<br>
+
+<h2>Previous Versions:</h2>
+<ul>
+	<li><a href="https://krpano.com/docu/releasenotes/?version=122">krpano 1.22</a></li>
+	<li><a href="https://krpano.com/docu/releasenotes/?version=121">krpano 1.21</a></li>
+	<li><a href="https://krpano.com/docu/releasenotes/?version=12012">krpano 1.20</a></li>
+</ul>
+<br>
+
+<br>
+
+
+
+				</div>
+			</div>
+		</div>
+		<div id="krpano_footerwrapper">
+			<div id="krpano_footer">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="right">Copyright &copy; 2025 krpano.com</td></tr></tbody></table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

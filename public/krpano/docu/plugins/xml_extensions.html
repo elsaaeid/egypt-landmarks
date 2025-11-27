@@ -1,0 +1,728 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../design.css"/>
+	<title>krpano Documentation</title>
+	<script>
+		function toggle_mobile_nav(){var t=document,n=t.getElementById("krpano_contentnav"),m=t.getElementById("krpano_mobile_menu_bg");t=n.state!=2;n.state=t?2:1;n.style.height=t?"auto":"24px";m.style.display=t?"block":"none";t=t?"add":"remove";n.classList[t]("krpano_contentnav_opened");t+="EventListener";n[t]("click",toggle_mobile_nav,false);m[t]("mousedown",toggle_mobile_nav,false);}
+	</script>
+</head>
+<body>
+	<div id="krpano_root">
+		<div id="krpano_headerwrapper">
+			<div id="krpano_header">
+				<div id="krpano_mainmenu">
+					krpano 1.23.2 <span class="smallcomment">(build 2025-09-22)</span>
+				</div>
+			</div>
+			<div id="krpano_imagebar"></div>
+			
+			<div id="krpano_logo_container">
+				<a id="krpano_logo" href="https://krpano.com"><span>krpano.com</span></a>
+			</div>
+			
+			<div id="krpano_imagebar_links">
+				Documentation
+			</div>
+		</div>
+		
+		<div id="krpano_contentwrapper">
+			<div id="krpano_mobile_menuicon" onclick="toggle_mobile_nav();"><span class="burgermenu"></span></div>
+			<div id="krpano_mobile_menu_bg"></div>
+			<div id="krpano_content">
+				<div id="krpano_contentnav">
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('doc_section');">Documentation</h2>
+					<ul class="sidemenu_section hidden" id="doc_section">
+						<li><a href="../embedpano.html#top">Embedding</a></li>
+						<li><a href="../xml.html#top">XML Reference</a>
+							<ul>
+								<li class="lisd"><a href="../textfield.html#top">Textfield</a></li>
+								<li class="lisd"><a href="scrollarea.html#top">ScrollArea</a></li>
+							</ul>
+						</li>
+						<li><a href="../actions.html#top">Actions / Scripting</a></li>
+						<li><a href="../js_api.html#top">Javascript Interface</a></li>
+						<li><a href="../localusage.html#top">Local / Offline Usage</a></li>
+						<li><a href="../coordinates.html#top">Coordinate Systems</a></li>
+						<li><a href="../../license.html#top">License Agreement</a></li>
+						<li><a href="../releasenotes.html#top">Release Notes</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('plugins_section');">Plugins</h2>
+					<ul class="sidemenu_section hidden" id="plugins_section">
+						<li><a href="bingmaps.html#top">Bing Maps</a></li>
+						<li><a href="googlemaps.html#top">Google Maps</a></li>
+						<li><a href="gyro2.html#top">Gyro2</a></li>
+						<li><a href="krpanomaps.html#top">krpano Maps</a></li>
+						<li><a href="postprocessing.html#top">Postprocessing</a></li>
+						<li><a href="radar.html#top">Radar</a></li>
+						<li><a href="snow.html#top">Snow / Rain</a></li>
+						<li><a href="soundinterface.html#top">Soundinterface</a></li>
+						<li><a href="threejs.html#top">ThreeJS</a></li>
+						<li><a href="videoplayer.html#top">Videoplayer</a></li>
+						<li><a href="webvr.html#top">WebVR</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('xmlext_section');">XML Extensions</h2>
+					<ul class="sidemenu_section " id="xmlext_section">
+						<li><a href="xml_extensions.html#controls3d">controls3d.xml</a></li>
+						<li><a href="xml_extensions.html#cursor3d">cursor3d.xml</a></li>
+						<li><a href="combobox.html#top">combobox.xml</a></li>
+						<li><a href="xml_extensions.html#contextmenu">contextmenu.xml</a></li>
+						<li><a href="xml_extensions.html#copy_to_clipboard">copy_to_clipboard.xml</a></li>
+						<li><a href="xml_extensions.html#drag3d">drag3d.xml</a></li>
+						<li><a href="xml_extensions.html#measure3d">measure3d.xml</a></li>
+						<li><a href="xml_extensions.html#fps">fps.xml</a></li>
+						<li><a href="xml_extensions.html#ios_iframe_fullscreen">ios_iframe_fullscreen.xml</a></li>
+						<li><a href="xml_extensions.html#iphone_fullscreen_swipe">iphone_fullscreen_swipe.xml</a></li>
+						<li><a href="xml_extensions.html#minimap_zoomrect">minimap_zoomrect.xml</a></li>
+						<li><a href="showtext.html#top">showtext.xml</a></li>
+						<li><a href="xml_extensions.html#stateurls">stateurls.xml</a></li>
+						<li><a href="xml_extensions.html#vr_and_anaglyph_buttons">vr_and_anaglyph_buttons.xml</a></li>
+						<li><a href="xml_extensions.html#wakelock">wakelock.xml</a></li>
+						<li><a href="xml_extensions.html#webvr">webvr.xml</a></li>
+						<li><a href="xml_extensions.html#webvr_autozoom">webvr_autozoom.xml</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('tools_section');">Tools</h2>
+					<ul class="sidemenu_section hidden" id="tools_section">
+						<li><a href="../tools/krpanotools.html#makepano">Makepano</a><br>
+							<ul><li><a href="../tools/config.html#top">Config File Reference</a></li></ul>
+						</li>
+						<li><a href="../tools/krpanotools.html#maketiles">Maketiles</a></li>
+						<li><a href="../tools/krpanotools.html#makepreview">Makepreview</a></li>
+						<li><a href="../tools/krpanotools.html#spheretocube">SphereToCube</a></li>
+						<li><a href="../tools/krpanotools.html#cubetosphere">CubeToSphere</a></li>
+						<li><a href="../tools/krpanotools.html#protect">Protect Tool</a></li>
+						<li><a href="../tools/krpanotools.html#encrypt">Encrypt Tool</a></li>
+						<li><a href="../tools/krpanotools.html#register">Registration Tool</a></li>
+						<li><a href="../tools/testingserver.html#top">krpano Testing Server</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('examples_section');">Examples</h2>
+					<ul class="sidemenu_section hidden" id="examples_section">
+						<li><a href="../examples.html#top">Show All</a></li>
+						<li><a href="../examples.html?vtour#top">Virtual Tours</a></li>
+						<li><a href="../examples.html?3d#top">3D Examples</a></li>
+						<li><a href="../examples.html?splats#top">Gaussian Splatting</a></li>
+						<li><a href="../examples.html?depthmap#top">Depthmap</a></li>
+						<li><a href="../examples.html?threejs#top">ThreeJS</a></li>
+						<li><a href="../examples.html?multires#top">Multiresolution</a></li>
+						<li><a href="../examples.html?layers#top">Layers</a></li>
+						<li><a href="../examples.html?plugins#top">Plugins</a></li>
+						<li><a href="../examples.html?hotspots#top">Hotspots</a></li>
+						<li><a href="../examples.html?maps#top">Maps</a></li>
+						<li><a href="../examples.html?video#top">Video</a></li>
+						<li><a href="../examples.html?webvr#top">WebVR</a></li>
+						<li><a href="../examples.html?js#top">Javascript</a></li>
+					</ul>
+				</div>
+				<a name="top" class="toplink">&nbsp;</a>
+				<div id="krpano_contenttext">
+
+					<noscript>
+						<table style="width:100%; height:400px; position:fixed; left:95px; top:220px;"><tr valign="middle"><td><center><h1>
+							<span style="color:#FFFFFF; background:#FF0000; padding:15px;">
+								Javascript must be activated for this page!
+							</span>
+						</h1></center></td></tr></table>
+					</noscript>
+					
+					<script>
+						function toggle_section(id)
+						{
+							var element = document.getElementById(id);
+							if (element)
+							{
+								element.classList.toggle("hidden")
+							}
+						}
+					</script>
+
+					
+		
+		<h1>XML Extensions
+			
+		</h1>
+		
+		<div class="paragraph">
+			The default krpano download package includes several xml-based extensions or helper-scripts for
+			various usage cases. The related xml files can be found in the <span class="pre">plugins</span> folder and optionally be
+			<a href="../xml.html#include">included</a> when needed.
+			And because these are xml files, they can be easily customized.
+		</div>
+		
+		<div class="paragraph">
+			<h2><a name="plugins" href="#plugins" class="selflink">Available XML Extensions:</a></h2>
+			<ul>
+				<li><a href="#controls3d">controls3d.xml</a></li>
+				<li><a href="#cursor3d">cursor3d.xml</a></li>
+				<li><a href="combobox.html#top">combobox.xml</a></li>
+				<li><a href="#contextmenu">contextmenu.xml</a></li>
+				<li><a href="#copy_to_clipboard">copy_to_clipboard.xml</a></li>
+				<li><a href="#drag3d">drag3d.xml</a></li>
+				<li><a href="#measure3d">measure3d.xml</a></li>
+				
+				
+				<li><a href="#fps">fps.xml</a></li>
+				<li><a href="#ios_iframe_fullscreen">ios_iframe_fullscreen.xml</a></li>
+				<li><a href="#iphone_fullscreen_swipe">iphone_fullscreen_swipe.xml</a></li>
+				<li><a href="#minimap_zoomrect">minimap_zoomrect.xml</a></li>
+				<li><a href="showtext.html#top">showtext.xml</a></li>
+				<li><a href="#stateurls">stateurls.xml</a></li>
+				
+				<li><a href="#vr_and_anaglyph_buttons">vr_and_anaglyph_buttons.xml</a></li>
+				<li><a href="#wakelock">wakelock.xml</a></li>
+				<li><a href="#webvr">webvr.xml</a></li>
+				<li><a href="#webvr_autozoom">webvr_autozoom.xml</a></li>
+			</ul>
+		</div>
+	
+		<br>
+		<a name="controls3d"></a>
+		<a name="depthmap_navigation"></a>
+		<pre><a class="selflink" href="#controls3d">controls3d.xml</a> (<a href="../../viewer/plugins/controls3d.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<div class="xmlextimg" style="padding-bottom:3px;">
+				<a href="../examples.html?3d" class="prop504x310"><img src="../images/tuscany.jpg" class="outlineimage prop_inner" /></a>
+				<div style="text-align:center;padding-top:3px;">3D Examples</div>
+			</div>
+			<ul>
+				<li>Extend krpano with controls for 3D environments, e.g. for navigating in 
+					<a href="../xml.html#image.depthmap">Depthmap&#8209;Panos</a>,
+					<a href="../xml.html#image.model">3D&#8209;Models</a>,
+					<a href="../xml.html#image.splats">Gaussian&#8209;Splatting&#8209;Models</a>.
+				</li>
+				
+				<li>This script replaces the previous <a href="#depthmap_navigation">depthmap_navigation.xml</a> script.
+				</li>
+				
+				<li>Features:
+					<ul>
+						<li>Keyboard controls</li>
+						<li>Mouse controls</li>
+						<li>Touch Gestures</li>
+						<li>Onscreen Joypad (e.g. for touch devices)</li>
+						<li>VR controllers</li>
+						<li>Collision detection</li>
+						<li>First-person or Object-view modes</li>
+					</ul>
+				</li>
+				
+				
+				<li>Keyboard Keys:
+					<ul>
+						<li><span class="pre">Arrow</span> or <span class="pre">WASD</span> for forward, left, back, right moving.</li>
+						<li>Holding <span class="pre">SHIFT</span> for faster movement.</li>
+						<li><span class="pre">Space</span> for jumping.</li>
+						<li><span class="pre">Q</span> for moving-up or for jumping.</li>
+						<li><span class="pre">E</span>, <span class="pre">Y</span> or <span class="pre">Z</span> for moving-down or for crouching.</li>
+						<li><span class="pre">C</span> for toggling between <b>Collisions</b> on/off.</li>
+						<li><span class="pre">F</span> for toggling between <b>Walking</b> and <b>Flying</b>.</li>
+						<li><span class="pre">R</span> for resetting the view, moving back to the startup view.</li>
+					</ul>
+				</li>
+				<li>
+					Mouse Buttons:
+					<ul>
+						<li><span class="pre">Left</span> - normal looking around or Object-rotating</li>
+						<li><span class="pre">Middle</span> or <span class="pre">Left</span>+<span class="pre">CTRL</span> or <span class="pre">Right</span>+<span class="pre">ALT</span> - move left, right, up, down.</li>
+						<li><span class="pre">Right</span> or <span class="pre">Middle</span>+<span class="pre">ALT</span> - moving forward, backward, left, right.</li>
+					</ul>
+				</li>
+				<li>Touch Gestures:
+					<ul>
+						<li>2-Finger panning for moving left, right, up, down.</li>
+						<li>The 2-Finger modes starts after dragging a certain distance.</li>
+						<li>Once in 2-Finger mode, the zooming-gesture will move forward, backward.</li>
+					</ul>
+				</li>
+				<li>Settings:
+					<pre>&lt;controls
+    showinfos="false"
+    movemode="walking"
+    wheelmode="zoom"
+    dollydistance="0.5"
+    joypad="true"
+    levelcontrol="true"
+    uizorder="99"
+    speed="0.5"
+    friction="0.9"
+    collision="true"
+    groundcollision="false"
+    usevrfloorlevel="false"
+    eyelevel="160.0"
+    collisionlevel="100.0"
+    smoothlevelchanges="0.15"
+    stopdistance="30"
+    moveback="1.2"
+    bounceback="1.6"
+    /&gt;</pre>
+					<ul>
+						<li><b>showinfos</b> - show infos about the controls</li>
+						<li><b>movemode</b> - "walking" or "flying" or "off"</li>
+						<li><b>wheelmode</b> - "zoom" or "dolly zoom" or "distance" or "move"</li>
+						<li><b>dollydistance</b> - a distance factor for the wheelmode="dolly zoom" setting</li>
+						<li><b>joypad</b> - show or hide the joypad</li>
+						<li><b>levelcontrol</b> - show or hide the levelcontrol joypad</li>
+						<li><b>uizorder</b> - the layer zorder for the joypad and levelcontrol</li>
+						<li><b>speed</b> - movement speed</li>
+						<li><b>friction</b> - movement friction</li>
+						<li><b>collision</b> - collision-detection / stop on walls</li>
+						<li><b>groundcollision</b> - collision-detection with the ground, enables gravity, should be only used on fully-textured 3D-models<br>
+							<ul>
+								<li><b>usevrfloorlevel</b> - use the real physical height in VR</li>
+								<li><b>eyelevel</b> - the distance in cm between the ground/floor and the eyes/camera</li>
+								<li><b>collisionlevel</b> - the height in cm where the collision checking should be done</li>
+								<li><b>smoothlevelchanges</b> - a factor for smoothing level/height changes</li>
+							</ul>
+						</li>
+						<li><b>stopdistance</b> - keep this distance in cm to walls/surfaces</li>
+						<li><b>moveback</b> - when hitting a wall, move back x times</li>
+						<li><b>bounceback</b> - when hitting a wall, add a bounce movement</li>
+					</ul>
+				</li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/controls3d.xml" /&gt;</pre>
+					Change settings (statically):
+					<pre>&lt;controls
+    groundcollision="true"
+    usevrfloorlevel="true"
+    /&gt;</pre>
+					Change settings (dynamically):
+					<pre>controls.groundcollision=true;<br>controls.usevrfloorlevel=true;</pre>
+
+				</li>
+			</ul>
+			<div class="xmlextimgclear"></div>
+		</div>
+		
+		
+		<br>
+		<a name="cursor3d"></a>
+		<pre><a class="selflink" href="#cursor3d">cursor3d.xml</a> (<a href="../../viewer/plugins/cursor3d.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>Add a 3D navigation cursor.</li>
+				<li>Shows a 3D-cursor at 3D-surfaces.</li>
+				<li>For mouse, touch and VR usage.</li>
+				<li>Optionally also use clicking or double-clicking for 3D-navigation.</li>
+				
+				<li>Settings:
+					<pre>&lt;cursor3d
+    enabled="true"
+    shownormal="true"
+    vrsupport="true"
+    url=""
+    size="20"
+    scale="1.0"
+    distancescale="0.0"
+    color="0xFFFFFF"
+    alpha="0.5"
+    border="1 0xFFFFFF 1.0"
+    normalcolor="0xFFFFFF"
+    normalalpha="1.0"
+    normallinewidth="3"
+    normallength="20"
+    onclick=""
+    ondoubleclick="cursor3d_movetohit()"
+    /&gt;</pre>
+					<ul>
+						<li><b>enabled</b> - Show or hide the 3D-cursor.</li>
+						<li><b>shownormal</b> - Show the normal vector at the surface location.</li>
+						<li><b>vrsupport</b> - Enable/disable the VR support.</li>
+						<li><b>url</b> - Optionally use a custom image for the 3D-cursor.</li>
+						<li><b>style</b> - Optionally use a custom <a href="../xml.html#style">style</a> for the 3D-cursor.</li>
+						<li><b>size</b> - Size of the 3D-cursor.</li>
+						<li><b>scale</b> - Scale factor for the 3D-cursor.</li>
+						<li><b>distancescale</b> - A special scale factor to compensate the distance-scale-effect. </li>
+						<li><b>color</b>, <b>alpha</b>, <b>border</b> - Appearance of the 3D-cursor.</li>
+						<li><b>normalcolor</b>, <b>normalalpha</b>, <b>normallinewidth</b> - Appearance of the normal vector.</li>
+						<li><b>normallength</b> - Length of the normal vector.</li>
+						
+						<li><b>onclick</b>, <b>ondoubleclick</b> - Events</li>
+					</ul>
+				</li>
+				<li>Variables:
+					<ul>
+						<li><b>cursor3d.hit</b> - The <a href="../actions.html#raycast">raycast</a> hit object (null if there is no surface).</li>
+						<li><b>cursor3d.hs</b> - The hotspot element for the cursor.</li>
+						<li><b>cursor3d.hs_normal</b> - The hotspot element for the normal vector.</li>
+					</ul>
+				</li>
+				<li>Actions:
+					<ul>
+						<li><b>cursor3d_movetohit()</b> - An action for automatically navigating to the hit-location. Can be used in the onclick or ondoubleclick events.</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="xmlextimgclear"></div>
+		</div>
+
+		<br>
+		<br><a name="contextmenu"></a>
+		<pre><a class="selflink" href="#contextmenu">contextmenu.xml</a> (<a href="../../viewer/plugins/contextmenu.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo" style="min-height:280px;">
+			<div class="xmlextimg" style="width:200px;">
+				<a href="../images/contextmenu.jpg" class="prop504x310" style="padding-top:132.14%;"><img src="../images/contextmenu.jpg" class="outlineimage prop_inner" /></a>
+			</div>
+			<ul>
+				<li>Add several typical entries for the right-click context-menu:
+					<ul>
+						<li>For changing the pano control-mode (dragging or moving),</li>
+						<li>and for setting several different viewing projections (e.g. Normal-View, Fisheye-View, Architectural-View, Little Planet and so on)
+							with animated transitions.
+						</li>
+					</ul>
+				</li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/contextmenu.xml" /&gt;</pre>
+				</li>
+			</ul>
+			<div class="xmlextimgclear"></div>
+		</div>
+		
+		<br>
+		<br><a name="copy_to_clipboard"></a>
+		<pre><a class="selflink" href="#copy_to_clipboard">copy_to_clipboard.xml</a> (<a href="../../viewer/plugins/copy_to_clipboard.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>Extend krpano with a <span class="pre">copy_to_clipboard(text)</span> action.</li>
+				<li>Can be used to copy any kind of text dynamically to the sytems clipboard.</li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/copy_to_clipboard.xml" /&gt;</pre>
+					<pre>copy_to_clipboard('hello from krpano');</pre>
+				</li>
+			</ul>
+		</div>
+		
+		<br>
+		<br><a name="drag3d"></a>
+		<pre><a class="selflink" href="#drag3d">drag3d.xml</a> (<a href="../../viewer/plugins/drag3d.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>A simple action for dragging 3D-model hotspots
+					in 3D-space along the current view/projection plane.
+				</li>
+				<li>Usage:
+					<ul>
+						<li>Just call <span class="pre">drag3d()</span> in the hotspot <a href="../xml.html#hotspot.ondown">ondown</a> event.</li>
+						<li>Non 3D-model hotspots need to have <a href="../xml.html#hotspot.hittest">hittest=true</a> set.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<br>
+		<br><a name="depthmap_measure3d"></a>
+		<a name="measure3d"></a>
+		<pre><a class="selflink" href="#measure3d">measure3d.xml</a> (<a href="../../viewer/plugins/measure3d.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<div class="xmlextimg" style="padding-bottom:3px;">
+				<a href="../examples.html?depthmap#top" class="prop504x310"><img src="../images/depthmap-textured.jpg" class="outlineimage prop_inner" /></a>
+				<div style="text-align:center;padding-top:3px;">Depthmap Examples</div>
+			</div>
+			<ul>
+				<li>A little helper tool and example for doing measurements in <a href="../xml.html#depthmap">Depthmap-Panos / 3D-Models</a>.</li>
+				<li>Provides actions and an optional user-interface for starting interactive measurements.</li>
+				<li>The design/look of the measurement points and lines can be changed either by editing the xml file itself or
+					by redefining the &lt;style&gt; elements from it in the xml file that is including it.
+				</li>
+				<li>The available settings:
+					<pre>&lt;measure3d
+    ui="true"
+    ui_pos="left,10,0"
+    ui_dragable="true"
+    gap="0.0"
+    showslope="false"
+    unit_format="roundval(v,1) + ' cm'"
+    /&gt;</pre>
+					<ul>
+						<li><b>ui</b> - show an optional user-interface for taking measurements.</li>
+						<li><b>ui_pos</b>- the aligment and position of the default user-interface.<br>
+							Syntax: <span class="pre">ui_pos="<a href="../xml.html#layer.align" class="selflink">align</a>,<a href="../xml.html#layer.x" class="selflink">x</a>,<a href="../xml.html#layer.y" class="selflink">y</a>"</span>
+						</li>
+						<li><b>ui_dragable</b> - should the user-interface be dragable.</li>
+						<li><b>gap</b> - add a gap between the surface and the measure-point, could be used for rough surfaces.</li>
+						<li><b>showslope</b> - show the slope / angle of the vertical height distance (in degrees).</li>
+						<li><b>unit_format</b> - an <a href="../actions.html#expressions">expression</a> to format the measuring result:<br>
+							<ul>
+								<li>cm: <span class="pre">roundval(v,1) + ' cm'</span></li>
+								<li>meters: <span class="pre">roundval(v/100,2) + ' m'</span></li>
+								<li>inch: <span class="pre">roundval(v/2.54,1) + '[dq]'</span></li>
+								<li>feet: <span class="pre">roundval(v/30.48,2) + ' ft'</span></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+
+				<li>The available actions:
+					<ul>
+						<li><span class="pre">start_measuring_between_points()</span><br>
+							Start measuring between two arbitrary 3D points, 
+							the user needs two double-click two times to select the two points.
+						</li> 
+						<li><span class="pre">start_measuring_between_surfaces()</span><br>
+							Start measuring between two surfaces. 
+							The user needs to double-click once to select a point on a surface, the measurement then will be done between
+							that point and a point on a surface that will be hit by a perpendicular line from the first surface.
+							An easy way for measuring room sizes.
+						</li>
+						<li><span class="pre">stop_measuring()</span><br>
+							Stop the current measuring (could be also stopped by pressing the ESC-key).
+						</li>
+					</ul>
+				</li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/measure3d.xml" /&gt;</pre>
+				</li>
+			</ul>
+			<div class="xmlextimgclear"></div>
+		</div>
+		
+		
+		
+		
+		
+		<br>
+		<br><a name="fps"></a>
+		<pre><a class="selflink" href="#fps">fps.xml</a> (<a href="../../viewer/plugins/fps.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>FPS (frames per second) performance measuring tool.</li>
+				<li>This tools shows the current average rendering frame-rate in the left-top corner.</li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/fps.xml" /&gt;</pre>
+				</li>
+			</ul>
+		</div>
+		
+		<br>
+		<br><a name="ios_iframe_fullscreen"></a>
+		<pre><a class="selflink" href="#ios_iframe_fullscreen">ios_iframe_fullscreen.xml</a> (<a href="../../viewer/plugins/ios_iframe_fullscreen.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>A helper script for getting into a kind of 'fullscreen mode' on iOS 
+					from inside an iframe.
+				</li>
+				<li>iOS itself doesn't support the HTML5 Fullscreen API on the iPhone and so there is no
+					way to make the pano window larger than the iframe area itself.
+				</li>
+				<li>This script therefore adds a fake-fullscreen-mode support and redirects
+					the browser window directly to the inner iframe page to make the iframe
+					itself beeing the full browser page.
+				</li>
+				<li>This can be used in cases where the pano is embedded as 'smaller' iframe element
+					into the website. When embedded as 'full-page-element' then this is not necessary.
+				</li>
+				<li>Note: this scripts only enables the fullscreen contextmenu item, 
+					custom xml elements that are depending on the 'device.fullscreensupport'
+					state would need to get enabled manually. That's because the xml parsing
+					and the xml element 'devices filtering' is happening before this script is
+					running. For 'manual enabling' e.g. remove the 'fullscreensupport' 
+					devices check from the related elements in the xml files.
+				</li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/ios_iframe_fullscreen.xml" /&gt;</pre>
+				</li>
+			</ul>
+		</div>
+		
+		<br>
+		<br><a name="iphone_fullscreen_swipe"></a>
+		<pre><a class="selflink" href="#iphone_fullscreen_swipe">iphone_fullscreen_swipe.xml</a> (<a href="../../viewer/plugins/iphone_fullscreen_swipe.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>A helper script for getting into fullscreen mode on the iPhone.</li>
+				<li>iOS itself doesn't support the HTML5 Fullscreen API on the iPhone and so there is no
+					way for directly going into fullscreen mode. But there is a 'hack': when rotating the iPhone to landscape, 
+					it's possible to 'scroll-out' the url/navigation-bar and so get into a kind of fullscreen mode.
+				</li>
+				<li>This xml script adds user-instructions for how to get into fullscreen mode.</li>
+				<li>Here a video showing this in action: <a href="https://www.youtube.com/embed/uPtbSTrZYDU?rel=0&hd=1&vq=hd1080&showinfo=0" target="_blank">krpano iPhone Fullscreen Mode</a></li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/iphone_fullscreen_swipe.xml" /&gt;</pre>
+				</li>
+			</ul>
+		</div>
+	
+	
+		<br>
+		<br><a name="minimap_zoomrect"></a>
+		<pre><a class="selflink" href="#minimap_zoomrect">minimap_zoomrect.xml</a> (<a href="../../viewer/plugins/minimap_zoomrect.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<div class="xmlextimg">
+				<a href="../examples.html#minimap_zoomrect" class="prop504x310"><img src="../images/minimap_zoomrect.jpg" class="outlineimage prop_inner" /></a>
+			</div>
+			<ul>
+				<li>A helper script for adding a zooming/panning-indicator for a mini-overview-map.</li>
+				<li>A rectangle will be added within an image layer (with a small image of the pano-image) and the size and position
+					of that rectangle will be automatically be updated depending on the zooming and panning.
+				</li>
+				<li>Additionally the rectangle will be dragable to pan around and the map-image
+					will be clickable to pan to a certain position.
+				</li>
+				<li>Works the best with high-resolution/high-zoomable flat-panos, but can be also used on all other kind of panos.</li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/minimap_zoomrect.xml" /&gt;</pre>
+					<pre>
+&lt;<a href="../xml.html#layer" class="selflink2">layer</a> name="minimap"
+       url="map.jpg"
+       bgborder="1 0xFFFFFF"
+       align="lefttop" x="10" y="10"
+       ...
+       <span class="redtext">style="minimap_zoomrect"
+       zoomrect_border="1 0x0000FF"
+       zoomrect_dragable="true"
+       zoomrect_movetoclick="true"
+       zoomrect_dragdelay="0.95"
+       zoomrect_showzoompercent="false"
+       zoomrect_percentstyle=""</span>
+       /&gt;</pre>
+				</li>
+			</ul>
+			<div class="xmlextimgclear"></div>
+		</div>
+		
+		<br>
+		<br><a name="stateurls"></a>
+		<pre><a class="selflink" href="#stateurls">stateurls.xml</a> (<a href="../../viewer/plugins/stateurls.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>Extend &lt;layer&gt; or &lt;hotspot&gt; elements with <span class="pre">overurl</span> and <span class="pre">downurl</span> settings.</li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/stateurls.xml" /&gt;</pre>
+					<pre>
+&lt;<a href="../xml.html#hotspot" class="selflink2">hotspot</a> ...
+         <span class="redtext">style="stateurl"
+         url="hotspot-normal.png"
+         overurl="hotspot-hovering.png"
+         downurl="hotspot-pressed.png"</span>
+         ...
+         /&gt;</pre>
+				</li>
+			</ul>
+			<div class="xmlextimgclear"></div>
+		</div>
+		
+		
+		<br>
+		<br><a name="vr_and_anaglyph_buttons"></a>
+		<pre><a class="selflink" href="#vr_and_anaglyph_buttons">vr_and_anaglyph_buttons.xml</a> (<a href="../../viewer/plugins/vr_and_anaglyph_buttons.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>Show small VR and Anaglyph-mode buttons in the left bottom corner.
+				</li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/vr_and_anaglyph_buttons.xml" /&gt;</pre>
+				</li>
+			</ul>
+		</div>
+		
+		<br>
+		<br><a name="wakelock"></a>
+		<pre><a class="selflink" href="#wakelock">wakelock.xml</a> (<a href="../../viewer/plugins/wakelock.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>Use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WakeLock" target="_blank">Wakelock API</a>
+					to prevent the screen from turning off, dimming or locking.
+				</li>
+				<li>Extensions:
+					<ul>
+						<li><span class="pre">wakelocksupport</span> - Check if the Wakelock API support is available.</li>
+						<li><span class="pre">requestwakelock()</span> - Request the Wakelock.</li>
+						<li><span class="pre">releasewakelock()</span>  - Releases/stops the Wakelock.</li>
+					</ul>
+				</lu>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/wakelock.xml" /&gt;</pre>
+					<pre>&lt;layer ... ondown="requestwakelock();" ...</pre>
+				</li>
+			</ul>
+			<div class="xmlextimgclear"></div>
+		</div>
+		
+		<br>
+		<br><a name="webvr"></a>
+		<pre><a class="selflink" href="#webvr">webvr.xml</a> (<a href="../../viewer/plugins/webvr.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<div class="xmlextimg" style="padding-bottom:3px;">
+				<a href="../examples.html#webvr" class="prop504x310"><img src="../images/webvr-controllers.jpg" class="outlineimage prop_inner" /></a>
+				<div style="text-align:center;padding-top:3px;">WebVR Examples</div>
+			</div>
+			<ul>
+				<li>The webvr.xml is a helper tool that provides several interface elements for using VR.</li>
+				<li>Buttons for entering and exiting the VR mode.</li>
+				<li>A setup menu for interactively customizing the lens-distortion for mobile-phone-based
+					<a href="https://en.wikipedia.org/wiki/Google_Cardboard" target="_blank">Google-Cardboard</a>-like VR headsets.</li>
+				<li>Lens distortion presets for common headsets.</li>
+				<li>An animated VR 'pointing-cursor' for devices without controllers (point/stare on an element for some seconds to interact with it).</li>
+				<li>Mulitple VR controllers styles for real VR controllers (laser, line+hitpoint, handcursor+hitpoint).</li>
+				<li>Support for a 'fake/simulation VR mode' for testing the VR mode also on non-VR systems.</li>
+				<li>Includes an editable built-in list of  mobile-phones and their screensizes to get the correct lens-distortion.</li>
+				<li>Provides a link to send the current tour to Meta Quest VR headsets.</li>
+				<li>Provides instructions for how to enable the WebXR API on the Apple Vision Pro headset.</li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/webvr.xml" /&gt;
+<span class="xmlattrnote">&lt;-- optionally adjust some of the <a href="webvr.html#syntax">webvr.js</a> default settings: --&gt;</span>
+&lt;<a href="../xml.html#plugin" class="selflink2">plugin</a> name="webvr"
+        mobilevr_support="true"
+        mobilevr_fake_support="true"
+        mobilevr_wakelock="true"
+        ...
+        /&gt;
+</pre>
+				</li>
+			</ul>
+			<div class="xmlextimgclear"></div>
+		</div>
+		
+		<br>
+		<br><a name="webvr2"></a>
+		<pre><a class="selflink" href="#webvr2">webvr2.xml</a> (<a href="../../viewer/plugins/webvr2.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>At the moment, the <a href="#webvr2">webvr2.xml</a> is basically the same as the <a href="#webvr">webvr.xml</a>,
+					 but uses some 'reactive programming' functions and these require using a
+					<a href="https://krpano.com/buy/upgrade/?version=122">krpano 1.22 license</a>.
+				</li>
+				<li>The old <a href="#webvr">webvr.xml</a> is therefore here for backward compatibility
+					and to allow updating old projects to the latest krpano version without the need for a license upgrade.
+				</li>
+				<li>This also allows <a href="#webvr2">webvr2.xml</a> to get updates in the future that wouldn't be possible without a new license.</li>
+			</ul>
+		</div>
+		
+		<br>
+		<br><a name="webvr_autozoom"></a>
+		<pre><a class="selflink" href="#webvr_autozoom">webvr_autozoom.xml</a> (<a href="../../viewer/plugins/webvr_autozoom.xml" class="selflink2">view</a>)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>A helper script for zooming in VR.</li>
+				<li>After ~2 seconds staring at one point, the view slowly starts zooming-in.</li>
+				<li>When looking around, the zooming-in stops and the view starts slowly zooming-out back to the normal view (the faster the looking-around the faster the zooming-out).
+				</li>
+				<li>Usage:
+					<pre>&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/webvr.xml" /&gt;
+&lt;<a href="../xml.html#include" class="selflink2">include</a> url="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/webvr_autozoom.xml" /&gt;</pre>
+				</li>
+			</ul>
+		</div>
+		
+
+
+				</div>
+			</div>
+		</div>
+		<div id="krpano_footerwrapper">
+			<div id="krpano_footer">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="right">Copyright &copy; 2025 krpano.com</td></tr></tbody></table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="design.css"/>
+	<title>krpano Documentation</title>
+	<script>
+		function toggle_mobile_nav(){var t=document,n=t.getElementById("krpano_contentnav"),m=t.getElementById("krpano_mobile_menu_bg");t=n.state!=2;n.state=t?2:1;n.style.height=t?"auto":"24px";m.style.display=t?"block":"none";t=t?"add":"remove";n.classList[t]("krpano_contentnav_opened");t+="EventListener";n[t]("click",toggle_mobile_nav,false);m[t]("mousedown",toggle_mobile_nav,false);}
+	</script>
+</head>
+<body>
+	<div id="krpano_root">
+		<div id="krpano_headerwrapper">
+			<div id="krpano_header">
+				<div id="krpano_mainmenu">
+					krpano 1.23.2 <span class="smallcomment">(build 2025-09-22)</span>
+				</div>
+			</div>
+			<div id="krpano_imagebar"></div>
+			
+			<div id="krpano_logo_container">
+				<a id="krpano_logo" href="https://krpano.com"><span>krpano.com</span></a>
+			</div>
+			
+			<div id="krpano_imagebar_links">
+				Documentation
+			</div>
+		</div>
+		
+		<div id="krpano_contentwrapper">
+			<div id="krpano_mobile_menuicon" onclick="toggle_mobile_nav();"><span class="burgermenu"></span></div>
+			<div id="krpano_mobile_menu_bg"></div>
+			<div id="krpano_content">
+				<div id="krpano_contentnav">
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('doc_section');">Documentation</h2>
+					<ul class="sidemenu_section " id="doc_section">
+						<li><a href="embedpano.html#top">Embedding</a></li>
+						<li><a href="xml.html#top">XML Reference</a>
+							<ul>
+								<li class="lisd"><a href="textfield.html#top">Textfield</a></li>
+								<li class="lisd"><a href="plugins/scrollarea.html#top">ScrollArea</a></li>
+							</ul>
+						</li>
+						<li><a href="actions.html#top">Actions / Scripting</a></li>
+						<li><a href="js_api.html#top">Javascript Interface</a></li>
+						<li><a href="localusage.html#top">Local / Offline Usage</a></li>
+						<li><a href="coordinates.html#top">Coordinate Systems</a></li>
+						<li><a href="../license.html#top">License Agreement</a></li>
+						<li><a href="releasenotes.html#top">Release Notes</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('plugins_section');">Plugins</h2>
+					<ul class="sidemenu_section hidden" id="plugins_section">
+						<li><a href="plugins/bingmaps.html#top">Bing Maps</a></li>
+						<li><a href="plugins/googlemaps.html#top">Google Maps</a></li>
+						<li><a href="plugins/gyro2.html#top">Gyro2</a></li>
+						<li><a href="plugins/krpanomaps.html#top">krpano Maps</a></li>
+						<li><a href="plugins/postprocessing.html#top">Postprocessing</a></li>
+						<li><a href="plugins/radar.html#top">Radar</a></li>
+						<li><a href="plugins/snow.html#top">Snow / Rain</a></li>
+						<li><a href="plugins/soundinterface.html#top">Soundinterface</a></li>
+						<li><a href="plugins/threejs.html#top">ThreeJS</a></li>
+						<li><a href="plugins/videoplayer.html#top">Videoplayer</a></li>
+						<li><a href="plugins/webvr.html#top">WebVR</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('xmlext_section');">XML Extensions</h2>
+					<ul class="sidemenu_section hidden" id="xmlext_section">
+						<li><a href="plugins/xml_extensions.html#controls3d">controls3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#cursor3d">cursor3d.xml</a></li>
+						<li><a href="plugins/combobox.html#top">combobox.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#contextmenu">contextmenu.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#copy_to_clipboard">copy_to_clipboard.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#drag3d">drag3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#measure3d">measure3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#fps">fps.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#ios_iframe_fullscreen">ios_iframe_fullscreen.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#iphone_fullscreen_swipe">iphone_fullscreen_swipe.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#minimap_zoomrect">minimap_zoomrect.xml</a></li>
+						<li><a href="plugins/showtext.html#top">showtext.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#stateurls">stateurls.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#vr_and_anaglyph_buttons">vr_and_anaglyph_buttons.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#wakelock">wakelock.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#webvr">webvr.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#webvr_autozoom">webvr_autozoom.xml</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('tools_section');">Tools</h2>
+					<ul class="sidemenu_section hidden" id="tools_section">
+						<li><a href="tools/krpanotools.html#makepano">Makepano</a><br>
+							<ul><li><a href="tools/config.html#top">Config File Reference</a></li></ul>
+						</li>
+						<li><a href="tools/krpanotools.html#maketiles">Maketiles</a></li>
+						<li><a href="tools/krpanotools.html#makepreview">Makepreview</a></li>
+						<li><a href="tools/krpanotools.html#spheretocube">SphereToCube</a></li>
+						<li><a href="tools/krpanotools.html#cubetosphere">CubeToSphere</a></li>
+						<li><a href="tools/krpanotools.html#protect">Protect Tool</a></li>
+						<li><a href="tools/krpanotools.html#encrypt">Encrypt Tool</a></li>
+						<li><a href="tools/krpanotools.html#register">Registration Tool</a></li>
+						<li><a href="tools/testingserver.html#top">krpano Testing Server</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('examples_section');">Examples</h2>
+					<ul class="sidemenu_section hidden" id="examples_section">
+						<li><a href="examples.html#top">Show All</a></li>
+						<li><a href="examples.html?vtour#top">Virtual Tours</a></li>
+						<li><a href="examples.html?3d#top">3D Examples</a></li>
+						<li><a href="examples.html?splats#top">Gaussian Splatting</a></li>
+						<li><a href="examples.html?depthmap#top">Depthmap</a></li>
+						<li><a href="examples.html?threejs#top">ThreeJS</a></li>
+						<li><a href="examples.html?multires#top">Multiresolution</a></li>
+						<li><a href="examples.html?layers#top">Layers</a></li>
+						<li><a href="examples.html?plugins#top">Plugins</a></li>
+						<li><a href="examples.html?hotspots#top">Hotspots</a></li>
+						<li><a href="examples.html?maps#top">Maps</a></li>
+						<li><a href="examples.html?video#top">Video</a></li>
+						<li><a href="examples.html?webvr#top">WebVR</a></li>
+						<li><a href="examples.html?js#top">Javascript</a></li>
+					</ul>
+				</div>
+				<a name="top" class="toplink">&nbsp;</a>
+				<div id="krpano_contenttext">
+
+					<noscript>
+						<table style="width:100%; height:400px; position:fixed; left:95px; top:220px;"><tr valign="middle"><td><center><h1>
+							<span style="color:#FFFFFF; background:#FF0000; padding:15px;">
+								Javascript must be activated for this page!
+							</span>
+						</h1></center></td></tr></table>
+					</noscript>
+					
+					<script>
+						function toggle_section(id)
+						{
+							var element = document.getElementById(id);
+							if (element)
+							{
+								element.classList.toggle("hidden")
+							}
+						}
+					</script>
+
+					
+
+	<h1>krpano Coordinate Systems
+		
+	</h1>
+
+	<div class="paragraph">
+		<div class="subparagraph">
+			Here a quick overview about the various coordinate systems in krpano.
+		</div>
+	</div>
+	
+	<div class="paragraph">
+		Documentation topics:
+		<ul>
+			<li><a href="#view-coord-system">View / Lookat Coordinate System</a></li>
+			<li><a href="#3d-coord-system">3D Coordinate System</a></li>
+			<li><a href="#pano-image-arrangement">Panoramic Image Arrangement</a></li>
+		</ul>
+	</div>
+	
+	<script src="../viewer/krpano.js" defer></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function()
+		{
+			document.querySelectorAll("[data-krpano]").forEach(function(krpanodiv)
+			{
+				var example_id = krpanodiv.getAttribute("data-krpano");
+				var xmlcode = document.getElementById(example_id).innerHTML;
+				
+				embedpano({
+					target : krpanodiv, 
+					bgcolor : "transparent", 
+					onready : function(krpano){
+						krpano.actions.loadxml(xmlcode);
+					}
+				});
+			});
+		});
+	</script>
+	
+	<div class="paragraph">
+		
+		<a name="view-coord-system"></a><br>
+		<a class="infoboxtitle selflink" href="#view-coord-system">View / Lookat Coordinate System</a>
+		<div class="infobox">
+			
+			<div data-krpano="krpano_xml_view_example" style="width:100%;height:340px;overflow:hidden;" class="designborder">
+			</div>
+
+			Ranges:
+			<ul>
+				<li>360x180 degree.</li>
+				<li>From -180 (left) to +180 (right).</li>
+				<li>From -90 (top/zenith) to +90 (bottom/nadir).</li>
+				<li>The coordinates can wrap around and be also outside the 360x180 range, 
+					but the resulting view can be always only inside the 360x180 range.
+				</li>
+				<li>0/0 is always the center of the image.</li>
+			</ul>
+			Usages:
+			<ul>
+				<li>The <a href="xml.html#view">view</a> (viewing camera) is using the
+					<a href="xml.html#view.hlookat">hlookat</a> and 
+					<a href="xml.html#view.vlookat">vlookat</a> settings
+					to define the looking direction
+					to the given coordinate in the panoramic image.
+				</li>
+				<li>Hotspots are using <a href="xml.html#hotspot.ath">ath</a> and 
+					<a href="xml.html#hotspot.atv">atv</a> settings to the define the spherical
+					position in the panoramic image.
+				</li>
+				<li>Actions and functions might typically use h and v or x and y
+					for addressing the spherical position.
+				</li>
+			</ul>
+		</div>
+	
+	</div>
+
+	<div class="paragraph">
+		<a name="3d-coord-system"></a><br>
+		<a class="infoboxtitle selflink" href="#3d-coord-system">3D Coordinate System</a>
+		<div class="infobox">
+			
+			<div data-krpano="krpano_xml_3d_axes_example" style="width:100%;height:340px;overflow:hidden;" class="designborder">
+			</div>
+			
+			3D Coordinate System:
+			<ul>
+				<li>The 3D coordinate system is an extention of the 2D layer system (with a top-left edge) into 3D space.
+					This is done by adding +z as a depth into the screen value.
+				</li>
+				<li>This way the layer and hotspot x, y coordinates are compatible with each other.
+				</li>
+			</ul>
+			3D Axes:
+			<ul>
+				<li>X-Axis: Points from left (-) to right (+)</li>
+				<li>Y-Axis: Points from top (-) to bottom (+)</li>
+				<li>Z-Axis: Points from out-of-the-screen (-) into-the-screen (+)</li>
+				<li>The coordinate system is left-handed.</li>
+				<li>Unit: 1 ^= 1 cm</li>
+			</ul>
+			
+		</div>
+	</div>
+	
+	<div class="paragraph">
+		
+		<a name="pano-image-arrangement"></a><br>
+		<a class="infoboxtitle selflink" href="#pano-image-arrangement">Panoramic Image Arrangement</a>
+		<div class="infobox">
+			
+			<div data-krpano="krpano_xml_cube_example" style="width:100%;height:340px;overflow:hidden;" class="designborder">
+			</div>
+
+			Spherical, Cylindrical, Flat Panoramic Images:
+			<ul>
+				<li>0/0 is always the center of the image.</li>
+				<li>The images can have any horizontal and vertical field-of-view range.</li>
+			</ul>
+			Cube-face Arrangement:<br>
+			<ul>
+				<li>The left cube face is at h=-90° v=0°</li>
+				<li>The front cube face is at h=0° v=0°</li>
+				<li>The right cube face is at h=+90° v=0°</li>
+				<li>The back cube face is at h=+180° v=0°</li>
+				<li>The up cube face is at h=0° v=-90°</li>
+				<li>The down cube face is at h=0° v=+90°</li>
+			</ul>
+
+			<div style="display:grid;grid-template-areas:'. top . .' 'left front right back' '. bottom . .';grid-template-columns:repeat(4,1fr)">
+			  <div style="grid-area:top;aspect-ratio:1/1;background:url('./images/coordsystem_pano_u.jpg') center/cover"></div>
+			  <div style="grid-area:left;aspect-ratio:1/1;background:url('./images/coordsystem_pano_l.jpg') center/cover"></div>
+			  <div style="grid-area:front;aspect-ratio:1/1;background:url('./images/coordsystem_pano_f.jpg') center/cover"></div>
+			  <div style="grid-area:right;aspect-ratio:1/1;background:url('./images/coordsystem_pano_r.jpg') center/cover"></div>
+			  <div style="grid-area:back;aspect-ratio:1/1;background:url('./images/coordsystem_pano_b.jpg') center/cover"></div>
+			  <div style="grid-area:bottom;aspect-ratio:1/1;background:url('./images/coordsystem_pano_d.jpg') center/cover"></div>
+			</div>
+
+			The same as Spherical / Equirectangular Image:<br>
+			<img src="./images/coordsystem-sphere.jpg" style="width:100%;aspect-ratio:2/1;" /><br>
+		</div>
+	
+	</div>
+	
+	
+	
+
+
+<script id="krpano_xml_view_example" type="text/xmldata">
+<krpano>
+
+	<preview type="grid(cube,32,32,256,0xE0E0E0,0xFFFFFF,0xCCCCCC);" />
+	
+	<view fov="110" fovmin="30" fovmax="150" hlookat="0" vlookat="0" />
+	
+	<layer type="text" bg="false" css="font-family:monospace;" 
+		wraphlookat="false" onclick="switch(wraphlookat);"
+		template="
+		hlookat: {{view.hlookat,wraphlookat:roundval(wraphlookat ? adjust360(view.hlookat) : view.hlookat,1)}}[br]
+		vlookat: {{view.vlookat:roundval(view.vlookat,1)}}[br]
+		" />
+	
+	<style name="hstext" type="text" bg="false" css="color:black; font-weight:bold; font-size:14px;" renderer="webgl" enabled="false" />
+
+	<action autorun="true" scope="local">
+		for(i=-180, i LT 180, i+=10,
+			h = addhotspot();
+			h.loadstyle('hstext');
+			h.ath = i;
+			h.text = i;
+		);
+		for(i=-90, i LE 90, i+=10, if(i != 0,
+			h = addhotspot();
+			h.loadstyle('hstext');
+			link(h.ath, view.hlookat);
+			h.atv = i;
+			h.text = i;
+		));
+	</action>
+	
+</krpano>
+</script>
+
+<script id="krpano_xml_3d_axes_example" type="text/xmldata">
+<krpano>
+	
+	<preview type="grid(cube,64,64,512,0xE0E0E0,0xFFFFFF,0xCCCCCC);" />
+	
+	
+	<control dragscale="link:view.oz:view.oz GT 100 ? -1.0 : 0" />
+	
+	<view fov="30" fovmin="30" fovmax="60" hlookat="-15" vlookat="15" oz="500" />
+	
+	<layer type="text" bg="false" css="font-family:monospace;" 
+		wraphlookat="true" onclick="switch(wraphlookat);"
+		template="
+		hlookat: {{view.hlookat,wraphlookat:roundval(wraphlookat ? adjust360(view.hlookat) : view.hlookat,1)}}[br]
+		vlookat: {{view.vlookat:roundval(view.vlookat,1)}}[br]
+		" />
+	
+	<style name="axis_hs" renderer="css3d" polyine="true" borderwidth="5" enabled="false" />
+	<style name="axis_text" type="text" bg="false" depth="0" enabled="false" css="color:black; font-weight:bold; font-size:14px;" />
+	<style name="hstext" type="text" bg="false" css="color:#AAAAAA;" enabled="false" />
+	
+	<hotspot name="axis_x_poly" style="axis_hs" torigin="view" points3d="-100,0,0, +100,0,0" bordercolor="0xcc0000" />
+	<hotspot name="axis_y_poly" style="axis_hs" torigin="view" points3d="0,-100,0, 0,+100,0" bordercolor="0x008000" />
+	<hotspot name="axis_z_poly" style="axis_hs" torigin="view" points3d="0,0,-100, 0,0,+100" bordercolor="0x0000cd " />
+	
+	<hotspot name="axis_x_text_min" style="axis_text" text="-X" tx="-120" />
+	<hotspot name="axis_x_text_max" style="axis_text" text="+X" tx="+120" />
+	<hotspot name="axis_y_text_min" style="axis_text" text="-Y" ty="-120" />
+	<hotspot name="axis_y_text_max" style="axis_text" text="+Y" ty="+120" />
+	<hotspot name="axis_z_text_min" style="axis_text" text="-Z" tz="-120" />
+	<hotspot name="axis_z_text_max" style="axis_text" text="+Z" tz="+120" />
+		
+	<action autorun="true" scope="local">
+		for(i=-180, i LT 180, i+=10,
+			h = addhotspot();
+			h.loadstyle('hstext');
+			h.ath = i;
+			h.text = i;
+		);
+		for(r=-180, r LE 180, r+=90,
+		for(i=-90, i LE 90, i+=10, if(i != 0 AND (abs(i) != 90 OR r == 0),
+			h = addhotspot();
+			h.loadstyle('hstext');
+			h.ath = r;
+			h.atv = i;
+			h.text = i;
+		)));
+	</action>
+	
+</krpano>
+</script>
+
+<script id="krpano_xml_cube_example" type="text/xmldata">
+<krpano>
+	
+	<layer type="text" bg="false" css="color:white; font-family:monospace;" txtshadow="1 1 2 0x000000"
+		wraphlookat="true" onclick="switch(wraphlookat);"
+		template="
+		hlookat: {{view.hlookat,wraphlookat:roundval(wraphlookat ? adjust360(view.hlookat) : view.hlookat,1)}}[br]
+		vlookat: {{view.vlookat:roundval(view.vlookat,1)}}[br]
+		" />
+		
+	<view fovtype="VFOV" fov="105" />
+		
+	<image>
+		<cube url="https://krpano.com/docu/images/crossorigin/coordsystem_pano_%s.jpg" />
+	</image>
+	
+</krpano>
+</script>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div id="krpano_footerwrapper">
+			<div id="krpano_footer">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="right">Copyright &copy; 2025 krpano.com</td></tr></tbody></table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

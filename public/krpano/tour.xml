@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="tour.xsl"?>
+<!-- Museum tour XML - merged and cleaned. Replace or extend with your full krpano project as needed. -->
+<krpano version="1.20" title="Museum Tour">
+  <!-- Plugins and features for krpano 1.20
+    Enabled (scaffolded) here for development: depthmap/3D tours, multi-resolution (tiles/partial panos), VR, post-processing, and soundinterface.
+    Replace the placeholder plugin files in /public/krpano/plugins with the official krpano plugin files when available.
+  -->
+  <!-- Plugin placeholders (serves to avoid 404s during development) -->
+  <plugin name="soundinterface" url="plugins/soundinterface.js" />
+  <plugin name="pp_blur" url="plugins/pp_blur.js" />
+  <plugin name="pp_sharpen" url="plugins/pp_sharpen.js" />
+  <plugin name="threejs_krpanoplugin" url="plugins/threejs_krpanoplugin.js" />
+
+  <!-- Notes:
+    - Depthmap / 3D tours: include depth maps alongside your pano image assets and configure scenes to reference them.
+    - Multi-resolution / partial-panos: generate tiled multi-resolution assets and point your scene to the tiles folder.
+    - VR / stereo: krpano can use stereo/cube/stereo tiles; configure the scene or use the skin VR buttons.
+    - Post-processing: the pp_* plugins apply effects (blur, sharpen). They must be the official krpano plugins for full effect.
+  -->
+
+  <action name="startup">
+    loadscene(scene1, null, MERGE);
+  </action>
+
+  <scene name="scene1" title="Pyramid Museum">
+    <view fov="90" hlookat="0" vlookat="0" />
+    <image>
+      <sphere url="/assets/images/1.jpg" />
+      <!-- Synthetic test depthmap: horizontal gradient stored as an external SVG file -->
+      <depthmap url="/krpano/depthmaps/scene1_depth.svg" />
+    </image>
+    <hotspot name="toScene2" style="skin_hotspotstyle" ath="10" atv="0" onclick="loadscene(scene2,null,MERGE);" />
+  </scene>
+
+  <scene name="scene2" title="Statue Museum">
+    <image>
+      <sphere url="/assets/images/2.jfif" />
+    </image>
+    <hotspot name="toScene1" style="skin_hotspotstyle" ath="-10" atv="0" onclick="loadscene(scene1,null,MERGE);" />
+    <hotspot name="toScene3" style="skin_hotspotstyle" ath="0" atv="15" onclick="loadscene(scene3,null,MERGE);" />
+  </scene>
+
+  <scene name="scene3" title="Statues row Museum">
+    <image>
+      <sphere url="/assets/images/3.jfif" />
+    </image>
+    <hotspot name="toScene2" style="skin_hotspotstyle" ath="20" atv="0" onclick="loadscene(scene2,null,MERGE);" />
+  </scene>
+
+</krpano>

@@ -1,0 +1,829 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="design.css"/>
+	<title>krpano Documentation</title>
+	<script>
+		function toggle_mobile_nav(){var t=document,n=t.getElementById("krpano_contentnav"),m=t.getElementById("krpano_mobile_menu_bg");t=n.state!=2;n.state=t?2:1;n.style.height=t?"auto":"24px";m.style.display=t?"block":"none";t=t?"add":"remove";n.classList[t]("krpano_contentnav_opened");t+="EventListener";n[t]("click",toggle_mobile_nav,false);m[t]("mousedown",toggle_mobile_nav,false);}
+	</script>
+</head>
+<body>
+	<div id="krpano_root">
+		<div id="krpano_headerwrapper">
+			<div id="krpano_header">
+				<div id="krpano_mainmenu">
+					krpano 1.23.2 <span class="smallcomment">(build 2025-09-22)</span>
+				</div>
+			</div>
+			<div id="krpano_imagebar"></div>
+			
+			<div id="krpano_logo_container">
+				<a id="krpano_logo" href="https://krpano.com"><span>krpano.com</span></a>
+			</div>
+			
+			<div id="krpano_imagebar_links">
+				Documentation
+			</div>
+		</div>
+		
+		<div id="krpano_contentwrapper">
+			<div id="krpano_mobile_menuicon" onclick="toggle_mobile_nav();"><span class="burgermenu"></span></div>
+			<div id="krpano_mobile_menu_bg"></div>
+			<div id="krpano_content">
+				<div id="krpano_contentnav">
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('doc_section');">Documentation</h2>
+					<ul class="sidemenu_section " id="doc_section">
+						<li><a href="embedpano.html#top">Embedding</a></li>
+						<li><a href="xml.html#top">XML Reference</a>
+							<ul>
+								<li class="lisd"><a href="textfield.html#top">Textfield</a></li>
+								<li class="lisd"><a href="plugins/scrollarea.html#top">ScrollArea</a></li>
+							</ul>
+						</li>
+						<li><a href="actions.html#top">Actions / Scripting</a></li>
+						<li><a href="js_api.html#top">Javascript Interface</a></li>
+						<li><a href="localusage.html#top">Local / Offline Usage</a></li>
+						<li><a href="coordinates.html#top">Coordinate Systems</a></li>
+						<li><a href="../license.html#top">License Agreement</a></li>
+						<li><a href="releasenotes.html#top">Release Notes</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('plugins_section');">Plugins</h2>
+					<ul class="sidemenu_section hidden" id="plugins_section">
+						<li><a href="plugins/bingmaps.html#top">Bing Maps</a></li>
+						<li><a href="plugins/googlemaps.html#top">Google Maps</a></li>
+						<li><a href="plugins/gyro2.html#top">Gyro2</a></li>
+						<li><a href="plugins/krpanomaps.html#top">krpano Maps</a></li>
+						<li><a href="plugins/postprocessing.html#top">Postprocessing</a></li>
+						<li><a href="plugins/radar.html#top">Radar</a></li>
+						<li><a href="plugins/snow.html#top">Snow / Rain</a></li>
+						<li><a href="plugins/soundinterface.html#top">Soundinterface</a></li>
+						<li><a href="plugins/threejs.html#top">ThreeJS</a></li>
+						<li><a href="plugins/videoplayer.html#top">Videoplayer</a></li>
+						<li><a href="plugins/webvr.html#top">WebVR</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('xmlext_section');">XML Extensions</h2>
+					<ul class="sidemenu_section hidden" id="xmlext_section">
+						<li><a href="plugins/xml_extensions.html#controls3d">controls3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#cursor3d">cursor3d.xml</a></li>
+						<li><a href="plugins/combobox.html#top">combobox.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#contextmenu">contextmenu.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#copy_to_clipboard">copy_to_clipboard.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#drag3d">drag3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#measure3d">measure3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#fps">fps.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#ios_iframe_fullscreen">ios_iframe_fullscreen.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#iphone_fullscreen_swipe">iphone_fullscreen_swipe.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#minimap_zoomrect">minimap_zoomrect.xml</a></li>
+						<li><a href="plugins/showtext.html#top">showtext.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#stateurls">stateurls.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#vr_and_anaglyph_buttons">vr_and_anaglyph_buttons.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#wakelock">wakelock.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#webvr">webvr.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#webvr_autozoom">webvr_autozoom.xml</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('tools_section');">Tools</h2>
+					<ul class="sidemenu_section hidden" id="tools_section">
+						<li><a href="tools/krpanotools.html#makepano">Makepano</a><br>
+							<ul><li><a href="tools/config.html#top">Config File Reference</a></li></ul>
+						</li>
+						<li><a href="tools/krpanotools.html#maketiles">Maketiles</a></li>
+						<li><a href="tools/krpanotools.html#makepreview">Makepreview</a></li>
+						<li><a href="tools/krpanotools.html#spheretocube">SphereToCube</a></li>
+						<li><a href="tools/krpanotools.html#cubetosphere">CubeToSphere</a></li>
+						<li><a href="tools/krpanotools.html#protect">Protect Tool</a></li>
+						<li><a href="tools/krpanotools.html#encrypt">Encrypt Tool</a></li>
+						<li><a href="tools/krpanotools.html#register">Registration Tool</a></li>
+						<li><a href="tools/testingserver.html#top">krpano Testing Server</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('examples_section');">Examples</h2>
+					<ul class="sidemenu_section hidden" id="examples_section">
+						<li><a href="examples.html#top">Show All</a></li>
+						<li><a href="examples.html?vtour#top">Virtual Tours</a></li>
+						<li><a href="examples.html?3d#top">3D Examples</a></li>
+						<li><a href="examples.html?splats#top">Gaussian Splatting</a></li>
+						<li><a href="examples.html?depthmap#top">Depthmap</a></li>
+						<li><a href="examples.html?threejs#top">ThreeJS</a></li>
+						<li><a href="examples.html?multires#top">Multiresolution</a></li>
+						<li><a href="examples.html?layers#top">Layers</a></li>
+						<li><a href="examples.html?plugins#top">Plugins</a></li>
+						<li><a href="examples.html?hotspots#top">Hotspots</a></li>
+						<li><a href="examples.html?maps#top">Maps</a></li>
+						<li><a href="examples.html?video#top">Video</a></li>
+						<li><a href="examples.html?webvr#top">WebVR</a></li>
+						<li><a href="examples.html?js#top">Javascript</a></li>
+					</ul>
+				</div>
+				<a name="top" class="toplink">&nbsp;</a>
+				<div id="krpano_contenttext">
+
+					<noscript>
+						<table style="width:100%; height:400px; position:fixed; left:95px; top:220px;"><tr valign="middle"><td><center><h1>
+							<span style="color:#FFFFFF; background:#FF0000; padding:15px;">
+								Javascript must be activated for this page!
+							</span>
+						</h1></center></td></tr></table>
+					</noscript>
+					
+					<script>
+						function toggle_section(id)
+						{
+							var element = document.getElementById(id);
+							if (element)
+							{
+								element.classList.toggle("hidden")
+							}
+						}
+					</script>
+
+					
+
+	<h1>Embedding into HTML
+		
+	</h1>
+
+	<div class="paragraph">
+		<div class="subparagraph">
+			To embed the krpano viewer into an HTML page, the script file <span class="pre">krpano.js</span> (the actual filename can differ) 
+			must be included and the <a href="#embedpano" class="pre selflink2">embedpano()</a> function be called.
+		</div>
+	</div>
+	
+	<div class="paragraph">
+		Documentation topics:
+		<ul>
+			
+			<li class="uldd"><a href="#including">Script Including</a></li>
+			<li class="uldd"><a href="#syntax">Viewer Embedding</a></li>
+			<li class="uldd"><a href="#embeddingparameters">Embedding Parameters</a></li>
+			<li class="uldd"><a href="#queryparameters">URL Query Parameters</a></li>
+			
+			<li class="uldd"><a href="#removing">Viewer Removing</a></li>
+			
+			
+		</ul>
+	</div>
+
+	<div class="paragraph">
+		<h2><a class="selflink" name="including" href="#including">Script Including</a></h2>
+	
+		The krpano script file need to be included once anywhere on the html page:
+		<pre>&lt;script src="krpano.js"&gt;&lt;/script&gt;</pre>
+		<br>
+		Some details and notes:
+		<ul>
+			<li>The 'krpano.js' file can be named different - e.g. when using the MAKE PANO or MAKE VTOUR droplets it is typically named 'pano.js' or 'tour.js'.</li>
+			<li>The file itself contains the krpano viewer and when registered also the license information.</li>
+			<li>Typically the file is always the same for all panos and tours (unless custom protection settings were applied).
+				That means the same file can be used and shared for multiple panos and tours.<br>
+				When hosting multiple panos and tours this is even a recommend way - use one global location for the krpano viewer and plugins files
+				and refer from all other projects to them. With that updating the version will be much eaiser.
+			</li>
+		</ul>
+	</div>
+		
+	<div class="paragraph">
+		<h2><a class="selflink" name="syntax" href="#syntax">Viewer Embedding</a></h2>
+		
+		Create anywhere on the html page a <b>&lt;div&gt;</b> element where the viewer should be embedded,
+		give that div element an unique <b>'id'</b> name and define its size via css styles:
+		<pre>&lt;div id="<b>pano</b>" style="width:100%;height:100%;"&gt;&lt;/div&gt;</pre>
+		<br/>
+		After defining the <b>&lt;div&gt;</b> element, create a <b>&lt;script&gt;</b> element with the embedding script code.<br>
+		The embed the krpano viewer using the global <a href="#embedpano">embedpano()</a> function:
+		<br/>
+		<div>
+			<br/><a name="embedpano"></a>
+			<pre><a class="selflink" href="#embedpano">embedpano</a>({...<a class="selflink" href="#embeddingparameters">embedding parameters</a>...})</pre>
+			<div class="preinfo">
+				<ul>
+					<li>
+						The embedpano() function needs an Object with the <a href="#embeddingparameters">Embedding Parameters</a> as argument.
+						<br>
+					</li>
+					<li>Full example:
+						<pre>
+&lt;script src="krpano.js"&gt;&lt;/script&gt;
+
+&lt;div id="<span style="color:red;">pano</span>" style="width:600px; height:400px;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  embedpano({xml:"pano.xml", target:"<span style="color:red;">pano</span>"});
+&lt;/script&gt;</pre>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="paragraph">
+		<h2><a class="selflink" name="embeddingparameters" href="#embeddingparameters">Embedding Parameters</a></h2>
+		
+		The embedpano() function requires an Object as argument.
+		This Object is used to pass various settings.
+		All parameters are optional. If they are not defined, their default values are used.
+		
+		<div class="subparagraph">
+			The <a name="embeddingobjectparameters" href="#embeddingobjectparameters" class="selflink">Embedding Parameters Object</a> 
+			provides the following settings:<br/>
+			
+			<pre>
+embedpano({
+    <a href="#target" class="selflink">target</a> : null,
+    <a href="#xml" class="selflink">xml</a> : null,
+    <a href="#id" class="selflink">id</a> : "krpanoSWFObject",
+    <a href="#bgcolor" class="selflink">bgcolor</a> : "#000000",
+    <a href="#vars" class="selflink">vars</a> : null,
+    <a href="#initvars" class="selflink">initvars</a> : null,
+    <a href="#basepath" class="selflink">basepath</a> : null,
+    <a href="#cors" class="selflink">cors</a> : false,
+    <a href="#sameorigin" class="selflink">sameorigin</a> : true,
+    <a href="#consolelog" class="selflink">consolelog</a> : false,
+    <a href="#mwheel" class="selflink">mwheel</a> : true,
+    <a href="#capturetouch" class="selflink">capturetouch</a> : true,
+    <a href="#focus" class="selflink">focus</a> : true,
+    <a href="#webgl" class="selflink">webgl</a> : true,
+    <a href="#webglsettings" class="selflink">webglsettings</a> : {webgl2:true, depth:true, stencil:true},
+    <a href="#webxr" class="selflink">webxr</a> : "auto",
+    <a href="#mobilescale" class="selflink">mobilescale</a> : 1.0,
+    <a href="#safearea" class="selflink">safearea</a> : "auto",
+    <a href="#touchdevicemousesupport" class="selflink">touchdevicemousesupport</a> : true,
+    <a href="#iosfullscreen" class="selflink">iosfullscreen</a> : false,
+    <a href="#passQueryParameters" class="selflink">passQueryParameters</a> : false,
+    <a href="#onready" class="selflink">onready</a> : function(krpano){ ... }
+});</pre>
+
+			<span class="smallcomment">
+				Note - the Embedding Parameters Object is available in the viewer as 
+				<a href="actions.html#embeddingparameters">embeddingparameters</a> variable.
+			</span><br>
+			<br>
+			<br>
+			The Embedding Parameters in detail:<br>
+			
+			<br/><a name="target"></a>
+			<pre><a class="selflink" href="#target">target</a>:null</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Set the target html-element in which the pano viewer should be embedded.</li>
+					<li>Can be either the id of a html-element or directly the html-element itself.</li>
+					<li>If not set (or set to null), the parent element of the current &lt;script&gt; element is used.</li>
+					<li>A Javascript alert() error is shown if no valid target is set or 
+						if no html-element with the given id can be found.
+					</li>
+				</ul>
+			</div>
+	
+			<br/><a name="xml"></a>
+			<pre><a class="selflink" href="#xml">xml</a>:null</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Name and path to the startup xml file (relative to the html file).</li>
+					<li>When no xml file should be loaded on startup, set the value to <span class="presyntax_inline">null</span>.</li>
+					<li>Backward compatibility: When not set and a path to a swf file is set, then the given filename of the swf file will be used 
+						as name of the startup xml file (e.g. 'krpano.xml' for 'krpano.swf').
+					</li> 
+				</ul>
+			</div>
+			
+			<br/><a name="id"></a>
+			<pre><a class="selflink" href="#id">id</a>:"krpanoSWFObject"</pre>
+			<div class="preinfo">
+				<ul>
+					<li>The id of the internal viewer object.</li>
+					<li>This will be the object for interfacing the viewer via the <a href="js_api.html#top">Javascript-Interface</a>.</li>
+					<li>The default id is <b>"krpanoSWFObject"</b>.</li>
+					<li>It is important that each viewer will have an unique id!</li>
+					<li>When there already exists an object with the given id, then the embedding script will automatically add numbers at the end of the id until it is unique.</li>
+				</ul>
+			</div>
+			
+			
+			<br/><a name="bgcolor"></a>
+			<pre><a class="selflink" href="#bgcolor">bgcolor</a>:"#000000"</pre>
+			<div class="preinfo">
+				<ul>
+					<li>The background color of the viewer (in html color format).</li>
+					<li>The default is <span class="pre">#000000</span> (=Black).</li>
+					<li>Optionally the value <span class="pre">transparent</span> can be used to see the content (the website, <a href="xml.html#layer.parent">bglayer</a> layers) 
+						behind the pano (behind partial panos or 3D-models).
+						<ul>
+							<li><i>Note - when using a transparent background, only normal crossfade <a href="actions.html#loadpano.blend">pano-blending</a> 
+								is possible (other blending modes will automatically fallback to this).</i>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			
+			<br/><a name="vars"></a>
+			<pre><a class="selflink" href="#vars">vars</a>:{...}</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Pass an Object with krpano <b>variable:value</b> pairs.</li>
+					
+					<li>The variables will be set <u>AFTER</u> the xml file has been be loaded and parsed.<br>
+						So these variables can be used to add new settings or to overwrite settings that were already defined in the xml.
+					</li>
+					<li>Example:
+						<pre>
+var <span style="color:red;">settings</span> = {};
+<span style="color:red;">settings</span>["onstart"] = "trace('on start...')";
+<span style="color:red;">settings</span>["view.hlookat"] = 30;
+embedpano({xml:"pano.xml", target:"pano", vars:<span style="color:red;">settings</span>});</pre>
+					</li>
+				</ul>
+			</div>
+			
+			<br/><a name="initvars"></a>
+			<pre><a class="selflink" href="#initvars">initvars</a>:{...}</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Pass an Object with krpano <b>variable:value</b> pairs.</li>
+					<li>This is basically the same as the <a href="#vars">vars</a> setting, 
+						but these variables will be set <u>BEFORE</u> the xml file wil be loaded and parsed.
+					</li>
+					<li>The main usage of this setting will be to set custom path variables that can be 
+						used as <a href="xml.html#url-notes">placeholders</a> inside <a href="xml.html#url-notes">url paths</a> in the xml files
+						and / or to set variables that can be used inside <a href="xml.html#if">xml-if-checks</a> for <a href="xml.html#include">&lt;include&gt;</a> elements.
+					</li>
+					<li>Example:
+						<pre>embedpano({..., initvars:{<span style="color:red;">mypath</span>:"./panos1/"} });</pre>
+						XML:
+						<pre>url="<span style="color:red;">%$mypath%</span>image.jpg"</pre>
+					</li>
+					<li>To be able to pass <a href="#initvars">initvars</a> variables via <a href="#passQueryParameters">http queries</a> directly
+						at the url of the html file this syntax need to be used:
+						<pre>tour.html?<span style="color:red;">initvars.</span>variable=value</pre>
+					</li>
+				</ul>
+			</div>
+			
+			<br/><a name="basepath"></a>
+			<pre><a class="selflink" href="#basepath">basepath</a>:...</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Sets a custom path for resolving relative to the krpano viewer url paths.</li>
+					<li>Note - changing this will affect the <a href="xml.html#url" class="pre selflink2">%VIEWER%</a> url placeholder.</li>
+				</ul>
+			</div>
+			
+			<br/><a name="cors"></a>
+			<pre><a class="selflink" href="#cors">cors</a>:false</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Enable the sending of CORS (Cross Origin Resource Sharing) HTTP headers when loading files from external servers.</li>
+					<li>This can be necessary when the external server only allow selective access.</li>
+					<li>Same as when setting the <a href="xml.html#security.cors">security.cors</a> setting to <span class="pre">use-credentials</span>.</i>
+				</ul>
+			</div>
+			
+			<br/><a name="sameorigin"></a>
+			<pre><a class="selflink" href="#sameorigin">sameorigin</a>:true</pre>
+			<div class="preinfo">
+				<ul>
+					<li>A security feature as cross-site-scripting protection - when enabled (the default), the krpano viewer
+						will load 'text' files (xml, scripts, plugins, ...) only from the same server (same 'origin').
+					</li>
+					<li>Loading files from other origins (external servers, other domains) will be blocked and cause an 'External Access Denied' error.
+						This avoids the possibility to inject unwanted files, 
+						especially if using the <a href="#passQueryParameters">passQueryParameters</a> setting.
+					</li>
+					<li>Image and media files are not affected by this settings.</li>
+					
+				</ul>
+			</div>
+			
+			<br/><a name="consolelog"></a>
+			<pre><a class="selflink" href="#consolelog">consolelog</a>:false</pre>
+			<div class="preinfo">
+				<ul>
+					<li>If enabled, the krpano <a href="actions.html#trace">log/trace</a> messages
+						will also be displayed in the Browser's Javascript console.
+					</li>
+				</ul>
+			</div>
+			
+			<br/><a name="mwheel"></a>
+			<pre><a class="selflink" href="#mwheel">mwheel</a>:true</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Control the mouse-wheel support.</li>
+					<li>When set to <b>true</b> (the default), then the mouse-wheel events will be captured and can be used in the viewer (e.g. for zooming).</li>
+					<li>When set to <b>false</b>, then any mouse-wheel usage will be ignored and the Browser will do its default mouse-wheel handling (typically scrolling the webpage).</li>
+					<li>The mouse-wheel support can be changed also using the <a href="xml.html#control.disablewheel">control.disablewheel</a> setting.
+				</ul>
+			</div>
+			
+			<br/><a name="capturetouch"></a>
+			<pre><a class="selflink" href="#capturetouch">capturetouch</a>:true</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Control the capturing of touch events.</li>
+					<li>When set to <b>true</b> (the default), then the touch events will be captured and can be used in the viewer (e.g. for panning and zooming).</li>
+					<li>When set to <b>false</b>, then touch events itself will be still used by the viewer, but their default event processing will be not stopped.
+						That means in this case the Browser might pan or zoom the webpage.
+					</li>
+					<li>This setting can be changed also using the <a href="xml.html#control.capturetouch">control.capturetouch</a> setting.
+				</ul>
+			</div>
+			
+			<br/><a name="focus"></a>
+			<pre><a class="selflink" href="#focus">focus</a>:true</pre>
+			<div class="preinfo">
+				<ul>
+					<li>When set to <b>true</b> (the default), the viewer will get the input / keyboard focus on startup.</li>
+					<li>When set to <b>false</b>, the current focus will be not changed.</li>
+					<li>When <b>not set</b>, the setting will be set automatically depending on the viewer size - 
+						when the viewer will cover the whole webpage, focus will be set to true, otherwise to false.
+					</li>
+				</ul>
+			</div>
+			
+			<br/><a name="webgl"></a>
+			<pre><a class="selflink" href="#webgl">webgl</a>:true</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Use <a href="https://en.wikipedia.org/wiki/WebGL" target="_blank">WebGL</a> for the rendering (recommended).</li>
+					<li>Instead of WebGL,
+						<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms#3d_specific_css_properties" target="_blank">CSS 3D-transforms</a>
+						could be used for displaying the panos, 
+						but compared to using WebGL this is very limited.
+					</li>
+					<li>Settings:
+						<ul>
+							<li><span class="pre">true</span> - Only use WebGL (the default).</li>
+							<li><span class="pre">false</span> - Don't use WebGL, always use CSS 3D-transforms.</li>
+							<li><span class="pre">"auto"</span> - Use WebGL when available, otherwise use CSS 3D-transforms.</li>
+							<li><span class="pre">2.0</span> - Only use WebGL 2.0, when not available an Error will be shown.</li>
+						</ul>
+					</li>
+					<li>When WebGL and CSS 3D-transforms are not available, an Error will be shown.
+					</li>
+					<li>Note - <u>without WebGL</u> these features are not available:
+						<ul>
+							<li><a href="xml.html#image.type">Spherical, Cylindrical and Fisheye Panos</a> (only Cubical and Flat Panos)</li>
+							<li><a href="plugins/videoplayer.html#top">Video-Panos</a></li>
+							<li><a href="xml.html#view.distortion">Viewing Projections</a> (Little-Planet-View)</li>
+							<li><a href="xml.html#depthmap">Depthmap / 3D-Model Panos</a></li>
+							<li><a href="actions.html#loadpano.blend">Pano-blending modes</a></li>
+							<li><a href="xml.html#display.mipmapping">Mipmapping</a></li>
+							<li><a href="plugins/postprocessing.html#top">Postprocessing</a></li>
+							<li><a href="xml.html#hotspot.chromakey">Chromakey</a> and <a href="xml.html#hotspot.alphachannel">alphachannel</a> hotspots</li>
+							<li><a href="xml.html#hotspot.blendmode">Hotspot blendmodes</a></li>
+							<li><a href="xml.html#hotspot.colormatrix">WebGL Hotspot colormatrix filters</a></li>
+							<li><a href="plugins/webvr.html#top">VR</a> and <a href="xml.html#display.stereo">Stereo</a> support</li>
+						</ul>
+					</li>
+					<li>Note - <u>without WebGL 2.0</u> these features are not available:
+						<ul>
+							<li><a href="xml.html#splats">Gaussian Splatting</a></li>
+						</ul>
+					</li>
+					<li>Note - depending on the Browser and device the number of WebGL elements on a single webpage is limited 
+						(e.g. to only 8 WebGL elements).
+						When requesting more WebGL elements, then the least recently used one will get released.<br>
+						This needs to be considered when putting multiple panos on one single webpage.
+						For simple panos/tours disabling WebGL for this usage case can be an option.
+					</li>
+				</ul>
+			</div>
+			
+			<br/><a name="webglsettings"></a>
+			<pre><a class="selflink" href="#webglsettings">webglsettings</a>:{webgl2:true, depth:true, stencil:true, ...}</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Pass an object with special settings for the WebGL context creation.</li>
+					<li>The WebGL context will be created at startup and can't be changed at runtime, therefore these settings
+						need to be specified already during embedding.
+					</li>
+					<li>Available settings:
+						<ul>
+							<li><a href="https://en.wikipedia.org/wiki/WebGL" target="_blank">webgl2</a>
+								<ul>
+									<li>Use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext" target="_blank">WebGL 2.0 API</a>
+										when available (true by default).
+									</li>
+									<li>If WebGL 2.0 will be available can be checked using the
+										<a href="actions.html#device.webgl2">device.webgl2</a> variable and the <a href="xml.html#devices">devices</a> xml filter.
+									</li>
+									<li>WebGL2 advantages in krpano:
+										<ul>
+											<li>Support for <a href="xml.html#splats">3D-Gaussian-Splatting</a>.</li>
+											<li>Non-power-of-two textures also can use mipmapping.</li>
+											<li>Non-power-of-two textures can use repeatable texture-coordinates (needed for some .obj 3D-Models) without shader-workarounds.</li>
+											<li>Better <a href="plugins/threejs.html">ThreeJS</a> support.</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.2.1">depth</a> - Create a depth buffer. 
+								Required for depthmap support and 3D-object rendering.
+								Set to true by default, but could be disabled when not needed.
+							</li>
+							<li><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.2.1">stencil</a> - Create a stencil buffer. Required for a correct line rendering of polygonal-hotspots when using an alpha-transparent line-border color. 
+								Set to true by default, but could be disabled when not needed.
+							</li>
+							<li><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.2.1">preserveDrawingBuffer</a> - 
+								Keep the drawing buffer content. 
+								Would need to be enabled for when trying to make screenshots of the WebGL canvas via toDataURL or readPixels in some Browsers.
+								Set to false by default for better performance.
+							</li>
+							<li><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.2.1">failIfMajorPerformanceCaveat</a> - Don't use WebGL when the rendering performance would be dramatically lower than the OpenGL rendering performance of a native application. Set to false by default.</li>
+							<li><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.2.1">antialias</a> - 
+								Set if anti-aliasing should be used - true or false.<br>
+								When not set, krpano decided itself for optimal performance because some device/Browser/gpu combinations are performing very bad (e.g. half framerate)
+								with enabled anti-aliasing.
+								<i class="redtext"> This setting should be used only for internal testing or very special cases.</i>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<br/><a name="webxr"></a>
+			<pre><a class="selflink" href="#webxr">webxr</a>:"auto"</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Control the <a href="plugins/webvr.html">WebXR API</a> support.</li>
+					<li>For using the WebXR API it is neccesady to do several initial setup-steps already on startup,
+						therefore the usage of the WebXR API need to be defined already when embedding the viewer.
+					</li>
+					<li>Available settings:
+						<ul>
+							<li><span class="pre">auto</span> (the default)
+								<ul>
+									<li>Use the WebXR API only on desktop Browsers and dedicated VR systems/Browsers.
+										On Android mobile systems the alternative krpano MobileVR support has a currently a better and wider device support.
+									</li>
+									<li>When the WebVR API and the WebXR API are both available the same time, then prefer the WebVR API.
+										In such cases the WebVR API is typically the better choice.
+									</li>
+								</ul>
+							</li>
+							<li><span class="pre">preferwebvr</span>
+								<ul>
+									<li>Prefer the <u>WebVR API</u> when WebVR and WebXR are both available.</li>
+								</ul>
+							</li>
+							<li><span class="pre">prefer</span> or <span class="pre">true</span>
+								<ul>
+									<li>Prefer the <u>WebXR API</u> when WebVR and WebXR are both available.</li>
+								</ul>
+							</li>
+							<li><span class="pre">no</span> or <span class="pre">false</span>
+								<ul>
+									<li>Don't use the WebXR API at all, always use the WebVR API or the krpano MobileVR support for VR display.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<br/><a name="mobilescale"></a>
+			<pre><a class="selflink" href="#mobilescale">mobilescale</a>:1.0</pre>
+			<div class="preinfo">
+				<ul>
+					<li>A setting for optionally using a different global scale for mobile devices.</li>
+					<li>See also the xml <a href="actions.html#stagescale">stagescale</a> setting.</li>
+				</ul>
+			</div>
+			
+			<br/><a name="safearea"></a>
+			<pre><a class="selflink" href="#safearea">safearea</a>:"auto"</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Enable or disable the general <a href="xml.html#display.safearea">Safe-Area</a> support (for iOS devices with a notch).</li>
+					<li>Available settings:
+						<ul>
+							<li><span class="pre">auto</span> (the default) - Automatically enable the Safe-Area support when the viewer gets embedded into a 'full-page' html-element.
+							</li>
+							<li><span class="pre">true</span> - Always enable the Safe-Area support.
+								Could be used when the embedding-target-html-element is not full-page-sized during embedding.
+							</li>
+							<li><span class="pre">false</span> - Disable enable the Safe-Area support.
+							</li>
+						</ul>
+					</li>
+					<li>Note - in the html file there need to be also this &lt;meta&gt; setting in the html &lt;head&gt; element to be able to use the Safe-Area:
+						<pre style="white-space: pre-wrap; ">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"&gt;</pre>
+					</li>
+					<li>More information: <a href="https://krpano.com/forum/wbb/index.php?thread/15736-krpano-1-19-pr14/&l=2&postID=73517#news119iphonex">krpano Forum Post</a>
+				</ul>
+			</div>
+			
+			<br/><a name="touchdevicemousesupport"></a>
+			<pre><a class="selflink" href="#touchdevicemousesupport">touchdevicemousesupport</a>:true</pre>
+			<div class="preinfo">
+				<ul>
+					<li>A setting for optionally disabling the mouse support on touch devices.</li>
+				</ul>
+			</div>
+			
+			
+			<br/><a name="iosfullscreen"></a>
+			<pre><a class="selflink" href="#iosfullscreen">iosfullscreen</a>:false</pre>
+			<div class="preinfo">
+				<ul>
+					<li>Enable / Disable (=default) the iOS HTML5 Fullscreen API support.</li>
+					<li>On iOS the HTML5 Fullscreen Mode is unfortunately not very usable. 
+						Every swipe downwards ends the fullscreen mode and this disrupts the typical panorama control.
+						Additionally there will be always an non-adjustable exit-button in the left top corner.
+					</li>
+					<li>Because of these restrictions, the HTML5 fullscreen mode support is currently disabled for iOS by default.
+						As an alternative, the special <a href="https://www.youtube.com/watch?v=uPtbSTrZYDU" target="_blank">iPhone Landscape Fullscreen Mode</a> will be used.
+					</li>
+				</ul>
+			</div>
+			
+			
+			
+			<br/><a name="passQueryParameters"></a>
+			<pre><a class="selflink" href="#passQueryParameters">passQueryParameters</a>:false</pre>
+			<div class="preinfo">
+				<ul>
+					<li>With this setting it will be possible to pass/redirect <a href="#queryparameters">http-query parameters</a> from the url to the krpano viewer as variables.</li>
+					<li>Possible values:
+						<ul>
+							<li><span class="pre">false</span> (the default)
+								<ul>
+									<li>Don't pass any parameters.</li>
+								</ul>
+							</li>
+							<li><span class="pre">"param1,param2,param3,..."</span>
+								<ul>
+									<li>Define a custom list of comma-separated parameters that are allowed to be passed.
+									</li>
+									
+								</ul>
+							</li>
+						</ul>
+					</li>
+					
+					<li>Limitations:
+						<ul>
+							<li>For security reasons not all parameters and values can be used!
+								Parameters that could contain code or load something are filtered.
+							</li>
+							<li>
+								If setting the startup <a href="#xml" style="color:inherit;">xml</a> parameter will be allowed,
+								then the given xml file paths are restricted to be within the current folder.
+							</li>
+							<li>The length of a parameter value is limited to 30 characters.</li>
+							<li>The number of parameters is limited to 20.</li>
+						</ul>
+					</li>
+					
+					<li>Usage example:
+						<pre>
+embedpano({..., passQueryParameters="<span style="color:red;">startscene</span>,<span style="color:red;">design</span>"});
+...
+tour.html?<span style="color:red;">startscene</span>=scene2&amp;<span style="color:red;">initvars.design</span>=flat</pre>
+					</li>
+					
+					<li style="padding-top:10px;font-style:italic;color:#CC00CC;"><u>Security Warning</u>:<br>
+						Versions before 1.20.12 / 1.22.4 allowed also the usage of 'true' to allow <u>all</u> kind of parameters!
+						This can open potentials for <a href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" style="color:inherit;">Cross-site-scripting</a>
+						security vulnerabilities and should be strongly avoided!
+						Updating to the latest krpano version or changing the settings to 
+						<span class="pre">passQueryParameters:false</span> is highly recommended!
+					</li>
+				</ul>
+			</div>
+			
+			<br/><a name="onready"></a>
+			<pre><a class="selflink" href="#onready">onready</a>:...Javascript-Callback-Function...</pre>
+			<div class="preinfo">
+				<ul>
+					<li>The <b>onready</b> function will be called when the krpano viewer is ready for usage.</li>
+					<li>The given function will be called with the <a href="js_api.html#krpanointerface">krpano&nbsp;Interface&nbsp;Object</a> as argument.</li>
+					<li><i>Notes - if a <a href="#xml">startup xml</a> file is set, the onready event will be called when all startup xml files are loaded</i>.</li>
+					<li>Example:
+						<pre>embedpano({target:"...", onready:function(<span class="redtext">krpano</span>)
+{
+  console.log("krpano is ready - version="+<span class="redtext">krpano</span>.<a href="xml.html#krpano.version" class="selflink">version</a>);
+  <span class="redtext">krpano</span>.actions.<a href="actions.html#loadpano" class="selflink">loadpano</a>("pano.xml",null,null,null,function()
+  {
+    var hs = <span class="redtext">krpano</span>.<a href="actions.html#addhotspot" class="selflink">addhotspot</a>();
+    hs.type = "text";
+    hs.text = "Test Hotspot";
+    hs.ath = 20;
+    hs.atv = 10;
+    hs.onclick = function()
+    {
+      alert("Test");
+    }
+  });
+}});</pre>
+					</li>
+				</ul>
+			</div>
+			
+			
+			
+			
+			
+		</div>
+	</div>
+	
+	
+	<div class="paragraph">
+		<h2><a class="selflink" name="queryparameters" href="#queryparameters">URL Query Parameters</a></h2>
+		
+		An URL can have a <a href="https://en.wikipedia.org/wiki/Query_string" target="_blank">Query String</a>
+		to set certain assigns parameters to specific values, e.g.:
+		
+		<pre>tour.html<span class="redtext">?</span>bgcolor=transparent<span class="redtext">&</span>antialias=false</pre>
+		<ul>
+			<li>By setting the embedpano() setting <a href="#passQueryParameters">passQueryParameters</a> 
+				to a list of allowed variables, the values for these variables can be set directly from the URL.
+			</li>
+		</ul>
+		Additionally to custom variables, there are these settings, which can be always set by URL:
+		<ul>
+			<li><a href="#bgcolor" class="pre selflink2">bgcolor</a> - change the default background-color or set it to transparent.</li>
+			<li><a href="#webgl" class="pre selflink2">webgl</a> - enable or disable the WebGL support.</li>
+			<li><a href="#webglsettings" class="pre selflink2">webgl2</a> - enable or disable the WebGL 2.0 support.</li>
+			<li><a href="#webglsettings" class="pre selflink2">antialias</a> - enable or disable the WebGL Antialiasing support.</li>
+		</ul>
+	</div>
+	
+	
+	<div class="paragraph">
+		<h2><a href="#removing" name="removing" class="selflink">Viewer Removing</a></h2>
+		
+		There are two ways for correctly removing a krpano viewer from the page and unloading / freeing all its allocated resources:<br>
+
+		<br/><a name="removepano"></a>
+		<pre><a class="selflink" href="#removepano">removepano</a>(id)</pre>
+		<div class="preinfo">
+			<ul>
+				<li>
+					The removepano() function can to be called either with:
+					<ul>
+						<li>the id of the html <a href="#target">target</a> element,</li>
+						<li>or directly the html <a href="#target">target</a> element itself,</li>
+						<li>or with the viewer <a href="#id">id</a> that was defined during embedding.</li>
+					</ul>
+				</li>
+				<li>Example:
+					<pre>embedpano({target:"<span class="redtext">panoDIV</span>"});
+...
+removepano("<span class="redtext">panoDIV</span>");
+</pre>
+or:
+					<pre>embedpano({target:"panoDIV", id:"<span class="redtext">viewer1</span>"});
+...
+removepano("<span class="redtext">viewer1</span>");
+</pre>
+				</li>
+			</ul>
+		</div>
+		
+		<br/><a name="unload"></a>
+		<pre><a class="selflink" href="#unload">krpano.unload</a>()</pre>
+		<div class="preinfo">
+			<ul>
+				<li>When having a <a href="js_api.html#krpanointerface">krpano&nbsp;Interface&nbsp;Object</a> (e.g. from <a href="#onready">onready</a> callback)
+					it is also possible to call its <a href="js_api.html#unload">unload()</a> function to remove the krpano viewer.
+				</li>
+				<li>Example:
+					<pre>embedpano({..., onready:function(<span class="redtext">krpano</span>)
+{
+  ...
+  <span class="redtext">krpano</span>.unload();
+}});</pre>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+	
+	<div style="height:15vh;">
+	</div>
+	
+
+
+
+
+				</div>
+			</div>
+		</div>
+		<div id="krpano_footerwrapper">
+			<div id="krpano_footer">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="right">Copyright &copy; 2025 krpano.com</td></tr></tbody></table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

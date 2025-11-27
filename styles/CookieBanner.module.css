@@ -1,0 +1,16 @@
+.acceptBtn {
+    background-color: var(--main-accent); /* Tailwind's green-600 */
+    color: var(--base-accent);
+    transition: background-color 0.3s;
+}
+.acceptBtn:hover {
+    background-color: var(--hover-accent); /* Tailwind's green-700 */
+}
+.dismissBtn {
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dismissBtn:hover {
+    background-color: var(--main-accent); /* Tailwind's gray-100 */
+    color: var(--base-accent); /* Tailwind's green-600 */
+}

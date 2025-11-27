@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --base-accent: #ffffff;
+  --background: var(--base-accent);
+  --foreground: #171717;
+  --gray-color: #6b7280; /* approx Tailwind gray-600 */
+  --main-accent: #db8924;
+  --hover-accent: #b76b1f;
+  --overlay-color: #00000080;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.button{
+    background:var(--main-accent);
+    color: var(--base-accent);
+    padding: 10px;
+    border:none;
+    cursor:pointer;
+    transition:background ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.button:hover{
+    background: var(--hover-accent);
+}

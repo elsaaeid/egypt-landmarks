@@ -1,0 +1,1024 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../design.css"/>
+	<title>krpano Documentation</title>
+	<script>
+		function toggle_mobile_nav(){var t=document,n=t.getElementById("krpano_contentnav"),m=t.getElementById("krpano_mobile_menu_bg");t=n.state!=2;n.state=t?2:1;n.style.height=t?"auto":"24px";m.style.display=t?"block":"none";t=t?"add":"remove";n.classList[t]("krpano_contentnav_opened");t+="EventListener";n[t]("click",toggle_mobile_nav,false);m[t]("mousedown",toggle_mobile_nav,false);}
+	</script>
+</head>
+<body>
+	<div id="krpano_root">
+		<div id="krpano_headerwrapper">
+			<div id="krpano_header">
+				<div id="krpano_mainmenu">
+					krpano 1.23.2 <span class="smallcomment">(build 2025-09-22)</span>
+				</div>
+			</div>
+			<div id="krpano_imagebar"></div>
+			
+			<div id="krpano_logo_container">
+				<a id="krpano_logo" href="https://krpano.com"><span>krpano.com</span></a>
+			</div>
+			
+			<div id="krpano_imagebar_links">
+				Documentation
+			</div>
+		</div>
+		
+		<div id="krpano_contentwrapper">
+			<div id="krpano_mobile_menuicon" onclick="toggle_mobile_nav();"><span class="burgermenu"></span></div>
+			<div id="krpano_mobile_menu_bg"></div>
+			<div id="krpano_content">
+				<div id="krpano_contentnav">
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('doc_section');">Documentation</h2>
+					<ul class="sidemenu_section hidden" id="doc_section">
+						<li><a href="../embedpano.html#top">Embedding</a></li>
+						<li><a href="../xml.html#top">XML Reference</a>
+							<ul>
+								<li class="lisd"><a href="../textfield.html#top">Textfield</a></li>
+								<li class="lisd"><a href="scrollarea.html#top">ScrollArea</a></li>
+							</ul>
+						</li>
+						<li><a href="../actions.html#top">Actions / Scripting</a></li>
+						<li><a href="../js_api.html#top">Javascript Interface</a></li>
+						<li><a href="../localusage.html#top">Local / Offline Usage</a></li>
+						<li><a href="../coordinates.html#top">Coordinate Systems</a></li>
+						<li><a href="../../license.html#top">License Agreement</a></li>
+						<li><a href="../releasenotes.html#top">Release Notes</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('plugins_section');">Plugins</h2>
+					<ul class="sidemenu_section " id="plugins_section">
+						<li><a href="bingmaps.html#top">Bing Maps</a></li>
+						<li><a href="googlemaps.html#top">Google Maps</a></li>
+						<li><a href="gyro2.html#top">Gyro2</a></li>
+						<li><a href="krpanomaps.html#top">krpano Maps</a></li>
+						<li><a href="postprocessing.html#top">Postprocessing</a></li>
+						<li><a href="radar.html#top">Radar</a></li>
+						<li><a href="snow.html#top">Snow / Rain</a></li>
+						<li><a href="soundinterface.html#top">Soundinterface</a></li>
+						<li><a href="threejs.html#top">ThreeJS</a></li>
+						<li><a href="videoplayer.html#top">Videoplayer</a></li>
+						<li><a href="webvr.html#top">WebVR</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('xmlext_section');">XML Extensions</h2>
+					<ul class="sidemenu_section hidden" id="xmlext_section">
+						<li><a href="xml_extensions.html#controls3d">controls3d.xml</a></li>
+						<li><a href="xml_extensions.html#cursor3d">cursor3d.xml</a></li>
+						<li><a href="combobox.html#top">combobox.xml</a></li>
+						<li><a href="xml_extensions.html#contextmenu">contextmenu.xml</a></li>
+						<li><a href="xml_extensions.html#copy_to_clipboard">copy_to_clipboard.xml</a></li>
+						<li><a href="xml_extensions.html#drag3d">drag3d.xml</a></li>
+						<li><a href="xml_extensions.html#measure3d">measure3d.xml</a></li>
+						<li><a href="xml_extensions.html#fps">fps.xml</a></li>
+						<li><a href="xml_extensions.html#ios_iframe_fullscreen">ios_iframe_fullscreen.xml</a></li>
+						<li><a href="xml_extensions.html#iphone_fullscreen_swipe">iphone_fullscreen_swipe.xml</a></li>
+						<li><a href="xml_extensions.html#minimap_zoomrect">minimap_zoomrect.xml</a></li>
+						<li><a href="showtext.html#top">showtext.xml</a></li>
+						<li><a href="xml_extensions.html#stateurls">stateurls.xml</a></li>
+						<li><a href="xml_extensions.html#vr_and_anaglyph_buttons">vr_and_anaglyph_buttons.xml</a></li>
+						<li><a href="xml_extensions.html#wakelock">wakelock.xml</a></li>
+						<li><a href="xml_extensions.html#webvr">webvr.xml</a></li>
+						<li><a href="xml_extensions.html#webvr_autozoom">webvr_autozoom.xml</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('tools_section');">Tools</h2>
+					<ul class="sidemenu_section hidden" id="tools_section">
+						<li><a href="../tools/krpanotools.html#makepano">Makepano</a><br>
+							<ul><li><a href="../tools/config.html#top">Config File Reference</a></li></ul>
+						</li>
+						<li><a href="../tools/krpanotools.html#maketiles">Maketiles</a></li>
+						<li><a href="../tools/krpanotools.html#makepreview">Makepreview</a></li>
+						<li><a href="../tools/krpanotools.html#spheretocube">SphereToCube</a></li>
+						<li><a href="../tools/krpanotools.html#cubetosphere">CubeToSphere</a></li>
+						<li><a href="../tools/krpanotools.html#protect">Protect Tool</a></li>
+						<li><a href="../tools/krpanotools.html#encrypt">Encrypt Tool</a></li>
+						<li><a href="../tools/krpanotools.html#register">Registration Tool</a></li>
+						<li><a href="../tools/testingserver.html#top">krpano Testing Server</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('examples_section');">Examples</h2>
+					<ul class="sidemenu_section hidden" id="examples_section">
+						<li><a href="../examples.html#top">Show All</a></li>
+						<li><a href="../examples.html?vtour#top">Virtual Tours</a></li>
+						<li><a href="../examples.html?3d#top">3D Examples</a></li>
+						<li><a href="../examples.html?splats#top">Gaussian Splatting</a></li>
+						<li><a href="../examples.html?depthmap#top">Depthmap</a></li>
+						<li><a href="../examples.html?threejs#top">ThreeJS</a></li>
+						<li><a href="../examples.html?multires#top">Multiresolution</a></li>
+						<li><a href="../examples.html?layers#top">Layers</a></li>
+						<li><a href="../examples.html?plugins#top">Plugins</a></li>
+						<li><a href="../examples.html?hotspots#top">Hotspots</a></li>
+						<li><a href="../examples.html?maps#top">Maps</a></li>
+						<li><a href="../examples.html?video#top">Video</a></li>
+						<li><a href="../examples.html?webvr#top">WebVR</a></li>
+						<li><a href="../examples.html?js#top">Javascript</a></li>
+					</ul>
+				</div>
+				<a name="top" class="toplink">&nbsp;</a>
+				<div id="krpano_contenttext">
+
+					<noscript>
+						<table style="width:100%; height:400px; position:fixed; left:95px; top:220px;"><tr valign="middle"><td><center><h1>
+							<span style="color:#FFFFFF; background:#FF0000; padding:15px;">
+								Javascript must be activated for this page!
+							</span>
+						</h1></center></td></tr></table>
+					</noscript>
+					
+					<script>
+						function toggle_section(id)
+						{
+							var element = document.getElementById(id);
+							if (element)
+							{
+								element.classList.toggle("hidden")
+							}
+						}
+					</script>
+
+					
+
+	<h1>krpano Maps Plugin
+		<span class="pluginfilename">krpanomaps.xml</span>
+		
+	</h1>
+	
+	<div class="paragraph">
+		<ul>
+			<li>A krpano-based Maps Plugin using <a href="https://www.openstreetmap.org/" target="_blank">Open Street Map</a> images (and others).</li>
+			<li>Compatible to the <a href="googlemaps.html">Google Maps</a> and <a href="bingmaps.html">Bing Maps</a> Plugins and can be used a direct replacement.</li>
+			<li>As krpano-based, <a href="../viewer/plugins/krpanomaps.xml">open-source</a> xml-only plugin, it allows way more customizing and is more flexible,
+				e.g. use any kind of krpano hotspots or krpano layers on the map.
+			</li>
+		</ul>
+		
+		<br>
+		Plugin documentation topics:
+		<ul>
+			<li><a href="#syntax">Usage Syntax</a></li>
+			<li><a href="#settings">Plugin Settings</a></li>
+			<li><a href="#actions">Plugin Actions</a> (<a href="#oldactions">Compatibility Actions</a>)</li>
+			<li>Plugin Subnodes (for compatibility)
+				<ul>
+					<li><a href="#radar">Radar</a></li>
+					<li><a href="#spotstyle">Spotstyle</a></li>
+					<li><a href="#spot">Spot</a></li>
+				</ul>
+			</li>
+			<li><a href="#examples">Examples</a></li>
+		</ul>
+	</div>
+	
+	
+	
+	<div class="paragraph">
+		<h2><a name="syntax" href="#syntax" class="selflink">Usage Syntax</a></h2>
+
+		Including and setup:
+		<pre class="xmlpre">&lt;<a href="../xml.html#include">include</a> <a href="../xml.html#url">url</a>="<a href="../xml.html#url" class="selflink2">%VIEWER%</a>/plugins/<span class="redtext">krpanomaps.xml</span>" /&gt;
+			
+&lt;<a href="../xml.html#layer">layer</a> <a href="../xml.html#layer.name">name</a>="map" <a href="../xml.html#layer.style">style</a>="<span class="redtext">krpanomaps</span>"
+       ...
+       <span class="xmlattrnote">☞ map settings ...</span>
+       <a href="#lat" class="pluginattrib">lat</a>="0.0"
+       <a href="#lng" class="pluginattrib">lng</a>="0.0"
+       <a href="#zoom" class="pluginattrib">zoom</a>="0.0"
+       <span class="xmlattrnote">☞ customization settings ...</span>
+       <a href="#tileprovider" class="pluginattrib">tileprovider</a>="openstreetmaps"
+       <a href="#zoombase" class="pluginattrib">zoombase</a>="screen"
+       <a href="#controls" class="pluginattrib">controls</a>="zoom|zoomarea|geolocation|location|maptype"
+       <a href="#gesturerotation" class="pluginattrib">gesturerotation</a>="false"
+       <a href="#activespotenabled" class="pluginattrib">activespotenabled</a>="false"
+       <span class="xmlattrnote">☞ events</span>
+       <a href="#onmapmoved" class="pluginattrib">onmapmoved</a>=""
+       <a href="#onmapzoomed" class="pluginattrib">onmapzoomed</a>=""
+       <a href="#onmapready" class="pluginattrib">onmapready</a>=""
+&gt;
+    <span class="xmlattrnote">☞ additional elements</span>
+    &lt;<a href="#radar" class="pluginattrib">radar</a> ... /&gt;
+    &lt;<a href="#spotstyle" class="pluginattrib">spotstyle</a> ... /&gt;
+    &lt;<a href="#spot" class="pluginattrib">spot</a> ... /&gt;
+&lt;/<a href="../xml.html#layer">layer</a>&gt;</pre>
+	</div>
+	
+	<div class="paragraph">
+		<h2 style="padding-bottom:0;"><a name="settings" href="#settings" class="selflink">Plugin Settings</a></h2>
+		
+		<table class="xmlattrdoc" style="padding-left:1px;padding-top:0;margin-top:0;">
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="lat"></a><a name="lng"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#lat" class="selflink">lat</a><br>
+					<a href="#lng" class="selflink">lng</a><br>
+				</th>
+				<th>Number<br>Number</th>
+				<th>0.0<br>0.0</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Latitude and Longitude in degrees.</li>
+						<li>The geographic coordinates of the current map center position.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="zoom"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#zoom" class="selflink">zoom</a></th>
+				<th>Number</th>
+				<th>0.0</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Set the zoom level of the map.</li>
+						<li>From 0.0 to 20.0, continuously.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="tileprovider"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#tileprovider" class="selflink">tileprovider</a></th>
+				<th>String</th>
+				<th>"openstreetmaps"</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Select the tile-provider for the maps images.</li>
+						<li>A tile-provider can be defined in the xml by a <span class="pre">&lt;krpanomaps_tileprovider&gt;</span> element.
+							See the <a href="../viewer/plugins/krpanomaps.xml">krpanomaps.xml</a> for details.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="zoombase"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#zoombase" class="selflink">zoombase</a></th>
+				<th>String</th>
+				<th>"screen"</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Should the zoom be relative to the actual screen-pixels or to the layer size.</li>
+						<li>Available options:
+							<ul>
+								<li><span class="pre">screen</span>
+									<ul>
+										<li>The zoom of the map is relative to the actual pixels of the screen and the pixel of the map-images.</li>
+										<li>Changing the layer or viewer size, will not change the zoom-level, but the visible area.</li>
+									</ul>
+								</li>
+								<li><span class="pre">layer</span>
+									<ul>
+										<li>Here the zoom is relative to the size of the map layer element.</li>
+										<li>When changing the layer size, the visible part of the map will be kept the same.</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="controls"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#controls" class="selflink">controls</a></th>
+				<th>String</th>
+				<th>...</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Select which default controls/elements should be visible on the map.</li>
+						<li>The setting can contains several Strings combined by <span class="pre">|</span> characters.</li>
+						<li>Available options:
+							<ul>
+								<li><span class="pre">zoom</span> - zoom-in and zoom-out buttons.</li>
+								<li><span class="pre">zoomarea</span> - a button to zoom-out to see all map-spots.</li>
+								<li><span class="pre">geolocation</span> - a button to zoom and move to the current users geo-location.</li>
+								<li><span class="pre">location</span> - a textfield to see the current lat/lng coordinates.</li>
+								<li><span class="pre">maptype</span> - a selectbox to change the maptype.</li>
+								<li><span class="pre">mapshadow</span> - add a slight shadow on the map border.</li>
+								
+							</ul>
+						</li>
+						<li>The default is: <span class="pre">zoom|zoomarea|geolocation|location|maptype</span></li>
+					</ul>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="gesturerotation"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#gesturerotation" class="selflink">gesturerotation</a></th>
+				<th>Boolean</th>
+				<th>false</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Allow rotating the map using multi-touch gestures.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="activespotenabled"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#activespotenabled" class="selflink">activespotenabled</a></th>
+				<th>Boolean</th>
+				<th>false</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Should the current active spot be enabeld?</li>
+						<li>That means - should the active spot react to click or over events.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="onmapmoved"></a><a name="onmapzoomed"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#onmapmoved" class="selflink">onmapmoved</a><br>
+					<a href="#onmapzoomed" class="selflink">onmapzoomed</a><br>
+				</th>
+				<th>Event<br>Event</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Events that will be called when the map was moved or zoomed.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="onmapready"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#onmapready" class="selflink">onmapready</a></th>
+				<th>Event</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>This event will be called when the krpano Maps Plugin is ready for usage.</li>
+					</ul>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+	
+	<div class="paragraph">
+		<h2 style="padding-bottom:0;"><a name="actions" href="#actions" class="selflink">Plugin Actions</a> <span class="smallcomment">(krpanomaps only)</span></h2>
+		
+		<br>
+		
+		<ul>
+			<li><a href="#addlayer">addlayer(name)</a></li>
+			<li><a href="#addhotspot">addhotspot(name, ismapspot)</a></li>
+			<li><a href="#getbounds">getbounds(pnts, areascale)</a></li>
+			<li><a href="#fitbounds">fitbounds(pnts, areascale, instant)</a></li>
+			<li><a href="#panto">panto(lat, lng, zoom, mode, time, tweentype, donecallback)</a></li>
+			<li><a href="#distance">distance(lat1, lng1, lat2, lng2, unit)</a></li>
+			<li><a href="#maptolayer">maptolayer(lat, lng)</a></li>
+			<li><a href="#layertomap">layertomap(x, y)</a></li>
+		</ul>
+		
+		<br>
+		
+		<a name="addlayer" class="docu_anchor"></a>
+		<pre>l = layer[map].<a href="#addlayer" class="selflink">addlayer(<span class="optargs">name</span>)</a></pre>
+		<div class="preinfo">
+			<ul>
+				<li>Add a krpano <a href="../actions.html#addlayer" class="selflink">&lt;layer&gt;</a> element with the given name.</li>
+				<li>The name is optional, when not set or set to "auto" an automatic one will be chosen.</li>
+			</ul>
+		</div>
+		
+		<br>
+		
+		<a name="addhotspot" class="docu_anchor"></a>
+		<pre>hs = layer[map].<a href="#addhotspot" class="selflink">addhotspot(<span class="optargs">name, ismapspot</span>)</a></pre>
+		<div class="preinfo">
+			<ul>
+				<li>Add a krpano <a href="../actions.html#addhotspot" class="selflink">&lt;hotspot&gt;</a> element with the given name.</li>
+				<li>The name is optional, when not set or set to "auto" an automatic one will be chosen.</li>
+				<li><b>ismapspot</b> <span class="smallcomment">(optionally)</span> - define if that hotspot is a 'map spot' (true by default), 
+					that means if that hotspot should be included in a <a href="#getbounds">getbounds()</a> check.
+				</li>
+				<li>Extra hotspot features:
+					<ul>
+						<li><b>lat, lng</b>  - the hotspot is extended with <span class="pre">lat</span> and <span class="pre">lng</span> properties, 
+							that will automatically get mapped to <a href="../xml.html#hotspot.ath">ath, atv</a> values (and inverse).
+						</li>
+						<li>For defining a <a href="../xml.html#hotspot_polygon.xml">polygonal hotspots</a>,
+							the &lt;point&gt; objects are also extended with <span class="pre">lat, lng</span> properties.
+						</li>
+						<li><b>mappoints</b> - <a href="../xml.html#hotspot_polygon.xml">polygonal hotspots</a>
+							can also have a <span class="pre">mappoints="lat,lng,lat,lng,..."</span> setting for defining 
+							a list of map points.
+						</li>
+						<li><b>dragable, ondrag</b> - the hotspot has a <span class="pre">dragable</span> setting that can be set to true
+							to make the hotspot automatically dragable.
+							When getting dragged, an <span class="pre">ondrag</span> event is triggered.
+						</li>
+						<li><b>zoomlevelbase</b> - for hotspots with <a href="../xml.html#hotspot.zoom">zoom=true</a> this 
+							defines the scale-reference <a href="#zoom">zoom-level</a>.
+						</li>
+						<li><b>zoomlevelmin, zoomlevelmax</b> - define zoom levels, 
+							where the zoom scaling starts or ends.
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<br>
+		
+		<a name="getbounds" class="docu_anchor"></a>
+		<pre>bounds = layer[map].<a href="#getbounds" class="selflink">getbounds(<span class="optargs">pnts, areascale</span>)</a></pre>
+		<div class="preinfo">
+			<ul>
+				<li>Get the boundaries of several lat, lng coordinates.</li>
+				<li>Parameters:
+					<ul>
+						<li><b>pnts</b> <span class="smallcomment">(optionally)</span> - 
+							either null to use all 'map spots' (hotspots created with <a href="#addhotspot">ismapspot=true</a>),
+							an Array of Objects with {lat,lng} properties.
+						</li>
+						<li><b>areascale</b> <span class="smallcomment">(optionally)</span> - scale the boundary by this factor, 1.5 by default.
+						</li>
+					</ul>
+				</li>
+				<li>Returns an Object with the following properties:
+					<ul>
+						<li><b>count</b> - the number of map spots.</li>
+						<li><b>minlat</b>, <b>maxlat</b>, <b>minlng</b>, <b>maxlng</b> - the lat/lng boundaries to cover all map spots.</li>
+						<li><b>centerlat</b>, <b>centerlng</b> - the lat/lng center of the boundary.</li>
+						<li><b>zoom</b> - the map <a href="#zoom">zoom</a> level required to see all map spots at once.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<br>
+		
+		<a name="fitbounds" class="docu_anchor"></a>
+		<pre>layer[map].<a href="#fitbounds" class="selflink">fitbounds(<span class="optargs">pnts, areascale, time, donecallback</span>)</a></pre>
+		<div class="preinfo">
+			<ul>
+				<li>Pan and zoom the map to fit the boundary of several lat, lng coordinates.</li>
+				<li>Parameters:
+					<ul>
+						<li><b>pnts</b> <span class="smallcomment">(optionally)</span> - 
+							either null to use all 'map spots' (hotspots created with <a href="#addhotspot">ismapspot=true</a>),
+							an Array of Objects with {lat,lng} properties.
+						</li>
+						<li><b>areascale</b> <span class="smallcomment">(optionally)</span> - Scale the boundary by this factor, 1.5 by default.
+						</li>
+						<li><b>time</b> <span class="smallcomment">(optionally)</span> - 
+							The time for the <a href="#panoto">panto()</a> animation (0.5 by default).
+							When set to 0, the map's position and zoom level will be instantly changed.
+						</li>
+						<li><b>donecallback</b> <span class="smallcomment">(optionally)</span> - the callback when the change (and optionally also the panto() motion) is done.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<br>
+		
+		<a name="panto" class="docu_anchor"></a>
+		<pre>layer[map].<a href="#panto" class="selflink">panto(lat, lng<span class="optargs">, zoom, mode, time, tweentype, donecallback</span>)</a></pre>
+		<div class="preinfo">
+			<ul>
+				<li>Pan to the given coordinates and zoom level.</li>
+				<li>Parameters:
+					<ul>
+						<li><b>lat</b>, <b>lng</b></span> - the target coordinates.</li>
+						<li><b>zoom</b> <span class="smallcomment">(optionally)</span> - the target zoom level.</li>
+						<li><b>mode</b> <span class="smallcomment">(optionally)</span>
+							<ul>
+								<li><span class="pre">auto</span> (the default) - do a multi-step animation with zooming-out and zooming-in.
+									In this mode, the total time may be longer depending on the zoom-levels and distances.
+								</li>
+								<li><span class="pre">direct</span> - pan directly to the given target and zoom level.</li>
+							</ul>
+						<li><b>time</b> <span class="smallcomment">(optionally)</span> - the time in seconds for moving to the target (0.5 by default).</li>
+						<li><b>tweentype</b> <span class="smallcomment">(optionally)</span> - the motion curve, see <a href="../actions.html#tweentypes">tweentype</a> ("smoother" by default).</li>
+						<li><b>donecallback</b> <span class="smallcomment">(optionally)</span> - the callback when the motion is done.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<br>
+		
+		<a name="distance" class="docu_anchor"></a>
+		<pre>layer[map].<a href="#distance" class="selflink">distance(lat1, lng1, lat2, lng2<span class="optargs">, unit</span>)</a></pre>
+		<div class="preinfo">
+			<ul>
+				<li>Get the distance between two coordinates.</li>
+				<li>Parameters:
+					<ul>
+						<li><b>lat1</b>, <b>lng1</b>, <b>lat2</b>, <b>lng2</b></span> - the two coordinates.</li>
+						<li><b>unit</b> <span class="smallcomment">(optionally)</span> - the unit of the distance
+							<ul>
+								<li><span class="pre">deg</span> (the default) - the distance in degree.</li>
+								<li><span class="pre">km</span> - the distance in kilometers.</li>
+								<li><span class="pre">miles</span> - the distance in miles.</li>
+							</ul>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<br>
+		
+		<a name="maptolayer" class="docu_anchor"></a>
+		<pre>p = layer[map].<a href="#maptolayer" class="selflink">maptolayer(lat, lng)</a></pre>
+		<div class="preinfo">
+			<ul>
+				<li>Converts map coordinates to layer x/y coordinates.</li>
+				<li>Returns an Object with {x,y} properties.</li>
+			</ul>
+		</div>
+		
+		<br>
+		
+		<a name="fitbounds" class="docu_anchor"></a>
+		<pre>p = layer[map].<a href="#fitbounds" class="selflink">layertomap(x, y)</a></pre>
+		<div class="preinfo">
+			<ul>
+				<li>Converts layer x/y coordinates to map coordinates.</li>
+				<li>Returns an Object with {lat,lng} properties.</li>
+			</ul>
+		</div>
+		
+	</div>
+		
+	<div class="paragraph">
+		<h2 style="padding-bottom:0;"><a name="oldactions" href="#oldactions" class="selflink">Compatibility Plugin Actions</a> <span class="smallcomment">(same for all maps plugins)</span></h2>
+		
+		<ul>
+			<li><a href="#activatespot">activatespot()</a></li>
+			<li><a href="#addspot">addspot()</a></li>
+			<li><a href="#addstylespot">addstylespot()</a></li>
+			<li><a href="#addimagespot">addimagespot()</a></li>
+			<li><a href="#addspotstyle">addspotstyle()</a></li>
+			<li><a href="#panby">panby()</a></li>
+			<li><a href="#panto.old">panto()</a></li>
+			<li><a href="#pantospot">pantospot()</a></li>
+			<li><a href="#removeallspots">removeallspots()</a></li>
+			<li><a href="#removespot">removespot()</a></li>
+			<li><a href="#setcenter">setcenter()</a></li>
+			<li><a href="#setzoom">setzoom()</a></li>
+			<li><a href="#zoomin">zoomin()</a></li>
+			<li><a href="#zoomout">zoomout()</a></li>
+			<li><a href="#zoomtospotsextent">zoomtospotsextent()</a></li>
+		</ul>
+		
+		<br>
+		
+		<ul>
+			<li>
+				<a name="activatespot" href="#activatespot" class="selflink">activatespot(name)</a>
+				<ul>
+					<li class="lisd">Activate the spot wih the given name.</li>
+					<li class="lisd">That means the spot will show the active spotstyle image (when no url was set) and that 
+						the radar will be shown at the spot location.
+				</ul>
+			</li>
+			<li>
+				<a name="addimagespot" href="#addimagespot" class="selflink">addimagespot(name, lat, lng, heading, spotstyle, url<span class="optargs">, onclick, onhover, onover, onout</span>)</a>
+				<ul>
+					<li class="lisd">Add a new spot with a custom image.</li>
+					<li class="lisd"><a href="#spot.name" class="selflink">name</a> = name of the new spot.</li>
+					<li class="lisd"><a href="#spot.lat" class="selflink">lat</a> / <a href="#spot.lng" class="selflink">lng</a> = the geographic coordinates of the spot.</li>
+					<li class="lisd"><a href="#spot.heading" class="selflink">heading</a> = pano heading for the spot.</li>
+					<li class="lisd"><a href="#spot.spotstyle" class="selflink">spotstyle</a> = <a href="#spotstyle">spotstyle</a> for the spot.</li>
+					<li class="lisd"><a href="#spot.url" class="selflink">url</a> = url of the image for the spot.</li>
+					<li class="lisd"><a href="#spot.onclick" class="selflink">onclick</a>, <a href="#spot.onhover" class="selflink">onhover</a>, <a href="#spot.onover" class="selflink">onover</a>, <a href="#spot.onout" class="selflink">onout</a> = mouse events for the spot. <span class="smallcomment">(optionally)</span></li>
+				</ul>
+			</li>
+			<li>
+				<a name="addspot" href="#addspot" class="selflink">addspot(name, lat, lng, heading<span class="optargs">, active, onclick, onhover, onover, onout</span>)</a>
+				<ul>
+					<li class="lisd">Add a new spot <span class="smallcomment">(with the DEFAULT style)</span>.</li>
+					<li class="lisd"><a href="#spot.name" class="selflink">name</a> = name of the new spot.</li>
+					<li class="lisd"><a href="#spot.lat" class="selflink">lat</a> / <a href="#spot.lng" class="selflink">lng</a> = the geographic coordinates of the spot.</li>
+					<li class="lisd"><a href="#spot.heading" class="selflink">heading</a> = pano heading for the spot.</li>
+					<li class="lisd"><a href="#spot.active" class="selflink">active</a> = activate the spot? <span class="smallcomment">(optionally)</span></li>
+					<li class="lisd"><a href="#spot.onclick" class="selflink">onclick</a>, <a href="#spot.onhover" class="selflink">onhover</a>, <a href="#spot.onover" class="selflink">onover</a>, <a href="#spot.onout" class="selflink">onout</a> = mouse events for the spot. <span class="smallcomment">(optionally)</span></li>
+				</ul>
+			</li>
+			<li>
+				<a name="addspotstyle" href="#addspotstyle" class="selflink">addspotstyle(name<span class="optargs">, url, overurl, activeurl, edge, x, y</span>)</a>
+				<ul>
+					<li class="lisd">Add a new <a href="#spotstyle">spotstyle</a>.</li>
+					<li class="lisd"><a href="#spotstyle.name" class="selflink">name</a> = name of the new spotstyle.</li>
+					<li class="lisd"><a href="#spotstyle.url" class="selflink">url</a> = url of the default image. <span class="smallcomment">(optionally)</span></li>
+					<li class="lisd"><a href="#spotstyle.overurl" class="selflink">overurl</a> = url of the over image. <span class="smallcomment">(optionally)</span></li>
+					<li class="lisd"><a href="#spotstyle.activeurl" class="selflink">activeurl</a> = url of the active image. <span class="smallcomment">(optionally)</span></li>
+					<li class="lisd"><a href="#spotstyle.edge" class="selflink">edge</a> = alignment edge / anchor point of the spot images. <span class="smallcomment">(optionally)</span></li>
+					<li class="lisd"><a href="#spotstyle.x" class="selflink">x</a> / <a href="#spotstyle.x" class="selflink">y</a> = pixeloffset from the edge point. <span class="smallcomment">(optionally)</span></li>
+				</ul>
+			</li>
+			<li>
+				<a name="addstylespot" href="#addstylespot" class="selflink">addstylespot(name, lat, lng, heading, spotstyle<span class="optargs">, active, onclick, onhover, onover, onout</span>)</a>
+				<ul>
+					<li class="lisd">Add a new spot with a custom style.</li>
+					<li class="lisd"><a href="#spot.name" class="selflink">name</a> = name of the new spot.</li>
+					<li class="lisd"><a href="#spot.lat" class="selflink">lat</a> / <a href="#spot.lng" class="selflink">lng</a> = the geographic coordinates of the spot.</li>
+					<li class="lisd"><a href="#spot.heading" class="selflink">heading</a> = pano heading for the spot.</li>
+					<li class="lisd"><a href="#spot.spotstyle" class="selflink">spotstyle</a> = <a href="#spotstyle">spotstyle</a> for the spot.</li>
+					<li class="lisd"><a href="#spot.active" class="selflink">active</a> = activate the spot? <span class="smallcomment">(optionally)</span></li>
+					<li class="lisd"><a href="#spot.onclick" class="selflink">onclick</a>, <a href="#spot.onhover" class="selflink">onhover</a>, <a href="#spot.onover" class="selflink">onover</a>, <a href="#spot.onout" class="selflink">onout</a> = mouse events for the spot. <span class="smallcomment">(optionally)</span></li>
+				</ul>
+			</li>
+			<li>
+				<a name="panby" href="#panby" class="selflink">panby(dx, dy)</a>
+				<ul>
+					<li class="lisd">Pan the map.</li>
+					<li class="lisd"><b>dx</b> / <b>dy</b> = distance in pixels to pan.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="panto.old" href="#panto.old" class="selflink">panto(lat, lng)</a>
+				<ul>
+					<li class="lisd">Pan to the given coordinates.</li>
+					<li class="lisd"><b>lat</b> / <b>lng</b> = the map coordinates.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="pantospot" href="#pantospot" class="selflink">pantospot(name<span class="optargs">, zoomlevel</span>)</a>
+				<ul>
+					<li class="lisd">Pan to the coordinates of the given spot.</li>
+					<li class="lisd"><b>name</b> = name of the spot.</li>
+					<li class="lisd"><b>zoomlevel</b> = zoom to the given level <span class="smallcomment">(optionally)</span>.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="removeallspots" href="#removeallspots" class="selflink">removeallspots()</a>
+				<ul>
+					<li class="lisd">Remove all spots from the map.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="removespot" href="#removespot" class="selflink">removespot(name)</a>
+				<ul>
+					<li class="lisd">Remove the given spot.</li>
+					<li class="lisd"><b>name</b> = name of the spot to be removed.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="setcenter" href="#setcenter" class="selflink">setcenter(lat, lng)</a>
+				<ul>
+					<li class="lisd">Set a new center for the map.</li>
+					<li class="lisd"><b>lat</b> / <b>lng</b> = the map center coordinates.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="setzoom" href="#setzoom" class="selflink">setzoom(zoom)</a>
+				<ul>
+					<li class="lisd">Set a new zoom level for the map.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="zoomin" href="#zoomin" class="selflink">zoomin(<span class="optargs">lat, lng, center</span>)</a>
+				<ul>
+					<li class="lisd">Zoom in the map by one zoom level.</li>
+					<li class="lisd">Can be used for own controls.</li>
+					<li class="lisd"><b>lat</b> / <b>lng</b> = zoom toward this coordinates <span class="smallcomment">(optionally)</span>.</li>
+					<li class="lisd"><b>zoom</b> = set to true to center the map at the lat/lng coordinates <span class="smallcomment">(optionally)</span>.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="zoomout" href="#zoomout" class="selflink">zoomout(<span class="optargs">lat, lng</span>)</a>
+				<ul>
+					<li class="lisd">Zoom out the map by one zoom level.</li>
+					<li class="lisd">Can be used for own controls.</li>
+					<li class="lisd"><b>lat</b> / <b>lng</b> = zoom toward this coordinates <span class="smallcomment">(optionally)</span>.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="zoomtospotsextent" href="#zoomtospotsextent" class="selflink">zoomtospotsextent()</a>
+				<ul>
+					<li class="lisd">Zoom and pan the map automatically to show all spots.</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	
+	<div class="paragraph">
+		<h2><a name="radar" href="#radar" class="selflink">Plugin Subnodes - &lt;radar&gt;</a></h2>
+		
+		The &lt;radar&gt; element with all its settings: 
+		<pre class="xmlpre">&lt;<a href="#radar" class="pluginattrib">radar</a> <a href="#radar.visible">visible</a>="false"
+       <a href="#radar.lat">lat</a>="0.0"
+       <a href="#radar.lng">lng</a>="0.0"
+       <a href="#radar.size">size</a>="100"
+       <a href="#radar.dragable">dragable</a>="true"
+       <a href="#radar.zoomwithmap">zoomwithmap</a>="false"
+       <a href="#radar.headingoffset">headingoffset</a>="90"
+       <a href="#radar.alpha">alpha</a>="0.5"
+       <a href="#radar.fillcolor">fillcolor</a>="0xFFFFFF"
+       <a href="#radar.fillalpha">fillalpha</a>="1.0"
+       <a href="#radar.linewidth">linewidth</a>="0.0"
+       <a href="#radar.linecolor">linecolor</a>="0xFFFFFF"
+       <a href="#radar.linealpha">linealpha</a>="0.0"
+       /&gt;</pre>
+		<br>
+		<ul>
+			<li>
+				<a name="radar.visible" href="#radar.visible" class="selflink">radar.visible</a>
+				<ul>
+					<li class="lisd">Show or hide the radar.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="radar.lat" href="#radar.lat" class="selflink">radar.lat</a> / <a name="radar.lng" href="#radar.lng" class="selflink">radar.lng</a>
+				<ul>
+					<li class="lisd">The position of the radar on the map.</li>
+					<li class="lisd">When a spot will be set active, then the radar will automatically move to its position.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="radar.size" href="#radar.size" class="selflink">radar.size</a>
+				<ul>
+					<li class="lisd">The size / range of the radar cone.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="radar.dragable" href="#radar.dragable" class="selflink">radar.dragable</a>
+				<ul>
+					<li class="lisd">Should the radar cone be dragable by the mouse?</li>
+				</ul>
+			</li>
+			<li>
+				<a name="radar.zoomwithmap" href="#radar.zoomwithmap" class="selflink">radar.zoomwithmap</a>
+				<ul>
+					<li class="lisd">Should the radar cone also be zoomed when zooming the map?</li>
+				</ul>
+			</li>
+			<li>
+				<a name="radar.headingoffset" href="#radar.headingoffset" class="selflink">radar.headingoffset</a>
+				<ul>
+					<li class="lisd">An offset for the <a href="#spot.heading">heading</a> value of the spots.</li>
+					<li class="lisd">
+						The default value for headingoffset is 90, which means heading=0 is pointing to right/east by default.
+						Use headingoffset=0 to let heading=0 pointing to top/north.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a name="radar.alpha" href="#radar.alpha" class="selflink">radar.alpha</a>
+				<ul>
+					<li class="lisd">The alpha transparency of the whole radar element.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="radar.fillcolor" href="#radar.fillcolor" class="selflink">radar.fillcolor</a> / 
+				<a name="radar.fillalpha" href="#radar.fillalpha" class="selflink">radar.fillalpha</a>
+				<ul>
+					<li class="lisd">The color and alpha of the filling of the radar cone.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="radar.linewidth" href="#radar.linewidth" class="selflink">radar.linewidth</a> / 
+				<a name="radar.linecolor" href="#radar.linecolor" class="selflink">radar.linecolor</a> / 
+				<a name="radar.linealpha" href="#radar.linealpha" class="selflink">radar.linealpha</a>
+				<ul>
+					<li class="lisd">The linewidth, color and alpha of the line around the radar cone.</li>
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+	
+	
+	<div class="paragraph">
+		<h2><a name="spotstyle" href="#spotstyle" class="selflink">Plugin Subnodes - &lt;spotstyle&gt;</a></h2>
+		
+		<ul>
+			<li>With the &lt;spotstyle&gt; subnode it is possible to define styles for the spots.</li>
+			<li>A spot can be assigned to a spotstyle by the <a href="#spot.spotstyle">spotstyle</a> attribute.</li>
+			<li>There is a predefined style named "DEFAULT".</li>
+		</ul>
+		
+		<br>
+		The &lt;spotstyle&gt; node with all settings and their default values: 
+		<pre class="xmlpre">&lt;<a href="#spotstyle" class="pluginattrib">spotstyle</a> <a href="#spotstyle.name">name</a>="DEFAULT"
+           <a href="#spotstyle.url">url</a>=""
+           <a href="#spotstyle.overurl">overurl</a>=""
+           <a href="#spotstyle.activeurl">activeurl</a>=""
+           <a href="#spotstyle.edge">edge</a>="center"
+           <a href="#spotstyle.x">x</a>="0"
+           <a href="#spotstyle.y">y</a>="0"
+           <a href="#spotstyle.scale">scale</a>="1.0"
+           /&gt;</pre>
+		<br>
+		<ul>
+			<li>
+				<a name="spotstyle.name" href="#spotstyle.name" class="selflink">spotstyle[].name</a>
+				<ul>
+					<li class="lisd">The name of the spotstyle.</li>
+					<li class="lisd">Use this name in the <a href="#spot.spotstyle">spotstyle</a> setting of a <a href="#spot">spot</a>.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spotstyle.url" href="#spotstyle.url" class="selflink">spotstyle[].url</a>
+				<ul>
+					<li class="lisd">The url of the image that should be used for the spot.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spotstyle.overurl" href="#spotstyle.overurl" class="selflink">spotstyle[].overurl</a>
+				<ul>
+					<li class="lisd">The url of the image that should be used for the spot when the mouse is over the spot.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spotstyle.activeurl" href="#spotstyle.activeurl" class="selflink">spotstyle[].activeurl</a>
+				<ul>
+					<li class="lisd">The url of the image that should be used when the spot is activated.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spotstyle.edge" href="#spotstyle.edge" class="selflink">spotstyle[].edge</a>
+				<ul>
+					<li class="lisd">The alignment <a href="../xml.html#layer.edge">edge</a> / anchor point of the spot image.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spotstyle.x" href="#spotstyle.x" class="selflink">spotstyle[].x</a> /
+				<a name="spotstyle.y" href="#spotstyle.y" class="selflink">y</a>
+				<ul>
+					<li class="lisd">The offset in pixels from the edge point to the image.</li>
+				</ul>
+			</li>
+
+			<li>
+				<a name="spotstyle.scale" href="#spotstyle.scale" class="selflink">spotstyle[].scale</a> 
+				<ul>
+					<li class="lisd">Scale the spotstyle images.</li>
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+	
+	<div class="paragraph">
+		<h2><a name="spot" href="#spot" class="selflink">Plugin Subnodes - &lt;spot&gt;</a></h2>
+		
+		<ul>
+			<li>With the &lt;spot&gt; subnode it is possible to define spots on the map.</li>
+			<li>A spot will be placed at lat/lng coordinates and can be linked to panos
+				by using the <a href="../actions.html#loadpano">loadpano / loadscene</a> actions in the onclick event.</li>
+		</ul>
+		
+		<br>
+		The &lt;spot&gt; node with all settings and their default values: 
+		<pre class="xmlpre">&lt;<a href="#spot" class="pluginattrib">spot</a> <a href="#spot.name">name</a>="..."
+      <a href="#spot.spotstyle">spotstyle</a>="DEFAULT"
+      <a href="#spot.url">url</a>="..."
+      <a href="#spot.lat">lat</a>="..."
+      <a href="#spot.lng">lng</a>="..."
+      <a href="#spot.heading">heading</a>="0"
+      <a href="#spot.active">active</a>="false"
+      <a href="#spot.onover">onover</a>=""
+      <a href="#spot.onhover">onhover</a>=""
+      <a href="#spot.onout">onout</a>=""
+      <a href="#spot.onclick">onclick</a>=""
+      /&gt;</pre>
+		<br>
+		<ul>
+			<li>
+				<a name="spot.name" href="#spot.name" class="selflink">spot[].name</a>
+				<ul>
+					<li class="lisd">The name of the current spot <i>(see also the <a href="../xml.html#name-notes">xml name notes</a>)</i>.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spot.spotstyle" href="#spot.spotstyle" class="selflink">spot[].spotstyle</a>
+				<ul>
+					<li class="lisd">The name of the <a href="#spotstyle">spotstyle</a> that should be used for that spot.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spot.url" href="#spot.url" class="selflink">spot[].url</a>
+				<ul>
+					<li class="lisd">The url / path to an image that should be used for the spot.</li>
+					<li class="lisd">When not defined, the image from the <a href="#spotstyle">spotstyle</a> will be used.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spot.lat" href="#spot.lat" class="selflink">spot[].lat</a> / 
+				<a name="spot.lng" href="#spot.lng" class="selflink">lng</a>
+				<ul>
+					<li class="lisd">Latitude and Longitude in degrees.</li>
+					<li class="lisd">The geographic coordinates of the spot.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spot.heading" href="#spot.heading" class="selflink">spot[].heading</a>
+				<ul>
+					<li class="lisd">The heading of the pano in degrees.</li>
+					<li class="lisd">Needed to align the pano orientation with the radar on the map.</li>
+					<li class="lisd">See also the <a href="#radar.headingoffset">radar headingoffset</a> setting for details.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spot.active" href="#spot.active" class="selflink">spot[].active</a>
+				<ul>
+					<li class="lisd">State of the spot.</<li>
+					<li class="lisd">When set to true the spot will be activated.</li>
+					<li class="lisd">That means the spot will show the active spotstyle image (when no url was set) and that 
+						the radar will be shown at the spot location.
+					</li>
+					<li class="lisd">To activate a spot dynamically, use the <a href="#activatespot">activatespot()</a> action.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spot.onover" href="#spot.onover" class="selflink">spot[].onover</a>
+				<ul>
+					<li class="lisd">Actions / functions that will be called when the mouse moves over the spot element.</li>
+				</ul>
+				<a name="spot.onhover" href="#spot.onhover" class="selflink">spot[].onhover</a>
+				<ul>
+					<li class="lisd" class="lisd">Actions / functions that will be called in intervals (several times per second) when the mouse stays over (hovers) the spot element.</li>
+				</ul>
+				<a name="spot.onout" href="#spot.onout" class="selflink">spot[].onout</a>
+				<ul>
+					<li class="lisd">Actions / functions that will be called when the mouse moves out of the spot element.</li>
+				</ul>
+				<a name="spot.onclick" href="#spot.onclick" class="selflink">spot[].onclick</a>
+				<ul>
+					<li class="lisd">Actions / functions that will be called when there is a mouse click on the spot element.</li>
+				</ul>
+			</li>
+
+			<li>
+				<a name="spot.activatespot" href="#spot.activatespot" class="selflink">spot[].activatespot()</a>
+				<ul>
+					<li class="lisd">Activate the current spot.</li>
+				</ul>
+			</li>
+			<li>
+				<a name="spot.pantospot" href="#spot.pantospot" class="selflink">spot[].pantospot()</a>
+				<ul>
+					<li class="lisd">Pan the map center to the current spot.</li>
+				</ul>
+			</li>
+			
+		</ul>
+	</div>
+	
+	<br>
+	
+	<div class="paragraph">
+		<h1><a name="examples" href="#examples" class="selflink">Examples</a></h1>
+		<table style="width:100%;">
+		<tr>
+		<td style="width:25%;"><div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+			<a href="../examples.html#maps-comparison" class="prop504x310"><img src="../images/maps-comparison.jpg" class="outlineimage prop_inner" /></a>
+			<div style="padding-top:3px;">Maps Plugins Comparison</div>
+		</div></td>
+		<td style="width:25%;"><div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+			<a href="../examples.html#krpanomaps" class="prop504x310"><img src="../images/krpanomaps.jpg" class="outlineimage prop_inner" /></a>
+			<div style="padding-top:3px;">krpano Maps Plugin Example</div>
+		</div></td>
+		</tr>
+		</table>
+	</div>
+	
+	
+
+
+				</div>
+			</div>
+		</div>
+		<div id="krpano_footerwrapper">
+			<div id="krpano_footer">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="right">Copyright &copy; 2025 krpano.com</td></tr></tbody></table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

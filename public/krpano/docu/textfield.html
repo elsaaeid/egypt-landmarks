@@ -1,0 +1,836 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="design.css"/>
+	<title>krpano Documentation</title>
+	<script>
+		function toggle_mobile_nav(){var t=document,n=t.getElementById("krpano_contentnav"),m=t.getElementById("krpano_mobile_menu_bg");t=n.state!=2;n.state=t?2:1;n.style.height=t?"auto":"24px";m.style.display=t?"block":"none";t=t?"add":"remove";n.classList[t]("krpano_contentnav_opened");t+="EventListener";n[t]("click",toggle_mobile_nav,false);m[t]("mousedown",toggle_mobile_nav,false);}
+	</script>
+</head>
+<body>
+	<div id="krpano_root">
+		<div id="krpano_headerwrapper">
+			<div id="krpano_header">
+				<div id="krpano_mainmenu">
+					krpano 1.23.2 <span class="smallcomment">(build 2025-09-22)</span>
+				</div>
+			</div>
+			<div id="krpano_imagebar"></div>
+			
+			<div id="krpano_logo_container">
+				<a id="krpano_logo" href="https://krpano.com"><span>krpano.com</span></a>
+			</div>
+			
+			<div id="krpano_imagebar_links">
+				Documentation
+			</div>
+		</div>
+		
+		<div id="krpano_contentwrapper">
+			<div id="krpano_mobile_menuicon" onclick="toggle_mobile_nav();"><span class="burgermenu"></span></div>
+			<div id="krpano_mobile_menu_bg"></div>
+			<div id="krpano_content">
+				<div id="krpano_contentnav">
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('doc_section');">Documentation</h2>
+					<ul class="sidemenu_section " id="doc_section">
+						<li><a href="embedpano.html#top">Embedding</a></li>
+						<li><a href="xml.html#top">XML Reference</a>
+							<ul>
+								<li class="lisd"><a href="textfield.html#top">Textfield</a></li>
+								<li class="lisd"><a href="plugins/scrollarea.html#top">ScrollArea</a></li>
+							</ul>
+						</li>
+						<li><a href="actions.html#top">Actions / Scripting</a></li>
+						<li><a href="js_api.html#top">Javascript Interface</a></li>
+						<li><a href="localusage.html#top">Local / Offline Usage</a></li>
+						<li><a href="coordinates.html#top">Coordinate Systems</a></li>
+						<li><a href="../license.html#top">License Agreement</a></li>
+						<li><a href="releasenotes.html#top">Release Notes</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('plugins_section');">Plugins</h2>
+					<ul class="sidemenu_section hidden" id="plugins_section">
+						<li><a href="plugins/bingmaps.html#top">Bing Maps</a></li>
+						<li><a href="plugins/googlemaps.html#top">Google Maps</a></li>
+						<li><a href="plugins/gyro2.html#top">Gyro2</a></li>
+						<li><a href="plugins/krpanomaps.html#top">krpano Maps</a></li>
+						<li><a href="plugins/postprocessing.html#top">Postprocessing</a></li>
+						<li><a href="plugins/radar.html#top">Radar</a></li>
+						<li><a href="plugins/snow.html#top">Snow / Rain</a></li>
+						<li><a href="plugins/soundinterface.html#top">Soundinterface</a></li>
+						<li><a href="plugins/threejs.html#top">ThreeJS</a></li>
+						<li><a href="plugins/videoplayer.html#top">Videoplayer</a></li>
+						<li><a href="plugins/webvr.html#top">WebVR</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('xmlext_section');">XML Extensions</h2>
+					<ul class="sidemenu_section hidden" id="xmlext_section">
+						<li><a href="plugins/xml_extensions.html#controls3d">controls3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#cursor3d">cursor3d.xml</a></li>
+						<li><a href="plugins/combobox.html#top">combobox.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#contextmenu">contextmenu.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#copy_to_clipboard">copy_to_clipboard.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#drag3d">drag3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#measure3d">measure3d.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#fps">fps.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#ios_iframe_fullscreen">ios_iframe_fullscreen.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#iphone_fullscreen_swipe">iphone_fullscreen_swipe.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#minimap_zoomrect">minimap_zoomrect.xml</a></li>
+						<li><a href="plugins/showtext.html#top">showtext.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#stateurls">stateurls.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#vr_and_anaglyph_buttons">vr_and_anaglyph_buttons.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#wakelock">wakelock.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#webvr">webvr.xml</a></li>
+						<li><a href="plugins/xml_extensions.html#webvr_autozoom">webvr_autozoom.xml</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('tools_section');">Tools</h2>
+					<ul class="sidemenu_section hidden" id="tools_section">
+						<li><a href="tools/krpanotools.html#makepano">Makepano</a><br>
+							<ul><li><a href="tools/config.html#top">Config File Reference</a></li></ul>
+						</li>
+						<li><a href="tools/krpanotools.html#maketiles">Maketiles</a></li>
+						<li><a href="tools/krpanotools.html#makepreview">Makepreview</a></li>
+						<li><a href="tools/krpanotools.html#spheretocube">SphereToCube</a></li>
+						<li><a href="tools/krpanotools.html#cubetosphere">CubeToSphere</a></li>
+						<li><a href="tools/krpanotools.html#protect">Protect Tool</a></li>
+						<li><a href="tools/krpanotools.html#encrypt">Encrypt Tool</a></li>
+						<li><a href="tools/krpanotools.html#register">Registration Tool</a></li>
+						<li><a href="tools/testingserver.html#top">krpano Testing Server</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('examples_section');">Examples</h2>
+					<ul class="sidemenu_section hidden" id="examples_section">
+						<li><a href="examples.html#top">Show All</a></li>
+						<li><a href="examples.html?vtour#top">Virtual Tours</a></li>
+						<li><a href="examples.html?3d#top">3D Examples</a></li>
+						<li><a href="examples.html?splats#top">Gaussian Splatting</a></li>
+						<li><a href="examples.html?depthmap#top">Depthmap</a></li>
+						<li><a href="examples.html?threejs#top">ThreeJS</a></li>
+						<li><a href="examples.html?multires#top">Multiresolution</a></li>
+						<li><a href="examples.html?layers#top">Layers</a></li>
+						<li><a href="examples.html?plugins#top">Plugins</a></li>
+						<li><a href="examples.html?hotspots#top">Hotspots</a></li>
+						<li><a href="examples.html?maps#top">Maps</a></li>
+						<li><a href="examples.html?video#top">Video</a></li>
+						<li><a href="examples.html?webvr#top">WebVR</a></li>
+						<li><a href="examples.html?js#top">Javascript</a></li>
+					</ul>
+				</div>
+				<a name="top" class="toplink">&nbsp;</a>
+				<div id="krpano_contenttext">
+
+					<noscript>
+						<table style="width:100%; height:400px; position:fixed; left:95px; top:220px;"><tr valign="middle"><td><center><h1>
+							<span style="color:#FFFFFF; background:#FF0000; padding:15px;">
+								Javascript must be activated for this page!
+							</span>
+						</h1></center></td></tr></table>
+					</noscript>
+					
+					<script>
+						function toggle_section(id)
+						{
+							var element = document.getElementById(id);
+							if (element)
+							{
+								element.classList.toggle("hidden")
+							}
+						}
+					</script>
+
+					
+
+	<h1>Textfield
+		<span class="pluginfilename">layer <a href="xml.html#layer.type" class="selflink2">type</a>=text</span>
+		
+	</h1>
+	
+	<div class="paragraph">
+		<ul>
+			<li>Textfields are elements for any kind of text in krpano.</li>
+			<li>Can be used for buttons, simple texts or even full HTML layouts.</li>
+			<li>The text can be HTML or BBCode formatted and styled by CSS styles or CSS classes.</li>
+			<li><a href="#template">Templates</a> can be used to update the text automatically depending on variable changes.</li>
+			<li>A textfield is an extended <a href="xml.html#layer.type">container</a> element and shares several settings and features with it,
+				like the ones for the background shape and borders.
+				
+			</li>
+			<li>The position and size can by adjusted with the standard <a href="xml.html#layer">layer</a> and <a href="xml.html#hotspot">hotspot</a> settings.</li>
+			<li>When no width/height size is set, the element will <a href="xml.html#layer.onresize">resize</a> itself to fit the given content.
+				It will also adjust its size automatically when there are further changes (e.g. when embedded images got loaded or the HTML-content changes itself).
+			</li>
+			<li>A textfield can be also used as <a href="#editable">input</a>- or <a href="#editable">edit</a>-field.</li>
+			<li>When using the textfield as <a href="xml.html#layer">layer</a> or a <a href="xml.html#hotspot.renderer">CSS3D-rendered</a> hotspots the full HTML/CSS capabilities are supported,
+				but when using the textfield as <a href="xml.html#hotspot.renderer">WebGL-rendered</a> hotspot, e.g. for VR-support, then
+				only a simple/reduced HTML/CSS subset is supported. Because in this case the textfield needs to be drawn manually.
+			</li>
+		</ul>
+	</div>
+
+	
+	<div class="paragraph">
+		<h2><a name="topics" href="#topics" class="selflink">Topics</a></h2>
+		<ul>
+			<li><a href="#syntax">Syntax</a></li>
+			<li><a href="#variables">Dynamic variables</a></li>
+			<li><a href="#attributes">Attributes</a></li>
+			<li><a href="#events">Events</a></li>
+			<li><a href="#actions">Actions</a></li>
+		</ul>
+	</div>
+	
+	
+	<div class="paragraph">
+		<h2><a name="syntax" href="#syntax" class="selflink">Syntax</a></h2>
+
+		Layer settings:
+		<pre class="xmlpre">&lt;<a href="xml.html#layer">layer</a> <a href="xml.html#layer.name">name</a>="mytext"
+       <a href="xml.html#layer.type">type</a>="text"
+       <a href="xml.html#layer.align">align</a>="lefttop" <a href="xml.html#layer.x">x</a>="10" <a href="xml.html#layer.y">y</a>="10"
+       <a href="#text" class="pluginattrib">text</a>="Text...[br][b]Bold Text...[/b]"
+       <a href="#template" class="pluginattrib">template</a>=""
+       <a href="#rawhtml" class="pluginattrib">rawhtml</a>="false"
+       <a href="#css" class="pluginattrib">css</a>="font-family:Arial; font-size:16px; color:#000000;"
+       <a href="xml.html#layer.cssclass">cssclass</a>=""
+       <a href="#txtshadow" class="pluginattrib">txtshadow</a>=""
+       <a href="#textalign" class="pluginattrib">textalign</a>="lefttop"
+       <a href="#padding" class="pluginattrib">padding</a>="2"
+       <a href="#trimwhitespace" class="pluginattrib">trimwhitespace</a>="false"
+       <a href="#wordwrap" class="pluginattrib">wordwrap</a>="true"
+       <a href="#ellipsis" class="pluginattrib">ellipsis</a>="false"
+       <a href="#interactive" class="pluginattrib">interactive</a>="false"
+       <a href="#selectable" class="pluginattrib">selectable</a>="false"
+       <a href="#editable" class="pluginattrib">editable</a>="false"
+       <a href="#editenterkey" class="pluginattrib">editenterkey</a>="stop"
+       <a href="xml.html#layer.maskchildren">maskchildren</a>="false"
+       <a href="xml.html#layer.htmllinkcolor">htmllinkcolor</a>="inherit"
+       <a href="xml.html#layer.bg">bg</a>="true"
+       <a href="xml.html#layer.bgcolor">bgcolor</a>="0xFFFFFF"
+       <a href="xml.html#layer.bgalpha">bgalpha</a>="1.0"
+       <a href="xml.html#layer.bgborder">bgborder</a>="0"
+       <a href="xml.html#layer.bgroundedge">bgroundedge</a>="0"
+       <a href="xml.html#layer.bgshadow" >bgshadow</a>=""
+       <a href="xml.html#layer.onresize">onresize</a>=""
+       <a href="#ontextchanged" class="pluginattrib">ontextchanged</a>=""
+       <a href="#oneditstart" class="pluginattrib">oneditstart</a>=""
+       <a href="#oneditchange" class="pluginattrib">oneditchange</a>=""
+       <a href="#oneditstop" class="pluginattrib">oneditstop</a>=""
+       /&gt;</pre>
+       <br>
+       Additional hotspot specific settings:
+         <pre class="xmlpre">&lt;<a href="xml.html#hotspot">hotspot</a> <a href="xml.html#hotspot.name">name</a>="mytext"
+         <a href="xml.html#hotspot.type">type</a>="text"
+         <a href="xml.html#hotspot.renderer">renderer</a>="auto"
+         ...
+         <a href="#oversampling" class="pluginattrib">oversampling</a>="1.0"
+         <a href="#mipmapping" class="pluginattrib">mipmapping</a>="false"
+         /&gt;</pre>
+	</div>
+	
+	
+	<div class="paragraph">
+		<h2><a name="variables" href="#variables" class="selflink">Dynamic variables</a></h2>
+		<ul>
+			<li><a href="#istextfield">istextfield</a></li>
+			<li><a href="#textlayer">textlayer</a></li>
+			<li><a href="#textwidth" >textwidth</a></li>
+			<li><a href="#textheight">textheight</a></li>
+		</ul>
+	</div>
+	
+	<div class="paragraph">
+		<h2><a name="eventslist" href="#eventslist" class="selflink">Events</a></h2>
+		<ul>
+			<li><a href="xml.html#layer.onresize">onresize</a></li>
+			<li><a href="#ontextchanged">ontextchanged</a></li>
+			<li><a href="#oneditstart">oneditstart</a></li>
+			<li><a href="#oneditchange">oneditchange</a></li>
+			<li><a href="#oneditstop">oneditstop</a></li>
+		</ul>
+	</div>
+	
+	<div class="paragraph">
+		<h2><a name="actionslist" href="#actionslist" class="selflink">Actions / Functions</a></h2>
+		<ul>
+			<li><a href="#startediting">startediting(select)</a></li>
+			<li><a href="#stopediting">stopediting()</a></li>
+			<li><a href="#updatetemplate">updatetemplate()</a></li>
+			<li><a href="#relinktemplate">relinktemplate()</a></li>
+		</ul>
+	</div>
+	
+	<br>
+	
+	<div class="paragraph">
+		<h2><a name="attributes" href="#attributes" class="selflink">Attributes</a></h2>
+		
+		<div style="padding-left:1px;padding-top:0;">
+		<table class="xmlattrdoc">
+	
+			<tr class="xmlattrdocdes1"><td style="width:50%;"><a name="text"></a><a name="html"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th>
+					<a href="#text" class="selflink">text</a> <span class="smallcomment">(new)</span><br>
+					<a href="#html" class="selflink">html</a> <span class="smallcomment">(old versions name)</span>
+				</th>
+				<th>String<br>String</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4" style="max-width:0;overflow:hidden;text-overflow:ellipsis;">
+					<ul>
+						<li>Set the text/content for the textfield.</li>
+						<li>The text can be HTML or BBCode formatted and styled by <a href="#css">CSS styles</a> or <a href="xml.html#layer.cssclass">CSS classes</a>.
+							<ul>
+								<li>Note - for defining CSS styles/classes directly in the xml file, the <a href="xml.html#cssstyles" class="selflink">&lt;cssstyles&gt;</a> element can be used.</li>
+							</ul>
+						</li>
+						<li>BBCode encoding:
+							<ul>
+								<li>In some cases, e.g. inside xml attributes or inside strings, some characters can't be used directly.
+									Here the BBCode encoding provides alternatives.
+								</li>
+								<li>BBCode character mapping:
+									<ul>
+										<li><span class="pre">&lt;</span> &rArr; <span class="pre">[</span> or <span class="pre">[lt]</span></li>
+										<li><span class="pre">&gt;</span> &rArr; <span class="pre">]</span> or <span class="pre">[gt]</span></li>
+										<li><span class="pre">'</span> &rArr; <span class="pre">[sq]</span> <span class="smallcomment">(single-quote)</span></li>
+										<li><span class="pre">"</span> &rArr; <span class="pre">[dq]</span> <span class="smallcomment">(double-quote)</span></li>
+										<li><span class="pre">[</span> &rArr; <span class="pre">[[</span></li>
+										<li><span class="pre">]</span> &rArr; <span class="pre">]]</span></li>
+									</ul>
+								</li>
+								<li>The BBCode encoding can be disabled using the <a href="#rawhtml">rawhtml</a> setting.
+							</ul>
+						</li>
+						
+						<li>Escaping:
+							<ul>
+								<li>As alternative to the BBCode-encoding, it is also possible to 
+									<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape" target="_blank">escape</a>
+									the HTML code.
+								</li>
+							</ul>
+						</li>
+						
+						<li>Load the content from <a href="xml.html#data" class="selflink">&lt;data&gt;</a> or other elements:
+							<ul>
+								<li>Instead of storing the text/HTML-content directly in a limited xml-attribute, it would be also possible
+									to put that content inside a <a href="xml.html#data" class="selflink">&lt;data&gt;</a> element and refer to that.
+								</li>
+								<li><pre class="xmlpre">text="data:name-of-the-data-element"</pre></li>
+								<li><pre class="xmlpre">text="<a href="xml.html#xmlget" class="selflink">get</a>:data[name-of-the-data-element].content"</pre></li>
+							</ul>
+						</li>
+						
+						<li>Linking to krpano actions or to Javascript code:
+							<ul>
+								<li>There is a special support for using HTML-links with:
+									<ul>
+										<li><span class="pre">href="krpano:..."</span> or <span class="pre">href="event:..."</span>
+											to call krpano actions, or
+										</li>
+										<li><span class="pre">href="js:..."</span> to call Javascript code.
+										</li>
+									</ul>
+								</li>
+								<li>The default <a href="xml.html?#action.scope">scope</a> for the krpano actions will be the textfield.</li>
+								<li>In Javascript code there are predefined <a href="js_api.html#krpanointerface">krpano</a> and <b>caller</b> (the textfield) objects.</li>
+								<li>Actions Example:
+									<pre class="xmlpre">[a href="krpano:showlog();trace('hello from ',name);"]link[/a]</pre>
+								</li>
+								<li>Javascript Example:
+									<pre class="xmlpre">[a href="js:console.log(caller.path); krpano.actions.lookto(0,0);"]...</pre>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="template"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#template" class="selflink">template</a></th><th>String</th><th></th></tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Use a 'template' for automatic text generation.</li>
+						<li>When the <a href="#template">template</a> setting is set, 
+							it will be automatically evaluated and any changes will set the <a href="#text">text</a> to the result.
+						</li>
+						<li>Syntax:
+							<pre>template="... {{variable}} ..."</pre>
+							With multiple variables and <a href="actions.html#expressions">expressions</a>:
+							<pre>template="... {{variable1|variable2:expression}} ..."</pre>
+							With events and <a href="actions.html#expressions">expressions</a>:
+							<pre>template="... {{<a href="xml.html#events" class="selflink2">event.NAME</a>:expression}} ..."</pre>
+							With the <a href="actions.html#translate">translate()</a> expression:
+							<pre>template="... {{translate(word)}} ..."</pre>
+						</li>
+						<li>Everything between <span class="pre">{{</span> and <span class="pre">}}</span> will be evaluated.</li>
+						<li>There can be either a simple <a href="actions.html#link">link</a> to a variable - then every time when this variables changes,
+							the <a href="#text">text</a> will be automatically regenerated.
+						</li>
+						<li>Or a more complex <a href="actions.html#expressions">expression</a> can be used.
+							In this case, first the variables that should be monitored for changes need to be defined
+							(separated by <span class="pre">|</span> or <span class="pre">,</span> characters), 
+							and second, the expression itself after a <span class="pre">:</span> character.
+							When any of the variables change, the expression will be automatically reevaluated the 
+							the <a href="#text">text</a> be updated.
+						</li>
+						<li>For manual updates the <a href="#updatetemplate">updatetemplate()</a> function can be used.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			
+			<tr class="xmlattrdocdesc"><td><a name="rawhtml"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#rawhtml" class="selflink">rawhtml</a></th><th>Boolean</th><th>false</th></tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>When enabled the content of the <a href="#text">text</a> setting will be used directly as HTML code for the textfield content.
+							No parsing or modifications will be applied. No BBCode encoding, no escaping.
+							No default font, font-size, text-color.
+						</li>
+						<li>These settings will also have no effect when enabled: <a href="#padding">padding</a>, <a href="#txtshadow">txtshadow</a>.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="css"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#css" class="selflink">css</a></th><th>String</th><th>""</th></tr>
+			<tr>
+				<td colspan="4" style="max-width:0;overflow:hidden;text-overflow:ellipsis;">
+					<ul>
+						<li>Set the CSS styles for text/content of the textfield.</li>
+						
+						<li>
+							Can be used to set the font, text-color and so on, e.g.:
+							<pre class="xmlpre">css="color:#FFFFFF; font-family:Arial; font-size:12px;"</pre>
+					</li>
+						
+						<li>Load the content from <a href="xml.html#data" class="selflink">&lt;data&gt;</a> or other elements:
+							<ul>
+								<li>Instead of storing the CSS styles directly in a limited xml-attribute, it would be also possible
+									to put that content inside a <a href="xml.html#data" class="selflink">&lt;data&gt;</a> element and refer to that.
+								</li>
+								<li><pre class="xmlpre">css="data:name-of-the-data-element"</pre></li>
+								<li><pre class="xmlpre">css="<a href="xml.html#xmlget" class="selflink">get</a>:data[name-of-the-data-element].content"</pre></li>
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="txtshadow"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#txtshadow" class="selflink">txtshadow</a></th>
+				<th>String</th>
+				<th>""</th>
+			</tr>
+			<tr><td colspan="4" style="max-width:0;overflow:hidden;text-overflow:ellipsis;">
+				<ul>
+					<li>Add a shadow behind the text.</li>
+					<li>Syntax:<br>
+						<pre class="xmlpre">txtshadow="xoffset yoffset blur color alpha, ..."</pre>
+					</li>
+					<li>Multiple shadows can be added by using a comma separated list of additional txtshadow values.</li>
+					<li>Parameters:
+						<ul>
+							<li><b>xoffset</b>,	<b>yoffset</b><br>
+								The offset / distance of the shadow in pixels.
+							</li>
+							
+							<li><b>blur</b><br>
+								The blur radius / range in pixels - defines how strong the shadow will be blurred.<br>
+								(0 = no blurring).
+							</li>
+							
+							<li><b>color</b> <span class="smallcomment">(optionally)</span><br>
+								The color of the shadow. The default is 0x000000 (black).
+							</li>
+							
+							<li><b>alpha</b> <span class="smallcomment">(optionally)</span><br>
+								The alpha transparency of the shadow. The default is 1.0.
+							</li>
+							
+							<li><b>...</b> <span class="smallcomment">(optionally)</span><br>
+								Add another shadow (comma separated).
+							</li>
+
+						</ul>
+					</li>
+				</ul>
+			</td></tr>
+			
+		
+			<tr class="xmlattrdocdesc"><td><a name="textalign"></a><a name="vcenter"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#textalign" class="selflink">textalign</a></th><th>String</th><th>"lefttop"</th></tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Alignment of the text/content within the textfield.</li>
+						<li>Possible values: lefttop, left, leftbottom, top, center, bottom, righttop, right, rightbottom.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="padding"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#padding" class="selflink">padding</a></th><th>String</th><th>"2"</th></tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Padding / space in pixels around the text/content. Can be individually for each side.</li>
+						<li>There are 4 different ways to set the paddings (same as in CSS):
+							<ul>
+								<li><b>padding="25"</b>
+									<ul>
+										<li class="lisd">all four paddings are 25px</li>
+									</ul>
+								</li>
+								<li><b>padding="25 50"</b>
+									<ul>
+										<li class="lisd">top and bottom paddings are 25px</li>
+										<li class="lisd">right and left paddings are 50px</li>
+									</ul>
+								</li>
+								<li><b>padding="25 50 75"</b>
+									<ul>
+										<li class="lisd">top padding is 25px</li>
+										<li class="lisd">right and left paddings are 50px</li>
+										<li class="lisd">bottom  padding is 75px</li>
+									</ul>
+								</li>
+								<li><b>padding="25 50 75 100"</b>
+									<ul>
+										<li class="lisd">top padding is 25px</li>
+										<li class="lisd">right padding is 50px</li>
+										<li class="lisd">bottom padding is 75px</li>
+										<li class="lisd">left padding is 100px</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="trimwhitespace"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#trimwhitespace" class="selflink">trimwhitespace</a></th><th>Boolean</th><th>false</th></tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Trim leading and trailing whitespace from all lines.</li>
+						<li>This could be used when using 'monospace / white-space=pre ' formatted texts and
+							to skip the xml-caused space/tab-indentations.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="wordwrap"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#wordwrap" class="selflink">wordwrap</a></th><th>Boolean</th><th>true</th></tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Set if the text should automatically wrap around (line-break) to new lines when the text doesn't fit into the current line.</li>
+						<li>This setting has only an effect when setting a <a href="xml.html#layer.width">width</a> for the textfield.</li>
+						<li>When disabled the text would get cut-off when it is larger than the given textfield width.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="ellipsis"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#ellipsis" class="selflink">ellipsis</a></th><th>Boolean</th><th>false</th></tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>When the text/content is larger than the given textfield width and line-breaking is not allowed or possible,
+							then the text will end with three dots '...' instead of a hard-cut.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="interactive"></a><a name="interactivecontent"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#interactive" class="selflink">interactive</a></th><th>Boolean</th><th>false *</th></tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>When enabled a direct mouse/touch interaction with the textfield content is possible.</li>
+						<li>By default this is disabled to avoid conflicts when krpano and a HTML inner content are both processing the mouse or touch events.</li>
+						<li><i>Note - when the HTML content contains &lt;a&gt; or &lt;iframe&gt; elements, then this setting will be automatically enabled!</i></li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="selectable"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#selectable" class="selflink">selectable</a></th><th>Boolean</th><th>false</th></tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Should the text/content be selectable by the user.</li>
+						<li>When enabled the browsers native/default contextmenu will appear when right-clicking (or long-touching) on the textfield.</li>
+						<li><i>Note - the <a href="#selectable" class="selflink">selectable</a> setting overrides the <a href="xml.html#layer.nativecontextmenu">nativecontextmenu</a> setting!</i></li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="editable"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#editable" class="selflink">editable</a></th><th>Boolean</th><th>false</th></tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Should the text/content be editable by the user.</li>
+						<li>When enabled the user can click into the textfield and edit it.</li>
+						<li>To get informed about editing changes there are these events:
+							<ul>
+								<li><a href="#oneditstart">oneditstart</a></li>
+								<li><a href="#oneditchange">oneditchange</a></li>
+								<li><a href="#oneditstop">oneditstop</a></li>
+							</ul>
+						</li>
+						<li>The edited content will be stored in the <a href="#text">text</a> variable.</li>
+						<li>Note that the edited content can be slightly different in each browser.</li>
+						<li>For dynamically starting or stopping editing  these actions can be called:
+							<ul>
+								<li><a href="#startediting">startediting(select)</a></li>
+								<li><a href="#stopediting">stopediting()</a></li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			
+			<tr class="xmlattrdocdesc"><td><a name="editenterkey"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#editenterkey" class="selflink">editenterkey</a></th><th>String</th><th>"stop"</th></tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Define what should happen when the user presses the Enter-key during editing:
+							<ul>
+								<li><span class="pre">stop</span> - Stop/finish the editing (default).</li>
+								<li><span class="pre">newline</span> - create a line-break / new-line.</li>
+								<li><span class="pre">shiftnewline</span> - create a line-break / new-line when only pressing the Shift+Enter keys, otherwise stop the editing.</li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			
+			<tr class="xmlattrdocdesc"><td><a name="oversampling"></a>Attribute name <span class="html5only">(only for WebGL-Hotspots usage)</span></td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#oversampling" class="selflink">oversampling</a></th>
+				<th>Number</th>
+				<th>1.0</th>
+			</tr>
+			<tr><td colspan="4">
+				<ul>
+					<li>Upscale the internal bitmap rendering target by the given oversampling factor for a higher-resolution (sharper) text.</li>
+					<li>Settings larger 1.0 are improving the text-rendering-quality, but also requiring more memory- and rendering-resources.</li>
+					<li>Only related for <a href="xml.html#hotspot.renderer">WebGL hotspot rendering</a>.</li>
+				</ul>
+			</td></tr>
+			
+			
+			<tr class="xmlattrdocdesc"><td><a name="mipmapping"></a>Attribute name <span class="html5only">(only for WebGL-Hotspots usage)</span></td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#mipmapping" class="selflink">mipmapping</a></th>
+				<th>Boolean</th>
+				<th>false</th>
+			</tr>
+			<tr><td colspan="4">
+				<ul>
+					<li>Enable mipmapping - this reduces aliasing effects when displaying the text as scaled-down element.</li>
+					<li>Mipmapping works by automatically upscaling the internal bitmap rendering target to the next power-of-two size (because that is required for mipmapping).</li>
+					<li>For better image/text-quality it would be recommended to use additionally also a higher than 1.0 <a href="#oversampling">oversampling</a> setting.</li>
+					<li>Only related for <a href="xml.html#hotspot.renderer">WebGL hotspot rendering</a>.</li>
+				</ul>
+			</td></tr>
+			
+
+		</table>
+		</div>
+	</div>
+	
+	<div class="paragraph">
+		<h2><a name="variablesdocu" href="#variablesdocu" class="selflink">Dynamic variables</a></h2>
+		
+		<div style="padding-left:1px;padding-top:0;">
+		<table class="xmlattrdoc">
+	
+			<tr class="xmlattrdocdes1"><td style="width:50%;"><a name="istextfield"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#istextfield" class="selflink">istextfield</a></th><th>Boolean</th><th>true</th></tr>
+			<tr><td colspan="4">
+				<ul>
+					<li>A variable to check if this layer or hotspot is a textfield.</li>
+				</ul>
+			</td></tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="textlayer"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#textlayer" class="selflink">textlayer</a></th><th>HTML-Element</th><th></th></tr>
+			<tr><td colspan="4">
+				<ul>
+					<li>The inner HTML/DOM element that contains the text/content.</li>
+				</ul>
+			</td></tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="textwidth"></a><a name="textheight"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#textwidth" class="selflink">textwidth</a><br>
+					<a href="#textheight" class="selflink">textheight</a><br>
+				</th>
+				<th>Number<br>Number</th><th></th></tr>
+			<tr><td colspan="4">
+				<ul>
+					<li>The size of the inner text/content.</li>
+				</ul>
+			</td></tr>
+			
+		</table>
+		</div>
+	</div>
+	
+	
+	<div class="paragraph">
+		<h2><a name="events" href="#events" class="selflink">Events</a></h2>
+		
+		<div style="padding-left:1px;padding-top:0;">
+		<table class="xmlattrdoc">
+			
+			
+			<tr class="xmlattrdocdes1"><td style="width:50%;"><a name="ontextchanged"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#ontextchanged" class="selflink">ontextchanged</a></th><th>Event</th><th></th></tr>
+			<tr><td colspan="4" style="max-width:0;overflow:hidden;text-overflow:ellipsis;">
+				<ul>
+					<li>Will be called after the <a href="#text">text</a> value has changed and the <a href="#textlayer">DOM elements</a> were updated.</li>
+					<li>But before layout or <a href="xml.html#layer.onresize">resize</a> updates.</li>
+					<li>Interactive changes by <a href="#oneditchange">editing</a> are not covered here.</li>
+					<li>This event can be used to get Javascript access to the <a href="#textlayer">DOM elements</a> defined in the <a href="#text">text</a> code 
+						(e.g. by <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector" target="_blank">querySelector</a> and so on).
+					</li>
+					<li>Javascript Example:
+<pre class="xmlpre">
+var tf = krpano.<a href="actions.html#addlayer" class="selflink2">addlayer</a>();
+tf.type = "text";
+tf.<a href="#interactive" class="selflink2">interactive</a> = true;
+tf.text = "Test &lt;button&gt;click me&lt;/button&gt;";
+tf.ontextchanged = function()
+{
+  var button = tf.<a href="#textlayer" class="selflink2">textlayer</a>.querySelector("button");
+  button.onclick = function(){ alert("button clicked"); }
+}
+</pre>
+				</ul>
+			</td></tr>
+	
+			<tr class="xmlattrdocdesc"><td><a name="oneditstart"></a><a name="oneditstop"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th>
+				<a href="#oneditstart" class="selflink">oneditstart</a><br>
+				<a href="#oneditstop" class="selflink">oneditstop</a>
+			</th><th>Event<br>Event</th><th></th></tr>
+			<tr><td colspan="4">
+				<ul>
+					<li>These events will be called when the textfield gets or loses the users input focus.</li>
+					<li>They could be used to highlight the textfield for editing.</li>
+				</ul>
+			</td></tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="oneditchange"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#oneditchange" class="selflink">oneditchange</a></th>
+				<th>Event</th><th></th></tr>
+			<tr><td colspan="4">
+				<ul>
+					<li>This event will be called when the textfield content changes due editing.</li>
+					<li>Note - that can happen also without or outside oneditstart/oneditstop events, e.g. when the browser changes
+						the text-content anytime later due an 'undo-call'.
+					</li>
+				</ul>
+			</td></tr>
+			
+		</table>
+		</div>
+	</div>
+	
+	
+	<div class="paragraph">
+		<h2><a name="actions" href="#actions" class="selflink">Actions</a></h2>
+		
+		<div style="padding-left:1px;padding-top:0;">
+		<table class="xmlattrdoc">
+	
+			<tr class="xmlattrdocdes1"><td style="width:50%;"><a name="startediting"></a>Function name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th>
+				<a href="#startediting" class="selflink">startediting(select)</a>
+			</th><th>Action</th><th></th></tr>
+			<tr><td colspan="4">
+				<ul>
+					<li>Start editing the textfield.</li>
+					<li>The textfield will get enabled for editing (<a href="#editable">editable</a> set to true) and will get the input focus.</li>
+					<li>Parameter:<br>
+						<ul>
+							<li><b>select</b> - Should the text/content be selected, true or false. The default is false.</li>
+						</ul>
+					</li>
+					<li>This could be used for actively starting editing a currently not editable textfield,
+						e.g. when doing a double-click on a textfield or when showing a textfield for direct user-input.
+					</li>
+				</ul>
+			</td></tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="stopediting"></a>Function name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#stopediting" class="selflink">stopediting()</a></th>
+				<th>Action</th><th></th></tr>
+			<tr><td colspan="4">
+				<ul>
+					<li>Actively stop the editing.</li>
+					<li>The textfield will lose the input focus and will get disabled for editing.
+					<li>The <a href="#editable">editable</a> setting will be set to false after this call.</li>
+				</ul>
+			</td></tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="updatetemplate"></a>Function name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#updatetemplate" class="selflink">updatetemplate()</a></th>
+				<th>Action</th><th></th></tr>
+			<tr><td colspan="4">
+				<ul>
+					<li>Manually update the <a href="#text">text</a> from the <a href="#template">template</a>.</li>
+				</ul>
+			</td></tr>
+			
+			<tr class="xmlattrdocdesc"><td><a name="relinktemplate"></a>Function name</td><td>Type</td><td>Default value</td></tr>
+			<tr><th><a href="#relinktemplate" class="selflink">relinktemplate()</a></th>
+				<th>Action</th><th></th></tr>
+			<tr><td colspan="4">
+				<ul>
+					<li>Parse and link the variables from the <a href="#template">template</a> again.</li>
+					<li>This could be used when the templates links to variables that have still the same names/addresses, but
+						are actually different objects now, e.g. when linking to <a href="xml.html#image" class="selflink">image.*</a>
+						properties and loading a new pano.
+					</li>
+				</ul>
+			</td></tr>
+			
+		</table>
+		</div>
+	</div>
+	
+
+
+
+				</div>
+			</div>
+		</div>
+		<div id="krpano_footerwrapper">
+			<div id="krpano_footer">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="right">Copyright &copy; 2025 krpano.com</td></tr></tbody></table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

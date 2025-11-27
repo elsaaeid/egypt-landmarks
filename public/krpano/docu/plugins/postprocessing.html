@@ -1,0 +1,626 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../design.css"/>
+	<title>krpano Documentation</title>
+	<script>
+		function toggle_mobile_nav(){var t=document,n=t.getElementById("krpano_contentnav"),m=t.getElementById("krpano_mobile_menu_bg");t=n.state!=2;n.state=t?2:1;n.style.height=t?"auto":"24px";m.style.display=t?"block":"none";t=t?"add":"remove";n.classList[t]("krpano_contentnav_opened");t+="EventListener";n[t]("click",toggle_mobile_nav,false);m[t]("mousedown",toggle_mobile_nav,false);}
+	</script>
+</head>
+<body>
+	<div id="krpano_root">
+		<div id="krpano_headerwrapper">
+			<div id="krpano_header">
+				<div id="krpano_mainmenu">
+					krpano 1.23.2 <span class="smallcomment">(build 2025-09-22)</span>
+				</div>
+			</div>
+			<div id="krpano_imagebar"></div>
+			
+			<div id="krpano_logo_container">
+				<a id="krpano_logo" href="https://krpano.com"><span>krpano.com</span></a>
+			</div>
+			
+			<div id="krpano_imagebar_links">
+				Documentation
+			</div>
+		</div>
+		
+		<div id="krpano_contentwrapper">
+			<div id="krpano_mobile_menuicon" onclick="toggle_mobile_nav();"><span class="burgermenu"></span></div>
+			<div id="krpano_mobile_menu_bg"></div>
+			<div id="krpano_content">
+				<div id="krpano_contentnav">
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('doc_section');">Documentation</h2>
+					<ul class="sidemenu_section hidden" id="doc_section">
+						<li><a href="../embedpano.html#top">Embedding</a></li>
+						<li><a href="../xml.html#top">XML Reference</a>
+							<ul>
+								<li class="lisd"><a href="../textfield.html#top">Textfield</a></li>
+								<li class="lisd"><a href="scrollarea.html#top">ScrollArea</a></li>
+							</ul>
+						</li>
+						<li><a href="../actions.html#top">Actions / Scripting</a></li>
+						<li><a href="../js_api.html#top">Javascript Interface</a></li>
+						<li><a href="../localusage.html#top">Local / Offline Usage</a></li>
+						<li><a href="../coordinates.html#top">Coordinate Systems</a></li>
+						<li><a href="../../license.html#top">License Agreement</a></li>
+						<li><a href="../releasenotes.html#top">Release Notes</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('plugins_section');">Plugins</h2>
+					<ul class="sidemenu_section " id="plugins_section">
+						<li><a href="bingmaps.html#top">Bing Maps</a></li>
+						<li><a href="googlemaps.html#top">Google Maps</a></li>
+						<li><a href="gyro2.html#top">Gyro2</a></li>
+						<li><a href="krpanomaps.html#top">krpano Maps</a></li>
+						<li><a href="postprocessing.html#top">Postprocessing</a></li>
+						<li><a href="radar.html#top">Radar</a></li>
+						<li><a href="snow.html#top">Snow / Rain</a></li>
+						<li><a href="soundinterface.html#top">Soundinterface</a></li>
+						<li><a href="threejs.html#top">ThreeJS</a></li>
+						<li><a href="videoplayer.html#top">Videoplayer</a></li>
+						<li><a href="webvr.html#top">WebVR</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('xmlext_section');">XML Extensions</h2>
+					<ul class="sidemenu_section hidden" id="xmlext_section">
+						<li><a href="xml_extensions.html#controls3d">controls3d.xml</a></li>
+						<li><a href="xml_extensions.html#cursor3d">cursor3d.xml</a></li>
+						<li><a href="combobox.html#top">combobox.xml</a></li>
+						<li><a href="xml_extensions.html#contextmenu">contextmenu.xml</a></li>
+						<li><a href="xml_extensions.html#copy_to_clipboard">copy_to_clipboard.xml</a></li>
+						<li><a href="xml_extensions.html#drag3d">drag3d.xml</a></li>
+						<li><a href="xml_extensions.html#measure3d">measure3d.xml</a></li>
+						<li><a href="xml_extensions.html#fps">fps.xml</a></li>
+						<li><a href="xml_extensions.html#ios_iframe_fullscreen">ios_iframe_fullscreen.xml</a></li>
+						<li><a href="xml_extensions.html#iphone_fullscreen_swipe">iphone_fullscreen_swipe.xml</a></li>
+						<li><a href="xml_extensions.html#minimap_zoomrect">minimap_zoomrect.xml</a></li>
+						<li><a href="showtext.html#top">showtext.xml</a></li>
+						<li><a href="xml_extensions.html#stateurls">stateurls.xml</a></li>
+						<li><a href="xml_extensions.html#vr_and_anaglyph_buttons">vr_and_anaglyph_buttons.xml</a></li>
+						<li><a href="xml_extensions.html#wakelock">wakelock.xml</a></li>
+						<li><a href="xml_extensions.html#webvr">webvr.xml</a></li>
+						<li><a href="xml_extensions.html#webvr_autozoom">webvr_autozoom.xml</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('tools_section');">Tools</h2>
+					<ul class="sidemenu_section hidden" id="tools_section">
+						<li><a href="../tools/krpanotools.html#makepano">Makepano</a><br>
+							<ul><li><a href="../tools/config.html#top">Config File Reference</a></li></ul>
+						</li>
+						<li><a href="../tools/krpanotools.html#maketiles">Maketiles</a></li>
+						<li><a href="../tools/krpanotools.html#makepreview">Makepreview</a></li>
+						<li><a href="../tools/krpanotools.html#spheretocube">SphereToCube</a></li>
+						<li><a href="../tools/krpanotools.html#cubetosphere">CubeToSphere</a></li>
+						<li><a href="../tools/krpanotools.html#protect">Protect Tool</a></li>
+						<li><a href="../tools/krpanotools.html#encrypt">Encrypt Tool</a></li>
+						<li><a href="../tools/krpanotools.html#register">Registration Tool</a></li>
+						<li><a href="../tools/testingserver.html#top">krpano Testing Server</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('examples_section');">Examples</h2>
+					<ul class="sidemenu_section hidden" id="examples_section">
+						<li><a href="../examples.html#top">Show All</a></li>
+						<li><a href="../examples.html?vtour#top">Virtual Tours</a></li>
+						<li><a href="../examples.html?3d#top">3D Examples</a></li>
+						<li><a href="../examples.html?splats#top">Gaussian Splatting</a></li>
+						<li><a href="../examples.html?depthmap#top">Depthmap</a></li>
+						<li><a href="../examples.html?threejs#top">ThreeJS</a></li>
+						<li><a href="../examples.html?multires#top">Multiresolution</a></li>
+						<li><a href="../examples.html?layers#top">Layers</a></li>
+						<li><a href="../examples.html?plugins#top">Plugins</a></li>
+						<li><a href="../examples.html?hotspots#top">Hotspots</a></li>
+						<li><a href="../examples.html?maps#top">Maps</a></li>
+						<li><a href="../examples.html?video#top">Video</a></li>
+						<li><a href="../examples.html?webvr#top">WebVR</a></li>
+						<li><a href="../examples.html?js#top">Javascript</a></li>
+					</ul>
+				</div>
+				<a name="top" class="toplink">&nbsp;</a>
+				<div id="krpano_contenttext">
+
+					<noscript>
+						<table style="width:100%; height:400px; position:fixed; left:95px; top:220px;"><tr valign="middle"><td><center><h1>
+							<span style="color:#FFFFFF; background:#FF0000; padding:15px;">
+								Javascript must be activated for this page!
+							</span>
+						</h1></center></td></tr></table>
+					</noscript>
+					
+					<script>
+						function toggle_section(id)
+						{
+							var element = document.getElementById(id);
+							if (element)
+							{
+								element.classList.toggle("hidden")
+							}
+						}
+					</script>
+
+					
+		
+		<h1>Postprocessing Plugins
+			<span class="pluginfilename">pp_*.js</span> 
+			
+		</h1>
+		
+		<div class="paragraph">
+			The post-processing plugins are high-performance WebGL shaders that will process the final rendered image.
+			For more information about the related krpano WebGL API please see <a href="../js_api.html#krpanowebglapi">here</a>.
+		</div>
+		
+		<div class="paragraph">
+			<h2><a name="plugins" href="#plugins" class="selflink">Available Postprocessing Plugins:</a></h2>
+			<ul>
+				<li><a href="#light">Light</a> - High-quality exposure and light/shadow control.</li>
+				<li><a href="#blur">Blur</a> - High-performance image blurring.</li>
+				<li><a href="#sharpen">Sharpen</a> - An Unsharp-Mask filter for sharpening or local contrast enhancement.</li>
+			</ul>
+			<br>
+			Third party post-processing plugins:
+			<ul>
+				<li><a href="https://krpano.com/plugins/userplugins/zfilter/#top">zFilter</a> - Brightness, Hue, Saturation, Vibrance, Vignette, Sepia, Color-Blending.</li>
+			</ul>
+		</div>
+		
+		<div class="paragraph">
+			<h2><a name="examples" href="#examples" class="selflink">Examples</a></h2>
+			<table style="width:100%;">
+			<tr>
+			<td style="width:33%;"><div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+				<a href="../examples.html#pp-demo" class="prop504x310"><img src="../images/pp-demo.jpg" class="outlineimage prop_inner" /></a>
+				<div style="padding-top:3px;">Postprocessing Plugins Demo</div>
+			</div></td>
+			<td style="width:33%;"><div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+				<a href="../examples.html#pp-blur" class="prop504x310"><img src="../images/ppblur_vs_bgblur.jpg" class="outlineimage prop_inner" /></a>
+				<div style="padding-top:3px;"> Blur Comparison</div>
+			</div></td>
+			<td style="width:33%;"><div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+				<a href="../examples.html#pp-sharpen" class="prop504x310"><img src="../images/pp-sharpen.jpg" class="outlineimage prop_inner" /></a>
+				<div style="padding-top:3px;">Zoom-based Sharpening</div>
+			</div></td>
+			</tr>
+			</table>
+		</div>
+		
+		<br>
+
+		<div class="paragraph">
+			<h2><a name="light" href="#light" class="selflink">Light Postprocessing Plugin</a>
+				<span class="pluginfilename">pp_light.js</span> 
+			</h2>
+			
+			<div>
+				<ul>
+					<li>A high-image-quality exposure processing plugin.</li>
+					<li>Content based lights and shadows control.</li>
+					<li>Highlight preservation to avoid that whites are getting gray on strong exposure reduction.</li>
+				</ul>
+			</div>
+		
+			Syntax:
+			<pre class="xmlpre">&lt;<a href="../xml.html#plugin">plugin</a> <a href="../xml.html#plugin.name">name</a>="pp_light" <a href="../xml.html#plugin.keep">keep</a>="true"
+        <a href="../xml.html#plugin.url">url</a>="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/pp_light.js" 
+        <a href="#enabled" class="pluginattrib">enabled</a>="true"
+        <a href="#pp_light.exposure" class="pluginattrib">exposure</a>="0.0"
+        <a href="#pp_light.lights" class="pluginattrib">lights</a>="0.0"
+        <a href="#pp_light.shadows" class="pluginattrib">shadows</a>="0.0"
+        <a href="#pp_light.filterrange" class="pluginattrib">filterrange</a>="60.0"
+        <a href="#pp_light.masking" class="pluginattrib">masking</a>="1.0"
+        <a href="#pp_light.quality" class="pluginattrib">quality</a>="7"
+        <a href="#order" class="pluginattrib">order</a>=""
+        <a href="#phase" class="pluginattrib">phase</a>="2"
+        /&gt;</pre>
+		</div>
+		
+		
+		
+		
+		<div class="paragraph">
+			<h2><a name="attributes" href="#attributes" class="selflink">Light Postprocessing Attributes</a></h2>
+			
+			<div style="padding-left:1px;padding-top:0;">
+			<table class="xmlattrdoc">
+		
+				<tr class="xmlattrdocdes1"><td style="width:50%;"><a name="pp_light.exposure"></a><a name="pp_light.lights"></a><a name="pp_light.shadows"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr><th><a href="#pp_light.exposure" class="selflink">exposure</a><br>
+						<a href="#pp_light.lights" class="selflink">lights</a><br>
+						<a href="#pp_light.shadows" class="selflink">shadows</a><br>
+					</th>
+					<th>Number<br>Number<br>Number</th>
+					<th>0.0<br>0.0<br>0.0</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>
+								Exposure control:
+								<ul>
+									<li>Positive values will light the image.</li>
+									<li>Negative values will darken the image.</li>
+								</ul>
+							</li>
+							<li>The <a href="#exposure" class="selflink">exposure</a> setting will affect the overall image,
+								the <a href="#lights" class="selflink">lights</a> and <a href="#shadows" class="selflink">shadows</a> 
+								settings only the lighter and darker parts of the image.
+							</li>
+						</ul>
+					</td>
+				</tr>
+							
+				<tr class="xmlattrdocdesc"><td><a name="pp_light.filterrange"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr>
+					<th><a href="#pp_light.filterrange" class="selflink">filterrange</a></th><th>Number</th><th>60.0</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>
+								The range of the pixels that will be used for the 
+								<a href="#pp_light.lights" class="selflink">lights</a> and <a href="#pp_light.shadows" class="selflink">shadows</a> 
+								changes.
+							</li>
+							<li>Larger values for smoother transitions between lights and shadow changes.</li>
+							<li>The larger the setting, the larger the <a href="#pp_light.quality">quality</a> setting might need to be to avoid noise.</li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr class="xmlattrdocdesc"><td><a name="pp_light.masking"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr>
+					<th><a href="#pp_light.masking" class="selflink">masking</a></th><th>Number</th><th>1.0</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>The lights / shadows mask range selection.</li>
+							<li>Larger values for a stronger lights / shadows separation, smaller values for more blending.</li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr class="xmlattrdocdesc"><td><a name="pp_light.quality"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr>
+					<th><a href="#pp_light.quality" class="selflink">quality</a></th><th>int</th><th>7<span class="presyntax_note"> or </span>3</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>A quality / performance control.</li>
+							<li>Affects only the <a href="#pp_light.lights" class="selflink">lights</a> and <a href="#pp_light.shadows" class="selflink">shadows</a> settings.
+							<li>The lower the quality setting value the faster the image processing, but therefore also more noise will be in the resulting image.</li>
+							<li>Value range: 0 (lowest quality) to 50 (highest quality).</li>
+							<li>On mobile and tablet devices the default is 3 for faster rendering performance.</li>
+							<li><i>Note - changing the quality setting can be a costly operation (browser and GPU dependent), so it should be not changed during animations.</i></li> 
+						</ul>
+					</td>
+				</tr>
+				
+			</table>
+			</div>
+		</div>
+		
+		<br>
+		
+		<div class="paragraph">
+			<h2><a name="blur" href="#blur" class="selflink">Blur Postprocessing Plugin</a>
+				<span class="pluginfilename">pp_blur.js</span> 
+			</h2>
+			
+			<div>
+				<ul>
+					<li>A high-performance image blurring filter.</li>
+					<li>It uses a fixed-number of pixels (based on the quality setting) for calculating the blurred image.
+						That means same rendering performance regardless of the blurring range.
+					</li>
+				</ul>
+			</div>
+			Syntax:
+			<pre class="xmlpre">&lt;<a href="../xml.html#plugin">plugin</a> <a href="../xml.html#plugin.name">name</a>="pp_blur" <a href="../xml.html#plugin.keep">keep</a>="true"
+        <a href="../xml.html#plugin.url">url</a>="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/pp_blur.js" 
+        <a href="#enabled" class="pluginattrib">enabled</a>="true"
+        <a href="#pp_blur.range" class="pluginattrib">range</a>="0.0"
+        <a href="#pp_blur.quality" class="pluginattrib">quality</a>="10"
+        <a href="#pp_blur.linearrgb" class="pluginattrib">linearrgb</a>="false"
+        <a href="#pp_blur.mirroredges" class="pluginattrib">mirroredges</a>="false"
+        <a href="#pp_blur.mask" class="pluginattrib">mask</a>="off" <a href="#pp_blur.maskx" class="pluginattrib">maskx</a>="0.0" <a href="#pp_blur.masky" class="pluginattrib">masky</a>="0.0" <a href="#pp_blur.maskw" class="pluginattrib">maskw</a>="1.0" <a href="#pp_blur.maskh" class="pluginattrib">maskh</a>="1.0"
+        <a href="#order" class="pluginattrib">order</a>=""
+        <a href="#phase" class="pluginattrib">phase</a>="2"
+        /&gt;</pre>
+		</div>
+		
+		<div class="paragraph">
+			<h2><a name="attributes" href="#attributes" class="selflink">Blur Postprocessing Attributes</a></h2>
+			
+			<div style="padding-left:1px;padding-top:0;">
+			<table class="xmlattrdoc">
+		
+				<tr class="xmlattrdocdes1"><td style="width:50%;"><a name="pp_blur.range"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr><th><a href="#pp_blur.range" class="selflink">range</a></th>
+					<th>Number</th>
+					<th>0.0</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>
+								The blurring range in pixel.
+							</li>
+						</ul>
+					</td>
+				</tr>
+							
+				<tr class="xmlattrdocdesc"><td><a name="pp_blur.quality"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr>
+					<th><a href="#pp_blur.quality" class="selflink">quality</a></th><th>int</th><th>10<span class="presyntax_note"> or </span>5</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>The quality setting affects the blurring quality and the rendering-performance.</li>
+							<li>The lower the quality setting value the faster the image processing, but therefore also more noise will be in the resulting image.</li>
+							
+							<li>Value range: 1 (lowest quality) to 50 (highest quality).
+								Typically a setting between 5 and 10 is enough for the most usage cases.
+							</li>
+							<li>On mobile and tablet devices the default is 5 for faster rendering performance.</li>
+							<li><i>Note - changing the quality setting can be a costly operation (browser and GPU dependent), so it should be not changed during animations.</i></li> 
+						</ul>
+					</td>
+				</tr>
+				
+				<tr class="xmlattrdocdesc"><td><a name="pp_blur.linearrgb"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr>
+					<th><a href="#pp_blur.linearrgb" class="selflink">linearrgb</a></th><th>Boolean</th><th>false</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>Do the blurring in linear-RGB space.</li>
+							<li>This results in more correct blended/blurred colors, but also costs a bit performance, therefore it is disabled by default.</li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr class="xmlattrdocdesc"><td><a name="pp_blur.mirroredges"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr>
+					<th><a href="#pp_blur.mirroredges" class="selflink">mirroredges</a></th><th>Boolean</th><th>false</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>By default the pixels at the edges will get repeated when blurring the image.</li>
+							<li>When enabling this setting, the pixel will get mirrored instead.</li>
+							<li>This can improve the image quality a bit and reduce artefacts at the edges, but also costs a bit performance, therefore it is disabled by default.</li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr class="xmlattrdocdesc"><td><a name="pp_blur.mask"></a><a name="pp_blur.maskx"></a><a name="pp_blur.masky"></a><a name="pp_blur.maskw"></a><a name="pp_blur.maskh"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr>
+					<th>
+						<a href="#pp_blur.mask" class="selflink">mask</a><br>
+						<a href="#pp_blur.maskx" class="selflink">maskx</a><br>
+						<a href="#pp_blur.masky" class="selflink">masky</a><br>
+						<a href="#pp_blur.maskw" class="selflink">maskw</a><br>
+						<a href="#pp_blur.maskh" class="selflink">maskh</a><br>
+					</th>
+					<th>String<br>Number<br>Number<br>Number<br>Number</th><th>"off"<br>0.0<br>0.0<br>1.0<br>1.0</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>Blur only a specific rectangular area.</li>
+							<li>Mask settings:
+								<ul>
+									<li><span class="pre">off</span> - disabled</li>
+									<li><span class="pre">in</span> - blur only the area INSIDE the mask area.</li>
+									<li><span class="pre">out</span> - blur only the area OUTSIDE the mask area.</li>
+								</ul>
+							</li>
+							<li>The mask area is defined by the 
+								<a href="#pp_blur.maskx">maskx</a>, 
+								<a href="#pp_blur.masky">masky</a>,
+								<a href="#pp_blur.maskw">maskw</a>,
+								<a href="#pp_blur.maskh">maskh</a> settings.
+								Their range is from 0.0 (left/top) to 1.0 (right/bottom).
+							</li>
+						</ul>
+					</td>
+				</tr>
+				
+			</table>
+			</div>
+		</div>
+		
+		<br>
+		
+		<div class="paragraph">
+			<h2><a name="sharpen" href="#sharpen" class="selflink">Sharpen Postprocessing Plugin</a>
+				<span class="pluginfilename">pp_sharpen.js</span> 
+			</h2>
+			
+			<div>
+				<ul>
+					<li>Sharpens the image by appling an <a href="https://en.wikipedia.org/wiki/Unsharp_masking" target="_blank">Unsharp Mask</a>.</li>
+					<li>That means first the image will be blurred and then the differences between the blurred image and the original image be enhanced.</li>
+					<li>For typical sharpening use smaller <a href="#pp_sharpen.range">range</a> settings together with higher <a href="#pp_sharpen.strength">strength</a> settings.</li>
+					<li>For local contrast enhancements use larger <a href="#pp_sharpen.range">range</a> settings together with lower <a href="#pp_sharpen.strength">strength</a> settings.</li>
+				</ul>
+			</div>
+			Syntax:
+			<pre class="xmlpre">&lt;<a href="../xml.html#plugin">plugin</a> <a href="../xml.html#plugin.name">name</a>="pp_sharpen" <a href="../xml.html#plugin.keep">keep</a>="true"
+        <a href="../xml.html#plugin.url">url</a>="<a href="../xml.html#urlplaceholders" class="selflink2">%VIEWER%</a>/plugins/pp_sharpen.js" 
+        <a href="#enabled" class="pluginattrib">enabled</a>="true"
+        <a href="#pp_sharpen.strength" class="pluginattrib">strength</a>="0.0"
+        <a href="#pp_sharpen.range" class="pluginattrib">range</a>="0.0"
+        <a href="#pp_sharpen.luminanceonly" class="pluginattrib">luminanceonly</a>="true"
+        <a href="#pp_sharpen.quality" class="pluginattrib">quality</a>="5"
+        <a href="#order" class="pluginattrib">order</a>=""
+        <a href="#phase" class="pluginattrib">phase</a>="2"
+        /&gt;</pre>
+		</div>
+		
+		<div class="paragraph">
+			<h2><a name="attributes" href="#attributes" class="selflink">Sharpen Postprocessing Attributes</a></h2>
+			
+			<div style="padding-left:1px;padding-top:0;">
+			<table class="xmlattrdoc">
+		
+				<tr class="xmlattrdocdes1"><td style="width:50%;"><a name="pp_sharpen.strength"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr><th><a href="#pp_sharpen.strength" class="selflink">strength</a></th>
+					<th>Number</th>
+					<th>0.0</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>
+								The strength of the sharpening / contrast enhancement.
+							</li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr class="xmlattrdocdesc"><td><a name="pp_sharpen.range"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr><th><a href="#pp_sharpen.range" class="selflink">range</a></th>
+					<th>Number</th>
+					<th>0.0</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>
+								The blurring range in pixel.
+							</li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr class="xmlattrdocdesc"><td><a name="pp_sharpen.luminanceonly"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr><th><a href="#pp_sharpen.luminanceonly" class="selflink">luminanceonly</a></th>
+					<th>Boolean</th>
+					<th>true</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>Do sharpening only in the luminance channel instead of in RGB channels.</li>
+							<li>The processing is slightly faster when enabled (internally only 2 instead of 3 passes).</li>
+							<li>For normal sharping it shouldn't better what settings is used, but for local contrast enhancements it might look better when this setting is disabled.</li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr class="xmlattrdocdesc"><td><a name="pp_sharpen.quality"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr>
+					<th><a href="#pp_sharpen.quality" class="selflink">quality</a></th><th>int</th><th>5</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>The quality setting affects the blurring quality and the rendering-performance.</li>
+							<li>The lower the quality setting value the faster the image processing, but therefore also more noise will be in the resulting image.</li>
+							<li>Value range: 1 (lowest quality) to 50 (highest quality).
+								Typically a setting between 5 and 10 is enough for the most usage cases.
+							</li>
+							<li>For small <a href="#pp_sharpen.range">range</a> settings even a lower quality setting (e.g. 1-3) can be good enough.</li>
+							<li>The setting quality=1 is additionally a special case for a good performance / quality ratio at very low <a href="#pp_sharpen.range">range</a> settings (e.g. lower than 2) .</li>
+							<li><i>Note - changing the quality setting can be a costly operation (browser and GPU dependent), so it should be not changed during animations.</i></li> 
+						</ul>
+					</td>
+				</tr>
+				
+			</table>
+			</div>
+		</div>
+		
+		<br>
+		
+		<div class="paragraph">
+			<h2><a name="attributes" href="#attributes" class="selflink">Common Postprocessing Plugin Attributes</a></h2>
+			
+			<div style="padding-left:1px;padding-top:0;">
+			<table class="xmlattrdoc">
+		
+				<tr class="xmlattrdocdes1"><td style="width:50%;"><a name="enabled"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr><th><a href="#enabled" class="selflink">enabled</a></th><th>Boolean</th><th>true</th></tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>
+								Enable or disable the plugin.
+							</li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr class="xmlattrdocdesc"><td><a name="order"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr>
+					<th><a href="#order" class="selflink">order</a></th><th>int</th><th></th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>A number for sorting.</li>
+							<li>When using several postprocessing plugin they will be ordered by this given number.</li>
+							<li>When not set, the plugins will be processed in the order they were first added.</li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr class="xmlattrdocdesc"><td><a name="phase"></a>Attribute name</td><td>Type</td><td>Default value</td></tr>
+				<tr>
+					<th><a href="#phase" class="selflink">phase</a></th><th>int</th><th>2</th>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<ul>
+							<li>The Postprocessing 'Phase'.</li>
+							<li>There are two phases:
+								<ul>
+									<li><span class="pre">phase=1</span>
+										<ul>
+											<li>After rendering the pano image, but BEFORE rendering the hotspots.</li>
+											<li>Could be used e.g. for blurring the pano image, but keeping the hotspots sharp.</li>
+											
+										</ul>
+									</li>
+									<li><span class="pre">phase=2</span>
+										<ul>
+											<li>After rendering the pano image and AFTER rendering the hotspots.</li>
+											<li>As last postprocessing step before showing the image on the screen.</li>
+											
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				
+			</table>
+			</div>
+		</div>
+		
+		
+		
+
+
+				</div>
+			</div>
+		</div>
+		<div id="krpano_footerwrapper">
+			<div id="krpano_footer">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="right">Copyright &copy; 2025 krpano.com</td></tr></tbody></table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

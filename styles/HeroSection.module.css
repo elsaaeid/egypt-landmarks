@@ -1,0 +1,49 @@
+/* HeroSection.module.css */
+
+.hero {
+    position: relative;
+    background-image: url('../public/assets/images/pyramids-hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 31rem; /* Equivalent to h-96 in Tailwind */
+    width: 100%;
+    margin-top: 45px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--overlay-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+.title {
+  font-size: 2.25rem; /* Equivalent to text-4xl */
+  font-weight: bold;
+  margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
+
+.subtitle {
+  font-size: 1.125rem; /* Equivalent to text-lg */
+  margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+}
+
+.button {
+  background-color: var(--main-accent); /* Equivalent to bg-blue-600 */
+  color: white;
+  padding: 0.5rem 1.5rem; /* Equivalent to px-6 py-2 */
+  border-radius: 0.25rem; /* Equivalent to rounded */
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--hover-accent); /* Equivalent to hover:bg-blue-700 */
+}

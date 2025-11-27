@@ -1,0 +1,1735 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../design.css"/>
+	<title>krpano Documentation</title>
+	<script>
+		function toggle_mobile_nav(){var t=document,n=t.getElementById("krpano_contentnav"),m=t.getElementById("krpano_mobile_menu_bg");t=n.state!=2;n.state=t?2:1;n.style.height=t?"auto":"24px";m.style.display=t?"block":"none";t=t?"add":"remove";n.classList[t]("krpano_contentnav_opened");t+="EventListener";n[t]("click",toggle_mobile_nav,false);m[t]("mousedown",toggle_mobile_nav,false);}
+	</script>
+</head>
+<body>
+	<div id="krpano_root">
+		<div id="krpano_headerwrapper">
+			<div id="krpano_header">
+				<div id="krpano_mainmenu">
+					krpano 1.23.2 <span class="smallcomment">(build 2025-09-22)</span>
+				</div>
+			</div>
+			<div id="krpano_imagebar"></div>
+			
+			<div id="krpano_logo_container">
+				<a id="krpano_logo" href="https://krpano.com"><span>krpano.com</span></a>
+			</div>
+			
+			<div id="krpano_imagebar_links">
+				Documentation
+			</div>
+		</div>
+		
+		<div id="krpano_contentwrapper">
+			<div id="krpano_mobile_menuicon" onclick="toggle_mobile_nav();"><span class="burgermenu"></span></div>
+			<div id="krpano_mobile_menu_bg"></div>
+			<div id="krpano_content">
+				<div id="krpano_contentnav">
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('doc_section');">Documentation</h2>
+					<ul class="sidemenu_section hidden" id="doc_section">
+						<li><a href="../embedpano.html#top">Embedding</a></li>
+						<li><a href="../xml.html#top">XML Reference</a>
+							<ul>
+								<li class="lisd"><a href="../textfield.html#top">Textfield</a></li>
+								<li class="lisd"><a href="scrollarea.html#top">ScrollArea</a></li>
+							</ul>
+						</li>
+						<li><a href="../actions.html#top">Actions / Scripting</a></li>
+						<li><a href="../js_api.html#top">Javascript Interface</a></li>
+						<li><a href="../localusage.html#top">Local / Offline Usage</a></li>
+						<li><a href="../coordinates.html#top">Coordinate Systems</a></li>
+						<li><a href="../../license.html#top">License Agreement</a></li>
+						<li><a href="../releasenotes.html#top">Release Notes</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('plugins_section');">Plugins</h2>
+					<ul class="sidemenu_section " id="plugins_section">
+						<li><a href="bingmaps.html#top">Bing Maps</a></li>
+						<li><a href="googlemaps.html#top">Google Maps</a></li>
+						<li><a href="gyro2.html#top">Gyro2</a></li>
+						<li><a href="krpanomaps.html#top">krpano Maps</a></li>
+						<li><a href="postprocessing.html#top">Postprocessing</a></li>
+						<li><a href="radar.html#top">Radar</a></li>
+						<li><a href="snow.html#top">Snow / Rain</a></li>
+						<li><a href="soundinterface.html#top">Soundinterface</a></li>
+						<li><a href="threejs.html#top">ThreeJS</a></li>
+						<li><a href="videoplayer.html#top">Videoplayer</a></li>
+						<li><a href="webvr.html#top">WebVR</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('xmlext_section');">XML Extensions</h2>
+					<ul class="sidemenu_section hidden" id="xmlext_section">
+						<li><a href="xml_extensions.html#controls3d">controls3d.xml</a></li>
+						<li><a href="xml_extensions.html#cursor3d">cursor3d.xml</a></li>
+						<li><a href="combobox.html#top">combobox.xml</a></li>
+						<li><a href="xml_extensions.html#contextmenu">contextmenu.xml</a></li>
+						<li><a href="xml_extensions.html#copy_to_clipboard">copy_to_clipboard.xml</a></li>
+						<li><a href="xml_extensions.html#drag3d">drag3d.xml</a></li>
+						<li><a href="xml_extensions.html#measure3d">measure3d.xml</a></li>
+						<li><a href="xml_extensions.html#fps">fps.xml</a></li>
+						<li><a href="xml_extensions.html#ios_iframe_fullscreen">ios_iframe_fullscreen.xml</a></li>
+						<li><a href="xml_extensions.html#iphone_fullscreen_swipe">iphone_fullscreen_swipe.xml</a></li>
+						<li><a href="xml_extensions.html#minimap_zoomrect">minimap_zoomrect.xml</a></li>
+						<li><a href="showtext.html#top">showtext.xml</a></li>
+						<li><a href="xml_extensions.html#stateurls">stateurls.xml</a></li>
+						<li><a href="xml_extensions.html#vr_and_anaglyph_buttons">vr_and_anaglyph_buttons.xml</a></li>
+						<li><a href="xml_extensions.html#wakelock">wakelock.xml</a></li>
+						<li><a href="xml_extensions.html#webvr">webvr.xml</a></li>
+						<li><a href="xml_extensions.html#webvr_autozoom">webvr_autozoom.xml</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('tools_section');">Tools</h2>
+					<ul class="sidemenu_section hidden" id="tools_section">
+						<li><a href="../tools/krpanotools.html#makepano">Makepano</a><br>
+							<ul><li><a href="../tools/config.html#top">Config File Reference</a></li></ul>
+						</li>
+						<li><a href="../tools/krpanotools.html#maketiles">Maketiles</a></li>
+						<li><a href="../tools/krpanotools.html#makepreview">Makepreview</a></li>
+						<li><a href="../tools/krpanotools.html#spheretocube">SphereToCube</a></li>
+						<li><a href="../tools/krpanotools.html#cubetosphere">CubeToSphere</a></li>
+						<li><a href="../tools/krpanotools.html#protect">Protect Tool</a></li>
+						<li><a href="../tools/krpanotools.html#encrypt">Encrypt Tool</a></li>
+						<li><a href="../tools/krpanotools.html#register">Registration Tool</a></li>
+						<li><a href="../tools/testingserver.html#top">krpano Testing Server</a></li>
+					</ul>
+					
+					<h2 class="sidemenu_title" onclick="toggle_section('examples_section');">Examples</h2>
+					<ul class="sidemenu_section hidden" id="examples_section">
+						<li><a href="../examples.html#top">Show All</a></li>
+						<li><a href="../examples.html?vtour#top">Virtual Tours</a></li>
+						<li><a href="../examples.html?3d#top">3D Examples</a></li>
+						<li><a href="../examples.html?splats#top">Gaussian Splatting</a></li>
+						<li><a href="../examples.html?depthmap#top">Depthmap</a></li>
+						<li><a href="../examples.html?threejs#top">ThreeJS</a></li>
+						<li><a href="../examples.html?multires#top">Multiresolution</a></li>
+						<li><a href="../examples.html?layers#top">Layers</a></li>
+						<li><a href="../examples.html?plugins#top">Plugins</a></li>
+						<li><a href="../examples.html?hotspots#top">Hotspots</a></li>
+						<li><a href="../examples.html?maps#top">Maps</a></li>
+						<li><a href="../examples.html?video#top">Video</a></li>
+						<li><a href="../examples.html?webvr#top">WebVR</a></li>
+						<li><a href="../examples.html?js#top">Javascript</a></li>
+					</ul>
+				</div>
+				<a name="top" class="toplink">&nbsp;</a>
+				<div id="krpano_contenttext">
+
+					<noscript>
+						<table style="width:100%; height:400px; position:fixed; left:95px; top:220px;"><tr valign="middle"><td><center><h1>
+							<span style="color:#FFFFFF; background:#FF0000; padding:15px;">
+								Javascript must be activated for this page!
+							</span>
+						</h1></center></td></tr></table>
+					</noscript>
+					
+					<script>
+						function toggle_section(id)
+						{
+							var element = document.getElementById(id);
+							if (element)
+							{
+								element.classList.toggle("hidden")
+							}
+						}
+					</script>
+
+					
+
+	<h1>krpano ThreeJS Plugin
+		<span class="pluginfilename">threejs_krpanoplugin.js</span>
+		
+	</h1>
+
+	<div class="paragraph">
+		<ul>
+			<li>A plugin for using the <a href="https://threejs.org/" target="_blank">ThreeJS</a> 3D-graphics library inside krpano.</li>
+			<li>With this plugin it is possible to use <a href="#3dmodelhotspot">3D Models</a> (glb, gltf, obj+mtl files) as krpano <a href="#3dmodelhotspot">Hotspots</a>.
+				These hotspots can interact and intersect with the krpano content and automatically support all krpano hotspot controls and events.
+			</li>
+			<li>Additionally this plugin supports many helper functions for using 3D-content:
+				<ul>
+					<li>Special <a href="#lighthotspot">Light Hotspots</a> for creating light and shadow effects.</li>
+					<li>It provides optionally using <a href="#light.colortemperature">color temperatures</a> for setting the lights colors.</li>
+					<li>A <a href="#shadowfloor">Shadow Floor</a> plane to see shadows also on the pano-background.</li>
+					<li>Automatic <a href="#envmapurl">Environment Mapping</a> for lighting and reflections using the preview pano.</li>
+					<li>Easy usage and controlling of <a href="#gltfanimations">GLTF Animations</a>.</li>
+					<li><a href="#hotspot.convertmaterials">Material conversions</a> for GLTF models when the stored ones are not suitable.</li>
+					<li>Getting the untransformed <a href="#hotspot.bboxx">Bounding Box</a> informations.</li>
+				</ul>
+			</li>
+			
+			<li>The plugin has the ThreeJS library and some of its addons modules directly <a href="#useembeddedthreejs">integrated and embedded</a>.
+				This integration allows much faster loading and provides better browser compatibility.
+			</li>
+			<li>Beside the functions provided by this plugin, it is also possible to access
+				the ThreeJS library directly via Javascript and perform custom tasks with it.
+			</li>
+			<li>For even more customization and to help understanding how the integration works,
+				there is an <a href="#opensource">Open Source</a> version of the plugin available.
+			</li>
+		</ul>
+	</div>
+	
+	<div>
+		Documentation topics:
+		<ul>
+			<li><a href="#syntax">Syntax</a></li>
+			<li><a href="#integratedmodules">Integrated ThreeJS Addons / Modules</a></li>
+			<li><a href="#loadmodules">Load additional ThreeJS Addons / Modules</a></li>
+			<li><a href="#settings">Plugin Settings</a></li>
+			<li><a href="#3dmodelhotspot">3D Model Hotspots</a></li>
+			<li><a href="#lighthotspot">Light Hotspots</a></li>
+			<li><a href="#examples">Examples</a></li>
+			<li><a href="#opensource">Open Source Version</a></li>
+		</ul>
+		<br>
+	</div>
+	
+	
+	<div class="paragraph" style="margin-bottom:0;">
+		<h2><a name="syntax" href="#syntax" class="selflink">Syntax</a></h2>
+		Including and core settings:
+		<pre class="xmlpre">&lt;<a href="../xml.html#plugin">plugin</a> <a href="../xml.html#plugin.api">api</a>="threejs" <a href="../xml.html#plugin.keep">keep</a>="true"
+        <a href="../xml.html#plugin.url">url</a>="<a href="../xml.html#url" class="selflink2">%VIEWER%</a>/plugins/threejs_krpanoplugin.js"
+        <a href="#useembeddedthreejs" class="pluginattrib">useembeddedthreejs</a>="true"
+        <a href="#integratedrendering" class="pluginattrib">integratedrendering</a>="true"
+        <a href="#es6modules" class="pluginattrib">es6modules</a>="false"
+        <a href="#adjustlightfalloff" class="pluginattrib">adjustlightfalloff</a>="true"
+        <a href="#cache" class="pluginattrib">cache</a>="true"
+        <a href="#onready" class="pluginattrib">onready</a>=""
+        /&gt;</pre>
+		Settings:
+<pre class="xmlpre">&lt;<a href="../xml.html#plugin">threejs</a> <a href="#shadowmap" class="pluginattrib">shadowmap</a>="pcf"
+         <a href="#textureanisotropy" class="pluginattrib">textureanisotropy</a>="true"
+         <a href="#tonemapping" class="pluginattrib">tonemapping</a>="no"
+         <a href="#exposure" class="pluginattrib">exposure</a>="1.0"
+         <a href="#ambientlight" class="pluginattrib">ambientlight</a>="1.0"
+         <a href="#ambientcolor" class="pluginattrib">ambientcolor</a>="0xFFFFFF"
+         <a href="#ambientcolortemperature" class="pluginattrib">ambientcolortemperature</a>="0"
+         <a href="#shadowfloor" class="pluginattrib">shadowfloor</a>="false"
+         <a href="#shadowfloorlevel" class="pluginattrib">shadowfloorlevel</a>="160.0"
+         <a href="#shadowflooralpha" class="pluginattrib">shadowflooralpha</a>="0.5"
+         <a href="#envmapurl" class="pluginattrib">envmapurl</a>=""
+         <a href="#raycastcheck" class="pluginattrib">raycastcheck</a>="hotspots"
+         /&gt;</pre>
+         Global Events:
+<pre class="xmlpre">&lt;<a href="../xml.html#events">events</a> <a href="#events.threejs_onready" class="pluginattrib">threejs_onready</a>=""
+        <a href="#events.threejs_onbeforerender" class="pluginattrib">threejs_onbeforerender</a>=""
+        <a href="#events.threejs_onafterrender" class="pluginattrib">threejs_onafterrender</a>=""
+        <a href="#events.threejs_modelschanged" class="pluginattrib">threejs_modelschanged</a>=""
+        <a href="#events.threejs_lightschanged" class="pluginattrib">threejs_lightschanged</a>=""
+        /&gt;</pre>
+	</div>
+	
+	
+	<div class="paragraph">
+		After loading, the plugin object will be also available as global <span class="pre">threejs</span> variable (the <a href="../xml.html#plugin.api">api</a> name).<br>
+		<br>
+		Additionally there are these ThreeJS objects and functions available:
+		<ul>
+			<li><span class="pre">threejs.THREE</span> - the main THREE library object.</li>
+			<li><span class="pre">threejs.revision</span> - the THREE library revision / version.</li>
+			<li><span class="pre">threejs.renderer</span> - the ThreeJS <a href="https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer" target="_blank">Renderer</a>.</li>
+			<li><span class="pre">threejs.camera</span> - a ThreeJS <a href="https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera" target="_blank">PerspectiveCamera</a> with krpano projection settings.</li>
+			<li><span class="pre">threejs.raycaster</span> - a ThreeJS <a href="https://threejs.org/docs/index.html#api/en/core/Raycaster" target="_blank">Raycaster</a>.</li>
+			<li><span class="pre">threejs.scene</span> - the ThreeJS <a href="https://threejs.org/docs/index.html#api/en/scenes/Scene" target="_blank">Scene</a> where all gets added.</li>
+			<li><a href="#getmodule" class="pre selflink2">threejs.getmodule(modulename)</a> - a function for getting a module object.</li>
+			<li><a href="#krpano_to_threejs_position" class="pre selflink2">threejs.krpano_to_threejs_position(pnt, h,v,d, x,y,z)</a></li>
+			<li><a href="#threejs_to_krpano_position" class="pre selflink2">threejs.threejs_to_krpano_position(...)</a></li>
+			
+			<li><span class="pre">threejs.models</span> - Array of all 3D Model hotspots.</li>
+			<li><span class="pre">threejs.lights</span> - Array of all Light hotspots.</li>
+		</ul>
+		<br>
+		
+		<h2><a name="integratedmodules" href="#integratedmodules" class="selflink">Integrated ThreeJS Addons / Modules</a></h2>
+		The krpano ThreeJS plugin has these modules / add-ons already integrated:
+		<ul>
+			<li><a href="https://threejs.org/docs/index.html#examples/en/utils/BufferGeometryUtils" target="_blank">BufferGeometryUtils</a></li>
+			<li><a href="https://threejs.org/docs/index.html#examples/en/loaders/GLTFLoader" target="_blank">GLTFLoader</a></li>
+			<li><a href="https://threejs.org/docs/index.html#examples/en/loaders/OBJLoader" target="_blank">OBJLoader</a></li>
+			<li><a href="https://threejs.org/docs/index.html#examples/en/loaders/MTLLoader" target="_blank">MTLLoader</a></li>
+		</ul>
+		<br>
+		
+		<h2><a name="loadmodules" href="#loadmodules" class="selflink">Load additional ThreeJS Addons / Modules</a></h2>
+		Example:
+		<pre class="xmlpre">&lt;<a href="../xml.html#plugin">plugin</a> <a href="../xml.html#plugin.url">url</a>="<a href="../xml.html#url" class="selflink2">%VIEWER%</a>/plugins/threejs_krpanoplugin.js" ...&gt;
+    &lt;module <a href="#module.name" class="pluginattrib">name</a>="TransformControls" <a href="#module.url" class="pluginattrib">url</a>="TransformControls.js" /&gt;
+    &lt;module <a href="#module.name" class="pluginattrib">name</a>="..." <a href="#module.url" class="pluginattrib">url</a>="..." /&gt;
+    ...
+&lt;/<a href="../xml.html#plugin">plugin</a>&gt;</pre>
+		<ul>
+			<li>This syntax can be used to load additional ES6 modules (ThreeJS add-ons).</li>
+			<li>All modules listed there will be loaded before the plugin starts to runs.</li>
+			
+		</ul>
+	</div>
+	
+	
+	<div class="paragraph">
+		<h2 style="padding-bottom:0;"><a name="settings" href="#settings" class="selflink">Plugin Settings</a></h2>
+		
+		<table class="xmlattrdoc" style="padding-left:1px;padding-top:0;margin-top:0;">
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="useembeddedthreejs"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#useembeddedthreejs" class="selflink">useembeddedthreejs</a></th>
+				<th>Boolean</th>
+				<th>true</th>
+			</tr>
+			<tr>
+				<td colspan="4" style="max-width:0;overflow:hidden;text-overflow:ellipsis;">
+					<ul>
+						<li>Use the <a href="https://threejs.org/" target="_blank">ThreeJS</a> library that is embedded inside the krpano ThreeJS plugin.</li>
+						<li>When disabling this setting, the ThreeJS library and its add-ons need to be included manually in the html file.
+							And an import map must exist to map the ThreeJS library files to their typical import names.
+						</li>
+						<li>Example for a minimum importmap in the html file when useembeddedthreejs is disabled:
+						<pre>&lt;script type="importmap"&gt;
+{ "imports": {
+  "three": "three.module.min.js",
+  "BufferGeometryUtils": "BufferGeometryUtils.js",
+  "GLTFLoader": "GLTFLoader.js"
+}}
+&lt;/script&gt;</pre>
+							The file paths would need to be adjusted accordingly of course.
+							And when there are other modules they would need to be included there as well.
+						</li>
+						<li>This could be used to use a different or custom version of the ThreeJS library than the one that is embedded inside the krpano ThreeJS plugin.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="integratedrendering"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#integratedrendering" class="selflink">integratedrendering</a></th>
+				<th>Boolean</th>
+				<th>true</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Use 'integrated' rendering - that means rendering the krpano content and the ThreeJS content into the same WebGL context - same framebuffer, same depthbuffer, same WebGL states.</li>
+						<li>With this the 3D-contents of krpano and ThreeJS can intersect each other.</li>
+						<li>When disabled, ThreeJS will use its own separate WebGL context and render on top of the krpano WebGL content.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="es6modules"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#es6modules" class="selflink">es6modules</a></th>
+				<th>Boolean</th>
+				<th>false</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Enable or disable the usage of Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules" target="_blank">ES6 modules</a>.</li>
+						<li>By default the krpano ThreeJS plugin uses its own module loader.
+							This one works also without <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap" target="_blank">importmap</a>-support by the browser
+							and additionally also should be faster.
+						</li>
+						<li>When disabled, the plugin <a href="#getmodule">getmodule()</a> function would need to be used instead of the
+							Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import?retiredLocale=de" target="_blank">import()</a>
+							function to get a module object.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="adjustlightfalloff"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#adjustlightfalloff" class="selflink">adjustlightfalloff</a></th>
+				<th>Boolean</th>
+				<th>true</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>krpano and ThreeJS are using different units and
+							generally this is no problem as the positions can be easily adjusted accordingly,
+							but the physically-based lighting in ThreeJS has the light falloff decaying hard-coded in the
+							<a href="https://github.com/mrdoob/three.js/blob/master/src/renderers/shaders/ShaderChunk/lights_pars_begin.glsl.js#L61" target="_blank">Shader code</a>
+							and is based on the ThreeJS units. 
+						</li>
+						<li>Therefore without adjusting the lights would fall off much too quickly with distance.
+						</li>
+						<li>When this setting is enabled (the default), the ThreeJS Shaders will be patched
+							to use the krpano units for the light falloff.
+						</li>
+						<li>This setting need to be set at startup and can't be changed at runtime.
+						
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="cache"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#cache" class="selflink">cache</a></th>
+				<th>Boolean</th>
+				<th>true</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Enable or disable the ThreeJS <a href="https://threejs.org/docs/#api/en/loaders/Cache" target="_blank">Cache</a>.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="shadowmap"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#shadowmap" class="selflink">shadowmap</a></th>
+				<th>String</th>
+				<th>"pcf"</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>The ThreeJS <a href="https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer.shadowMap" target="_blank">shadowMap</a> settings.</li>
+						<li>Defines how shadows will be rendered, affects shadow quality and performance.</li>
+						<li>Available settings:
+							<ul>
+								<li><span class="pre">off</span> - no shadows</li>
+								<li><span class="pre">basic</span> (default) - hard shadows without anti-aliasing</li>
+								<li><span class="pre">pcf</span> - Percentage-Closer Filtering (PCF) algorithm</li>
+								<li><span class="pre">pcfsoft</span> - PCF with bilinear filtering</li>
+								<li><span class="pre">vsm</span> - Variance Shadow Map (VSM) algorithm
+									<ul>
+										<li>Note - in this mode all objects that <a href="#hotspot.receiveshadow">receive shadows</a> will also <a href="#hotspot.castshadow">cast shadows</a>.</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="textureanisotropy"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#textureanisotropy" class="selflink">textureanisotropy</a></th>
+				<th>Boolean</th>
+				<th>true</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Enable <a href="https://en.wikipedia.org/wiki/Anisotropic_filtering" target="_blank">Anisotropic filtering</a> for Textures.</li>
+						<li>This can improve the display quality of downscaled and mip-mapped images / textures.</li>
+						<li>But therefore increase the memory-need and reduce rendering-performance.</li>
+						<li>Note - this setting would need to be set or changed <u>before</u> loading textures!
+							Any later setting change will only affect textures that will be loaded after the change.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="tonemapping"></a><a name="exposure"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#tonemapping" class="selflink">tonemapping</a><br>
+					<a href="#exposure" class="selflink">exposure</a>
+				</th>
+				<th>String<br>Number</th>
+				<th>"no"<br>1.0</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>The ThreeJS <a href="https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer.toneMapping" target="_blank">toneMapping</a> 
+							and <a href="https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer.toneMappingExposure" target="_blank">toneMappingExposure</a> settings.
+						</li>
+						<li>Available <a href="#tonemapping">tonemapping</a> settings:
+							<ul>
+								<li><span class="pre">no</span> (default) - no tone mapping</li>
+								<li><span class="pre">linear</span></li>
+								<li><span class="pre">reinhard</span></li>
+								<li><span class="pre">cineon</span></li>
+								<li><span class="pre">acesfilmic</span></li>
+							</ul>
+						</li>
+						<li>
+							The <a href="#exposure">exposure</a> setting adjusts the general tonemapping exposure,
+							but only when the <a href="#tonemapping">tonemapping</a> setting is set to a value other than "no".
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="ambientlight"></a><a name="ambientcolor"></a><a name="ambientcolortemperature"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#ambientlight" class="selflink">ambientlight</a><br>
+					<a href="#ambientcolor" class="selflink">ambientcolor</a><br>
+					<a href="#ambientcolortemperature" class="selflink">ambientcolortemperature</a><br>
+				</th>
+				<th>Number<br>Integer<br>Integer</th>
+				<th>1.0<br>0xFFFFFF<br>0</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>The intensity and color of the <a href="https://threejs.org/docs/index.html#api/en/lights/AmbientLight" target="_blank">Ambient light</a>.</li>
+						<li>This light globally illuminates all objects in the scene equally.</li>
+						<li>The light color can be either set as RGB hexcolor value (0xRRGGBB) or using the <a href="https://en.wikipedia.org/wiki/Color_temperature" target="_blank">color temperature</a>
+							in Kelvin (1000-40000, 0=off).
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="shadowfloor"></a><a name="shadowfloorlevel"></a><a name="shadowflooralpha"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#shadowfloor" class="selflink">shadowfloor</a><br>
+					<a href="#shadowfloorlevel" class="selflink">shadowfloorlevel</a><br>
+					<a href="#shadowflooralpha" class="selflink">shadowflooralpha</a><br>
+				</th>
+				<th>Boolean<br>Number<br>Number</th>
+				<th>false<br>160.0<br>0.5</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Enable a virtual / transparent floor plane that can receive shadows.</li>
+						<li>This can be used to give 3D Models, that are used on top of panoramic-background images, a floor where they can project their shadows.
+						</li>
+						<li><a href="#shadowfloorlevel">shadowfloorlevel</a> is distance from the camera-height to the floor in cm.</li>
+						<li><a href="#shadowflooralpha">shadowflooralpha</a> is blending between the shadows and the pano-background.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="envmapurl"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#envmapurl" class="selflink">envmapurl</a></th>
+				<th>String</th>
+				<th>null</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>The ThreeJS <a href="https://threejs.org/docs/#api/en/scenes/Scene.environment" target="_blank">Scene environment</a> texture.</li>
+						<li>Sets an environment map to illuminate the scene by a given image and to have a mirror image for reflecting materials.</li>
+						<li>Here either an url to a spherical pano image (360x180) could be set,</li>
+						<li>or the special value <span class="pre">preview</span> be used. In this case the current 
+							krpano pano <a href="../xml.html#preview" class="pre selflink2">&lt;preview&gt;</a> image will be automatically used.
+							Sphere and Cubestrip images are supported in this case.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="raycastcheck"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2"><a href="#raycastcheck" class="selflink">raycastcheck</a></th>
+				<th>String</th>
+				<th>"hotspots"</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Define which 3D-objects should be used on <a href="../actions.html#raycast">raycasting</a> / 3D-collision checking.</li>
+						<li>Possible settings:
+							<ul>
+								<li><span class="pre">hotspots</span> (default) - use only krpano hotspots with <a href="../xml.html#hotspot.hittest">hittest=true</a>.</li>
+								<li><span class="pre">visible</span> - use all 'visible' ThreeJS scene 3D geometry.</li>
+								<li><span class="pre">all</span> - use all ThreeJS scene 3D geometry.</li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="onready"></a><a name="events.threejs_onready"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#onready" class="selflink">onready</a><br>
+					<a href="#events.threejs_onready" class="selflink">events.threejs_onready</a><br>
+				</th>
+				<th>Event<br>Event<br></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>This event will be called when the krapno ThreeJS plugin is ready for usage.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="onbeforerender"></a><a name="onafterrender"></a><a name="events.threejs_onbeforerender"></a><a name="events.threejs_onafterrender"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					
+					<a href="#events.threejs_onbeforerender" class="selflink">events.threejs_onbeforerender</a><br>
+					<a href="#events.threejs_onafterrender" class="selflink">events.threejs_onafterrender</a><br>
+				</th>
+				<th>Event<br>Event<br></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>These events will be called before and after rendering the ThreeJS content.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="events.threejs_modelschanged"></a><a name="events.threejs_lightschanged"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#events.threejs_modelschanged" class="selflink">events.threejs_modelschanged</a><br>
+					<a href="#events.threejs_lightschanged" class="selflink">events.threejs_lightschanged</a><br>
+				</th>
+				<th>Event<br>Event</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>These events will be called when 3D Models or Lights will be added or removed.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="4"><a name="getmodule"></a>Function</td></tr>
+			<tr>
+				<th colspan="4">
+					<a href="#getmodule" class="selflink">getmodule(modulename)</a><br>
+				</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>A function to get the loaded Javascript ES6 <a href="#integratedmodules">modules</a>.</li>
+						<li>When the <a href="#es6modules">es6modules</a> setting is disabled (the default),
+							then this function NEED to be used for get the module objects.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="4"><a name="krpano_to_threejs_position"></a>Function</td></tr>
+			<tr>
+				<th colspan="4">
+					p = <a href="#krpano_to_threejs_position" class="selflink">krpano_to_threejs_position(p, h,v,d, x,y,z)</a><br>
+				</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Convert a krpano 3D position to a ThreeJS 3D position.</li>
+						<li>Parameters:
+							<ul>
+								<li><b>p</b> - a ThreeJS Vector Object (or any Object with x,y,z properties), where the result will be stored.
+									Can be null, then a new object will be created.
+								</li>
+								<li><b>h, v, d</b> - spherical coordinates (ath, atv, depth), should be set to 0 when not used.</li>
+								<li><b>x, y, z</b> - 3D coordinates, should be set to 0 when not used.</li>
+							</ul>
+						</li>
+						<li>Return: the <b>p</b> Object (an object with x,y,z properties).</li>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="4"><a name="threejs_to_krpano_position"></a>Function</td></tr>
+			<tr>
+				<th colspan="4">
+					p = <a href="#threejs_to_krpano_position" class="selflink">threejs_to_krpano_position(...)</a><br>
+				</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Convert a ThreeJS 3D position to a krpano 3D position.</li>
+						<li>Parameters:
+							<ul>
+								<li>Either an Object with x,y,z properties (e.g. a ThreeJS Vector object).</li>
+								<li>Or an Array with the x,y,z values.</li>
+								<li>Or x,y,z as individual parameters.</li>
+							</ul>
+						</li>
+						<li>Return: a new Object with x,y,z properties.</li>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+	
+	<br>
+	
+	<div class="paragraph" style="margin-bottom:0;">
+		<h2><a name="3dmodelhotspot" href="#3dmodelhotspot" class="selflink">3D Model Hotspots</a></h2>
+		
+		<div class="subparagraph">
+			<ul>
+				<li>
+					By adding <a class="pre selflink2" href="../xml.html#hotspot.type">type="threejs"</a> to a
+					<a href="../xml.html#hotspot" class="pre selflink2">&lt;hotspot&gt;</a> it is possible
+					to load and use 3D Models.
+				</li>
+				<li>
+					The supported 3D Model formats are:
+					<ul>
+						<li><a href="https://en.wikipedia.org/wiki/GlTF" target="_blank">GLTF</a> (.gltf and .glb)</li>
+						<li><a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file" target="_blank">OBJ + MTL</a> (.obj + .mtl)</li>
+						<li>Or <a href="#hotspot.url_custom">custom</a> script-built ThreeJS objects.</li>
+					</ul>
+				</li>
+				<li>The hotspots use the same positioning system as normal krpano hotspots.
+					<ul>
+						<li>This means that the resulting position in 3D space is a combination of the spherical position
+							given by <a href="../xml.html#hotspot.ath">ath/atv/depth</a> and the translation given by
+							 <a href="../xml.html#hotspot.tx">tx/ty/tz</a>.
+						</li>
+						<li>For using only the 3D XYZ position, set <a href="../xml.html#hotspot.depth">depth</a> to <span class="pre">0.0</span>.
+						</li>
+						<li>The unit for the 3D positions is: 1.0 ^= 1.0 cm.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		The XML syntax with all supported settings and their default values:
+		<pre class="xmlpre">&lt;<a href="../xml.html#hotspot.xml">hotspot</a> <a href="../xml.html#hotspot.name">name</a>="spot1"
+         <span class="redtext"><a href="../xml.html#hotspot.type">type</a>="threejs"</span>
+         <span class="xmlattrnote">☞ 3D model</span>
+         <a href="#hotspot.url">url</a>="3dmodel.glb"
+         <a href="#hotspot.mtlurl" class="pluginattrib">mtlurl</a>=""
+         <a href="#hotspot.convertmaterials" class="pluginattrib">convertmaterials</a>=""
+         <span class="xmlattrnote">☞ spherical position</span>
+         <a href="../xml.html#hotspot.ath">ath</a>="0.0"
+         <a href="../xml.html#hotspot.atv">atv</a>="0.0"
+         <a href="../xml.html#hotspot.depth">depth</a>="1000.0"
+         <span class="xmlattrnote">☞ 3D position</span>
+         <a href="../xml.html#hotspot.tx">tx</a>="0.0"
+         <a href="../xml.html#hotspot.ty">ty</a>="0.0"
+         <a href="../xml.html#hotspot.tz">tz</a>="0.0"
+         <span class="xmlattrnote">☞ 3D rotation</span>
+         <a href="../xml.html#hotspot.rx">rx</a>="0.0"
+         <a href="../xml.html#hotspot.ry">ry</a>="0.0"
+         <a href="../xml.html#hotspot.rz">rz</a>="0.0"
+         <a href="../xml.html#hotspot.rotationorder">rotationorder</a>="yxz"
+         <span class="xmlattrnote">☞ scaling</span>
+         <a href="#hotspot.scale" class="pluginattrib">scale</a>="1.0"
+         <a href="#hotspot.scalex" class="pluginattrib">scalex</a>="1.0"
+         <a href="#hotspot.scaley" class="pluginattrib">scaley</a>="1.0"
+         <a href="#hotspot.scalez" class="pluginattrib">scalez</a>="1.0"
+         <span class="xmlattrnote">☞ settings</span>
+         <a href="../xml.html#hotspot.visible">visible</a>="true"
+         <a href="../xml.html#hotspot.enabled">enabled</a>="true"
+         <a href="../xml.html#hotspot.capture">capture</a>="true"
+         <a href="../xml.html#hotspot.capturewheel">capturewheel</a>="false"
+         <a href="../xml.html#hotspot.cursor">cursor</a>="pointer"
+         <a href="../xml.html#hotspot.hittest">hittest</a>="false"
+         <span class="xmlattrnote">☞ shadows</span>
+         <a href="#hotspot.castshadow" class="pluginattrib">castshadow</a>="true"
+         <a href="#hotspot.receiveshadow" class="pluginattrib">receiveshadow</a>="true"
+         <span class="xmlattrnote">☞ events</span>
+         <a href="../xml.html#hotspot.onover">onover</a>=""
+         <a href="../xml.html#hotspot.onhover">onhover</a>=""
+         <a href="../xml.html#hotspot.onout">onout</a>=""
+         <a href="../xml.html#hotspot.ondown">ondown</a>=""
+         <a href="../xml.html#hotspot.onup">onup</a>=""
+         <a href="../xml.html#hotspot.onclick">onclick</a>=""
+         <a href="../xml.html#hotspot.onwheel">onwheel</a>=""
+         <a href="../xml.html#hotspot.onloaded">onloaded</a>=""
+         <a href="#hotspot.onloadprogress" class="pluginattrib">onloadprogress</a>=""
+         <a href="#hotspot.onloaderror" class="pluginattrib">onloaderror</a>=""
+         /&gt;</pre>
+         
+		<div class="xmlprenote">
+
+			<a name="3dmodelhotspot.variables" href="#3dmodelhotspot.variables" class="selflink2">Dynamic or read-only hotspot variables:</a>
+			<ul>
+				<li><a href="#hotspot.threejsobject">hotspot[name].threejsobject</a></li>
+				<li><a href="#hotspot.animations">hotspot[name].animations</a> - Array of <a href="#gltfanimations">GLTF Animations</a> (optional)</li>
+				<li><a href="#hotspot.activeanimation">hotspot[name].activeanimation</a></li>
+				
+				
+				<li><a href="#hotspot.bytesloaded">hotspot[name].bytesloaded</a></li>
+				<li><a href="#hotspot.bytestotal">hotspot[name].bytestotal</a></li>
+				
+				<li><a href="#hotspot.centerx">hotspot[name].centerx</a> / <a href="#hotspot.centery">centery</a> / <a href="#hotspot.centerz">centerz</a></li>
+				<li><a href="#hotspot.bboxx">hotspot[name].bboxx</a> / <a href="#hotspot.bboxy">bboxy</a> / <a href="#hotspot.bboxz">bboxz</a></li>
+			</ul>
+			
+			<a name="3dmodelhotspot.functions" href="#3dmodelhotspot.functions" class="selflink2">Hotspot functions:</a>
+			<ul>
+				<li><a href="#hotspot.set_threejs_pose">hotspot[name].set_threejs_pose()</a></li>
+				<li><a href="#hotspot.get_threejs_pose">hotspot[name].get_threejs_pose()</a></li>
+				<li><a href="#hotspot.updateboundingbox">hotspot[name].updateboundingbox()</a></li>
+				<li><a href="#hotspot.centermodel">hotspot[name].centermodel()</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="paragraph">
+		
+		
+		<table class="xmlattrdoc" style="padding-left:1px;padding-top:0;margin-top:0;">
+			
+			<tr class="xmlattrdocdesc">
+				<td colspan="2" style="width:50%;"><a name="hotspot.url"></a>Variable name</td>
+				<td>Type</td>
+				<td>Default&nbsp;value</td>
+			</tr>
+			<tr>
+				<th colspan="2"><a href="#hotspot.url" class="selflink">url</a></th>
+				<th>String</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>The url of the 3D Model.</li>
+						<li>The supported 3D Model formats are:
+							<ul>
+								<li><a href="https://en.wikipedia.org/wiki/GlTF" target="_blank">GLTF</a> (.gltf and .glb)</li>
+								<li><a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file" target="_blank">OBJ + MTL</a> (.obj + .mtl)</li>
+								<li>Or the special String <a name="hotspot.url_custom" href="#hotspot.url_custom">"custom"</a> for defining/building ThreeJS objects by script.</li>
+							</ul>
+						</li>
+						<li>When set to <a href="#hotspot.url_custom">"custom"</a>, the
+							<a href="#hotspot.threejsobject">hotspot[name].threejsobject</a> Object
+							(a <a href="https://threejs.org/docs/#api/en/objects/Group" target="_blank">THREE.Group</a> element) 
+							can be used to add other <a href="https://threejs.org/docs/#api/en/core/Object3D" target="_blank">THREE.Object3D</a> based elements.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc">
+				<td colspan="2" style="width:50%;"><a name="hotspot.mtlurl"></a>Variable name</td>
+				<td>Type</td>
+				<td>Default&nbsp;value</td>
+			</tr>
+			<tr>
+				<th colspan="2"><a href="#hotspot.mtlurl" class="selflink">mtlurl</a></th>
+				<th>String</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>When using .obj and .mtl files, ThreeJS doesn't automatically take the .mtl file specified in the .obj file.</li>
+						<li>That means the path and filename of the .mtl file would need to be set manually.</li>
+						<li>The krpano ThreeJS plugin adds a little helper here - when <a href="#hotspot.mtlurl">mtlurl</a> is not set,
+							it automatically uses the same path and filename as the .obj file and tries loading that one.
+							For many cases this automatic help should work, but if the filenames are different, it would be necessary 
+							to set the <a href="#hotspot.mtlurl">mtlurl</a> filename manually.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc">
+				<td colspan="2" style="width:50%;"><a name="hotspot.convertmaterials"></a>Variable name</td>
+				<td>Type</td>
+				<td>Default&nbsp;value</td>
+			</tr>
+			<tr>
+				<th colspan="2"><a href="#hotspot.convertmaterials" class="selflink">convertmaterials</a></th>
+				<th>String</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4" style="max-width:0;overflow:hidden;text-overflow:ellipsis;">
+					<ul>
+						<li>A helper setting for automatically converting <a href="https://threejs.org/docs/#api/en/materials/Material" target="_blank">Materials</a>.</li>
+						<li>Syntax:
+							<pre>convertmaterials="oldmaterial-to-newmaterial|..."</pre>
+							<ul>
+								<li><b>oldmaterial</b> - the material type that should be converted, can be <span class="pre">all</span> to convert all material types.</li>
+								<li><b>newmaterial</b> - the new material type.</li>
+								<li>It's possible to convert multiple material types by adding another conversion separated by a <span class="pre">|</span> character.</li>
+								<li>Available material types:
+									<ul>
+									<li><a href="https://threejs.org/docs/#api/en/materials/MeshBasicMaterial" target="_blank">basic</a> - most simple, no lights and shadows, best performance.</li>
+									<li><a href="https://threejs.org/docs/#api/en/materials/MeshLambertMaterial" target="_blank">lambert</a> - supports lights and shadows, but no specular highlights.</li>
+									<li><a href="https://threejs.org/docs/#api/en/materials/MeshPhongMaterial" target="_blank">phong</a> - similar to lambert, but with specular highlights.</li>
+									<li><a href="https://threejs.org/docs/#api/en/materials/MeshStandardMaterial" target="_blank">standard</a> - standard physically based material using metallic-roughness, more accurate and realistic, but more computationally expensive.</li>
+									<li><a href="https://threejs.org/docs/#api/en/materials/MeshPhysicalMaterial" target="_blank">physical</a> - more advanced physically-based rendering, but with a higher performance cost.</li>
+									<li><a href="https://threejs.org/docs/#api/en/materials/MeshToonMaterial" target="_blank">toon</a> - a material implementing toon shading.</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>Examples:
+							<pre>convertmaterials="basic-to-lambert"</pre>
+							<ul>
+								<li>Some .gltf/.glb files were saved with only a basic material, which does not allow lighting and shadows.
+								</li>
+								<li>Using this example will allow to use lighting and shadows on the 3D model.
+								</li>
+							</ul>
+							<pre>convertmaterials="all-to-basic"</pre>
+							<ul>
+								<li>When using photometric 3D scans, lighting and shadows can be unnecessary or even unwanted.
+								</li>
+								<li>This examples fixes this, while also improving the rendering performance.
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="hotspot.scale"></a><a name="hotspot.scalex"></a><a name="hotspot.scaley"></a><a name="hotspot.scalez"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#hotspot.scale" class="selflink">scale</a><br>
+					<a href="#hotspot.scalex" class="selflink">scalex</a><br>
+					<a href="#hotspot.scaley" class="selflink">scaley</a><br>
+					<a href="#hotspot.scalez" class="selflink">scalez</a><br>
+				</th>
+				<th>Number<br>Number<br>Number<br>Number</th>
+				<th>1.0<br>1.0<br>1.0<br>1.0</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Set the scale of the 3D Model.</li>
+						<li>Changing <a href="#scale">scale</a> will change the other scalex/y/z variables to the same value.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="hotspot.castshadow"></a><a name="hotspot.receiveshadow"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#hotspot.castshadow" class="selflink">castshadow</a><br>
+					<a href="#hotspot.receiveshadow" class="selflink">receiveshadow</a><br>
+				</th>
+				<th>Boolean<br>Boolean</th>
+				<th>true<br>true</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Should the 3D Model cast- and/or receive <a href="#light.castshadow">shadows</a>?</li>
+						<li>Warning - using <a href="#light.castshadow">shadows</a> can be very performance intensive!</li>
+					</ul>
+				</td>
+			</tr>
+			
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="hotspot.onloadprogress"></a><a name="hotspot.onloaderror"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#hotspot.onloadprogress" class="selflink">onloadprogress</a><br>
+					<a href="#hotspot.onloaderror" class="selflink">onloaderror</a><br>
+				</th>
+				<th>Event<br>Event<br></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Loading events.</li>
+						<li>When the <a href="#hotspot.onloaderror">onloaderror</a> event is not set, the default error reporting will be done on errors.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="hotspot.threejsobject"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#hotspot.threejsobject" class="selflink">threejsobject</a><br>
+				</th>
+				<th>Object</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>A <a href="https://threejs.org/docs/#api/en/objects/Group" target="_blank">THREE.Group</a> object that contains the 3D Model.</li>
+						<li>Will be first available after the <a href="../xml.html#hotspot.onloaded">onloaded</a> event.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="hotspot.animations"></a><a name="gltfanimations"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#hotspot.animations" class="selflink">animations</a><br>
+				</th>
+				<th>Array</th>
+				<th>null</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>When loading a GLTF 3D Model that contains animations, 
+							these will be available in the <a href="#hotspot.animations">animations</a> Array.
+						</li>
+						<li>This is a <a href="../actions.html#arrays">krpano-Array</a>, where each Array-item
+							has a <a href="../xml.html#name">name</a> and an index. 
+						</li>
+						<li>The <a href="../xml.html#name">name</a> will be name of the animation.
+						</li>
+						<li>Each animation Array-item has these settings (mapped to the related ThreeJS settings):
+							<ul>
+								<li><a href="https://threejs.org/docs/#api/en/animation/AnimationAction.enabled" target="_blank">enabled</a> - a Boolean, true by default.</li>
+								<li><a href="https://threejs.org/docs/#api/en/animation/AnimationAction.paused" target="_blank">paused</a> - a Boolean, false by default.</li>
+								<li><a href="https://threejs.org/docs/#api/en/animation/AnimationAction.loop" target="_blank">loop</a> - a String, can be "repeat" (default), "pingpong" or "once".</li>
+								<li><a href="https://threejs.org/docs/#api/en/animation/AnimationAction.blendMode" target="_blank">blendmode</a> - a String, can be "normal" (default) or "additive".</li>
+								<li><a href="https://threejs.org/docs/#api/en/animation/AnimationAction.repetitions" target="_blank">repetitions</a> - a Number, Infinity by default.</li>
+								<li><a href="https://threejs.org/docs/#api/en/animation/AnimationAction.time" target="_blank">time</a> - a Number, 0 by default.</li>
+								<li><a href="https://threejs.org/docs/#api/en/animation/AnimationAction.timeScale" target="_blank">timescale</a> - a Number, 1.0 by default.</li>
+								<li><a href="https://threejs.org/docs/#api/en/animation/AnimationAction.weight" target="_blank">weight</a> - a Number, 1.0 by default.</li>
+								<li><a href="https://threejs.org/docs/#api/en/animation/AnimationClip.duration" target="_blank">duration</a> - duration of this animation in seconds.</li>
+							</ul>
+							Actions:
+							<ul>
+								<li><a name="animation.play" href="#animation.play">play(loop, blendtime, playalone, callback)</a>
+									<ul>
+										<li>Play this animation.</li>
+										<li><a name="animation.play.loop" href="#animation.play.loop">loop</a> - 
+											set the loop mode for this animation (can be "repeat" (default), "pingpong" or "once").
+										</li>
+										<li><a name="animation.play.blendtime" href="#animation.play.blendtime">blendtime</a> - 
+											the time in seconds to blend from the current/previous animation to this one, 0.0 by default.
+										</li>
+										<li><a name="animation.play.playalone" href="#animation.play.playalone">playalone</a> - 
+											play only this animation and stop/fadeout all other ones,
+											true or false, false by default.
+										</li>
+										<li><a name="animation.play.callback" href="#animation.play.callback">callback</a> - 
+											will be called when the animation is done (only when <a href="#animation.play.loop">loop</a> is "once").
+										</li>
+									</ul>
+								</li>
+								<li><a name="animation.pause" href="#animation.pause">pause()</a></li>
+								<li><a href="https://threejs.org/docs/#api/en/animation/AnimationAction.stop" target="_blank">stop()</a></li>
+								<li><a href="https://threejs.org/docs/#api/en/animation/AnimationAction.reset" target="_blank">reset()</a></li>
+							</ul>
+							Events:
+							<ul>
+								<li>onloop</li>
+								<li>onfinished</li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="hotspot.activeanimation"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#hotspot.activeanimation" class="selflink">activeanimation</a><br>
+				</th>
+				<th>String</th>
+				<th>null</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Name of the current active animation.</li>
+					</ul>
+				</td>
+			</tr>
+		
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="hotspot.bytesloaded"></a><a name="hotspot.bytestotal"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#hotspot.bytesloaded" class="selflink">bytesloaded</a><br>
+					<a href="#hotspot.bytestotal" class="selflink">bytestotal</a><br>
+				</th>
+				<th>Number<br>Number</th>
+				<th>0<br>0<br></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>The loading progress in bytes.</li>
+						<li>These values will be updated in the <a href="#hotspot.onloadprogress">onloadprogress</a> event.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="hotspot.centerx"></a><a name="hotspot.centery"></a><a name="hotspot.centerz"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#hotspot.centerx" class="selflink">centerx</a><br>
+					<a href="#hotspot.centery" class="selflink">centery</a><br>
+					<a href="#hotspot.centerz" class="selflink">centerz</a><br>
+				</th>
+				<th>Number<br>Number<br>Number</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>The center point of the 3D Model.</li>
+						<li>Can be read or set to change.</li>
+						<li>Will be first available after the <a href="../xml.html#hotspot.onloaded">onloaded</a> event.</li>
+						<li>When the 3D Model gets modified, then
+							<a href="#hotspot.updateboundingbox">hotspot[name].updateboundingbox()</a>
+							need to be called to update these information.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="hotspot.bboxx"></a><a name="hotspot.bboxy"></a><a name="hotspot.bboxz"></a>Variable name</td><td>Type</td><td>Default value</td></tr>
+			<tr>
+				<th colspan="2">
+					<a href="#hotspot.bboxx" class="selflink">bboxx</a><br>
+					<a href="#hotspot.bboxy" class="selflink">bboxy</a><br>
+					<a href="#hotspot.bboxz" class="selflink">bboxz</a><br>
+				</th>
+				<th>Number<br>Number<br>Number</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>The bounding-box (without hotspot position, rotation or scale) of the 3D Model.</li>
+						<li>Will be first available after the <a href="../xml.html#hotspot.onloaded">onloaded</a> event.</li>
+						<li>When the 3D Model gets modified, then
+							<a href="#hotspot.updateboundingbox">hotspot[name].updateboundingbox()</a>
+							need to be called to update these information.
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="4"><a name="hotspot.set_threejs_pose"></a>Function</td></tr>
+			<tr>
+				<th colspan="4">
+					<a href="#hotspot.set_threejs_pose" class="selflink">set_threejs_pose()</a><br>
+				</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Instantly update the ThreeJS position, rotation, scale settings.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="4"><a name="hotspot.get_threejs_pose"></a>Function</td></tr>
+			<tr>
+				<th colspan="4">
+					<a href="#hotspot.get_threejs_pose" class="selflink">get_threejs_pose()</a><br>
+				</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Get the current ThreeJS position, rotation, scale settings and convert them
+							to the related krpano hotspot settings (tx,ty,tz, rx,ry,rz, scalex,scaley,scalez).
+						</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="4"><a name="hotspot.updateboundingbox"></a>Function</td></tr>
+			<tr>
+				<th colspan="4">
+					<a href="#hotspot.updateboundingbox" class="selflink">updateboundingbox()</a><br>
+				</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Update the bounding-box and center information.</li>
+						<li>Should be called when the 3D Model gets manually modified.</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2"><a name="hotspot.centermodel"></a>Function</td></tr>
+			<tr>
+				<th colspan="4">
+					<a href="#hotspot.centermodel" class="selflink">centermodel()</a><br>
+				</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<ul>
+						<li>Center the 3D Model.</li>
+					</ul>
+				</td>
+			</tr>
+
+			
+		</table>
+	</div>
+	
+	<br>
+	
+	<div class="paragraph" style="margin-bottom:0;">
+		<h2><a name="lighthotspot" href="#lighthotspot" class="selflink">Light Hotspots</a></h2>
+		
+		<div class="subparagraph">
+			<ul>
+				<li>
+					By adding <a class="pre selflink2" href="../xml.html#hotspot.type">type="threejslight"</a> to a
+					<a href="../xml.html#hotspot" class="pre selflink2">&lt;hotspot&gt;</a> it is possible
+					to use it as light source.
+				</li>
+				<li>
+					The supported <a name="light.mode" href="#light.mode">Lightmodes</a> are:
+					<ul>
+						<li><a href="#hemispherelight">Hemisphere Light</a> - <span class="pre">mode="hemisphere"</span>
+							<ul>
+								<li>An Ambient Light from two direction.</li>
+								<li>Like a sky and ground light (no shadows).</li>
+							</ul>
+						</li>
+						<li><a href="#directionallight">Directional Light</a> - <span class="pre">mode="directional"</span>
+							<ul>
+								<li>An kind of infinitely far away light.</li>
+								<li>Light-rays from it are all parallel.</li>
+								<li>Could be used to simulate a sun-light.</li>
+								<li>Even 'infinitely' away, the <a href="#light.castshadow">shadows</a> produced by this light can work only within a certain, defined range/area.</li>
+							</ul>
+						</li>
+						<li><a href="#sunlight">Sun Light</a> - <span class="pre">mode="sun"</span>
+							<ul>
+								<li>A automatic special mode of <a href="#directionallight">Directional Light</a>.</li>
+								<li>Here the light source position is defined by a spherical ath/atv position and the light target
+									and so also the shadow-map is always automatically at the camera / view position.
+								</li>
+							</ul>
+						</li>
+						<li><a href="#pointlight">Point Light</a> - <span class="pre">mode="point"</span>
+							<ul>
+								<li>A light from a single point into all directions, with a certain range with a decreasing intenstiy.
+								</li>
+								<li>Note - <a href="#light.castshadow">shadows</a> from this light require the most processing power! 
+									That's because here a cubemap (six sides/images) needs to be rendered to have shadows into all directions.
+								</li>
+							</ul>
+						</li>
+						<li><a href="#spotlight">Spot Light</a> - <span class="pre">mode="spot"</span>
+							<ul>
+								<li>A light from a single point into a specific direction, in the shape of a cone.
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>Notes about Performance and Implementation
+					<ul>
+						<li>
+							Lights and shadows can be very performance intensive, each light and shadow counts.
+							For best performance try to use a few lights and shadows as possible!
+						</li>
+						<li>
+							Try to avoid dynamically adding and removing lights (this requires an internal recompilation of the WebGL shader).
+							Instead toggle the hotspot <a href="../xml.html#hotspot.visible">visible</a> setting.
+						<li>
+							The light-positioning, ranges and some settings and helpers are not directly mapped to their ThreeJS equivalents and
+							use an own implementation for a better krpano integration.
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<br>
+	
+	<div class="paragraph" style="margin-bottom:0;">
+		<h2><a name="hemispherelight" href="#hemispherelight" class="selflink">Hemisphere Light Hotspot</a>
+			<div class="smallcomment" style="float:right;padding-top:4px;">ThreeJS Reference: <a href="https://threejs.org/docs/#api/en/lights/HemisphereLight" target="_blank">HemisphereLight</a></div>
+		</h2>
+		<pre class="xmlpre" style="clear:both;">&lt;<a href="../xml.html#hotspot.xml">hotspot</a> <a href="../xml.html#hotspot.name">name</a>="hemilight"
+         <span class="redtext"><a href="../xml.html#hotspot.type">type</a>="threejslight"</span>
+         <a href="#light.mode" class="pluginattrib">mode</a>="<span class="redtext">hemisphere</span>"
+         <span class="xmlattrnote">☞ spherical light position</span>
+         <a href="../xml.html#hotspot.ath" class="pluginattrib">ath</a>="0.0"
+         <a href="../xml.html#hotspot.atv" class="pluginattrib">atv</a>="0.0"
+         <span class="xmlattrnote">☞ lighting</span>
+         <a href="#light.intensity" class="pluginattrib">intensity</a>="1.0"
+         <a href="#light.color" class="pluginattrib">color</a>="0xFFFFFF"
+         <a href="#light.color2" class="pluginattrib">color2</a>="0x000000"
+         <span class="xmlattrnote">☞ helper</span>
+         <a href="#light.helper" class="pluginattrib">helper</a>="false"
+         <span class="xmlattrnote">☞ events</span>
+         <a href="../xml.html#hotspot.onloaded" class="pluginattrib">onloaded</a>=""
+         /&gt;</pre>
+         
+         <div class="xmlprenote">
+			<ul>
+				<li>The <a href="#hemispherelight">Hemisphere Light</a> is a direction based ambient light,
+					it can shade 3D Models from two directions - e.g. to use colors from the sky and the ground.
+				</li>
+				<li>The orientate the light, the spherical <a href="../xml.html#hotspot.ath">ath / atv</a> position can be used.
+				</li>
+				<li>Technically this light is the most simple one with the best performance.
+					It doesn't produce shadows or specular highlights.
+			</ul>
+		</div>
+	</div>
+	
+	<div class="paragraph" style="margin-bottom:0;">
+		<h2><a name="directionallight" href="#directionallight" class="selflink">Directional Light Hotspot</a>
+			<div class="smallcomment" style="float:right;padding-top:4px;">ThreeJS Reference: <a href="https://threejs.org/docs/#api/en/lights/DirectionalLight" target="_blank">DirectionalLight</a></div>
+		</h2>
+		<pre class="xmlpre" style="clear:both;">&lt;<a href="../xml.html#hotspot.xml">hotspot</a> <a href="../xml.html#hotspot.name">name</a>="dirlight"
+         <span class="redtext"><a href="../xml.html#hotspot.type">type</a>="threejslight"</span>
+         <a href="#light.mode" class="pluginattrib">mode</a>="<span class="redtext">directional</span>"
+         <span class="xmlattrnote">☞ 3D position light source</span>
+         <a href="#light.tx" class="pluginattrib">tx</a>="0.0"
+         <a href="#light.ty" class="pluginattrib">ty</a>="0.0"
+         <a href="#light.tz" class="pluginattrib">tz</a>="0.0"
+         <span class="xmlattrnote">☞ 3D position light target</span>
+         <a href="#light.targetx" class="pluginattrib">targetx</a>="0.0"
+         <a href="#light.targety" class="pluginattrib">targety</a>="0.0"
+         <a href="#light.targetz" class="pluginattrib">targetz</a>="0.0"
+         <span class="xmlattrnote">☞ lighting</span>
+         <a href="#light.color" class="pluginattrib">color</a>="0xFFFFFF"
+         <a href="#light.colortemperature" class="pluginattrib">colortemperature</a>="0"
+         <a href="#light.intensity" class="pluginattrib">intensity</a>="1.0"
+         <span class="xmlattrnote">☞ shadows</span>
+         <a href="#light.castshadow" class="pluginattrib">castshadow</a>="false"
+         <a href="#light.shadowmaprange" class="pluginattrib">shadowmaprange</a>="500"
+         <a href="#light.shadowmapnear" class="pluginattrib">shadowmapnear</a>="50"
+         <a href="#light.shadowmapfar" class="pluginattrib">shadowmapfar</a>="50000"
+         <a href="#light.shadowmapbias" class="pluginattrib">shadowmapbias</a>="0.001"
+         <a href="#light.shadowmapnormalbias" class="pluginattrib">shadowmapnormalbias</a>="0.01"
+         <a href="#light.shadowmapres" class="pluginattrib">shadowmapres</a>="512"
+         <span class="xmlattrnote">☞ helper</span>
+         <a href="#light.helper" class="pluginattrib">helper</a>="false"
+         <span class="xmlattrnote">☞ events</span>
+         <a href="../xml.html#hotspot.onloaded" class="pluginattrib">onloaded</a>=""
+         /&gt;</pre>
+         
+         <div class="xmlprenote">
+			<ul>
+				<li>The <a href="#directionallight">Directional Light</a> that gets emitted in a specific direction.</li>
+				<li>This light will behave as though it is infinitely far away and the rays produced from it are all parallel.</li>
+				<li>The common use case for this is to simulate daylight. 
+					The sun is far enough away that its position can be considered to be infinite, and all light rays coming from it are parallel.
+				</li>
+				<li>The light direction is calculated as pointing from the light's position to the target's position.
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="paragraph" style="margin-bottom:0;">
+		<h2><a name="sunlight" href="#sunlight" class="selflink">Sun Light Hotspot</a>
+			<div class="smallcomment" style="float:right;padding-top:4px;">ThreeJS Reference: <a href="https://threejs.org/docs/#api/en/lights/DirectionalLight" target="_blank">DirectionalLight</a></div>
+		</h2>
+		<pre class="xmlpre" style="clear:both;">&lt;<a href="../xml.html#hotspot.xml">hotspot</a> <a href="../xml.html#hotspot.name">name</a>="sunlight"
+         <span class="redtext"><a href="../xml.html#hotspot.type">type</a>="threejslight"</span>
+         <a href="#light.mode" class="pluginattrib">mode</a>="<span class="redtext">sun</span>"
+         <span class="xmlattrnote">☞ spherical light position</span>
+         <a href="../xml.html#hotspot.ath" class="pluginattrib">ath</a>="0.0"
+         <a href="../xml.html#hotspot.atv" class="pluginattrib">atv</a>="0.0"
+         <span class="xmlattrnote">☞ shadowmap position</span>
+         <a href="#light.atview" class="pluginattrib">atview</a>="true"
+         <a href="#light.tx" class="pluginattrib">tx</a>="0.0"
+         <a href="#light.ty" class="pluginattrib">ty</a>="0.0"
+         <a href="#light.tz" class="pluginattrib">tz</a>="0.0"
+         <span class="xmlattrnote">☞ lighting</span>
+         <a href="#light.color" class="pluginattrib">color</a>="0xFFFFFF"
+         <a href="#light.colortemperature" class="pluginattrib">colortemperature</a>="0"
+         <a href="#light.intensity" class="pluginattrib">intensity</a>="1.0"
+         <span class="xmlattrnote">☞ shadows</span>
+         <a href="#light.castshadow" class="pluginattrib">castshadow</a>="false"
+         <a href="#light.shadowmaprange" class="pluginattrib">shadowmaprange</a>="500"
+         <a href="#light.shadowmapnear" class="pluginattrib">shadowmapnear</a>="50"
+         <a href="#light.shadowmapfar" class="pluginattrib">shadowmapfar</a>="50000"
+         <a href="#light.shadowmapbias" class="pluginattrib">shadowmapbias</a>="0.001"
+         <a href="#light.shadowmapnormalbias" class="pluginattrib">shadowmapnormalbias</a>="0.01"
+         <a href="#light.shadowmapres" class="pluginattrib">shadowmapres</a>="512"
+         <span class="xmlattrnote">☞ helper</span>
+         <a href="#light.helper" class="pluginattrib">helper</a>="false"
+         <a href="#light.shadowmaphelper" class="pluginattrib">shadowmaphelper</a>="false"
+         <span class="xmlattrnote">☞ events</span>
+         <a href="../xml.html#hotspot.onloaded" class="pluginattrib">onloaded</a>=""
+         /&gt;</pre>
+         
+         <div class="xmlprenote">
+			<ul>
+				<li>The <a href="#sunlight">Sun Light</a> is a special variant of a <a href="#directionallight">Directional Light</a>.</li>
+				<li>Different to a normal directional light, which has a source and target position, the sun light is always automatically positioned
+					around the current camera/view position.
+				</li>
+				<li>The shadowmap therefore also is automatically always around the current camera/view position.</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="paragraph" style="margin-bottom:0;">
+		<h2><a name="pointlight" href="#pointlight" class="selflink">Point Light Hotspot</a>
+			<div class="smallcomment" style="float:right;padding-top:4px;">ThreeJS Reference: <a href="https://threejs.org/docs/#api/en/lights/PointLight" target="_blank">PointLight</a></div>
+		</h2>
+		<pre class="xmlpre" style="clear:both;">&lt;<a href="../xml.html#hotspot.xml">hotspot</a> <a href="../xml.html#hotspot.name">name</a>="pointlight"
+         <span class="redtext"><a href="../xml.html#hotspot.type">type</a>="threejslight"</span>
+         <a href="#light.mode" class="pluginattrib">mode</a>="<span class="redtext">point</span>"
+         <span class="xmlattrnote">☞ 3D position light source</span>
+         <a href="#light.tx" class="pluginattrib">tx</a>="0.0"
+         <a href="#light.ty" class="pluginattrib">ty</a>="0.0"
+         <a href="#light.tz" class="pluginattrib">tz</a>="0.0"
+         <span class="xmlattrnote">☞ lighting</span>
+         <a href="#light.color" class="pluginattrib">color</a>="0xFFFFFF"
+         <a href="#light.colortemperature" class="pluginattrib">colortemperature</a>="0"
+         <a href="#light.intensity" class="pluginattrib">intensity</a>="1.0"
+         <a href="#light.decay" class="pluginattrib">decay</a>="2.0"
+         <a href="#light.distance" class="pluginattrib">distance</a>="0.0"
+         <span class="xmlattrnote">☞ shadows</span>
+         <a href="#light.castshadow" class="pluginattrib">castshadow</a>="false"
+         <a href="#light.shadowmapnear" class="pluginattrib">shadowmapnear</a>="50"
+         <a href="#light.shadowmapfar" class="pluginattrib">shadowmapfar</a>="50000"
+         <a href="#light.shadowmapbias" class="pluginattrib">shadowmapbias</a>="0.001"
+         <a href="#light.shadowmapnormalbias" class="pluginattrib">shadowmapnormalbias</a>="0.01"
+         <a href="#light.shadowmapres" class="pluginattrib">shadowmapres</a>="256"
+         <span class="xmlattrnote">☞ helper</span>
+         <a href="#light.helper" class="pluginattrib">helper</a>="false"
+         <span class="xmlattrnote">☞ events</span>
+         <a href="../xml.html#hotspot.onloaded" class="pluginattrib">onloaded</a>=""
+         /&gt;</pre>
+
+		<div class="xmlprenote">
+			<ul>
+				<li>The <a href="#pointlight">Point Light</a> light gets emitted from the <a href="#pointlight.tx">tx, ty, tz</a> position
+					and shines in all directions.
+				</li>
+				<li>Note - <a href="#light.castshadow">shadows</a> from this light require the most processing power! 
+					That's because here a cubemap (six sides/images) needs to be rendered to have shadows into all directions.
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="paragraph" style="margin-bottom:0;">
+		<h2><a name="spotlight" href="#spotlight" class="selflink">Spot Light Hotspot</a>
+			<div class="smallcomment" style="float:right;padding-top:4px;">ThreeJS Reference: <a href="https://threejs.org/docs/#api/en/lights/SpotLight" target="_blank">SpotLight</a></div>
+		</h2>
+		<pre class="xmlpre" style="clear:both;padding-bottom:16px;">&lt;<a href="../xml.html#hotspot.xml">hotspot</a> <a href="../xml.html#hotspot.name">name</a>="spotlight"
+         <span class="redtext"><a href="../xml.html#hotspot.type">type</a>="threejslight"</span>
+         <a href="#light.mode" class="pluginattrib">mode</a>="<span class="redtext">spot</span>"
+         <span class="xmlattrnote">☞ 3D position light source</span>
+         <a href="#light.tx" class="pluginattrib">tx</a>="0.0"
+         <a href="#light.ty" class="pluginattrib">ty</a>="0.0"
+         <a href="#light.tz" class="pluginattrib">tz</a>="0.0"
+         <span class="xmlattrnote">☞ 3D position light target</span>
+         <a href="#light.targetx" class="pluginattrib">targetx</a>="0.0"
+         <a href="#light.targety" class="pluginattrib">targety</a>="0.0"
+         <a href="#light.targetz" class="pluginattrib">targetz</a>="0.0"
+         <span class="xmlattrnote">☞ lighting</span>
+         <a href="#light.color" class="pluginattrib">color</a>="0xFFFFFF"
+         <a href="#light.colortemperature" class="pluginattrib">colortemperature</a>="0"
+         <a href="#light.intensity" class="pluginattrib">intensity</a>="1.0"
+         <a href="#light.decay" class="pluginattrib">decay</a>="2.0"
+         <a href="#light.angle" class="pluginattrib">angle</a>="60.0"
+         <a href="#light.penumbra" class="pluginattrib">penumbra</a>="0.5"
+         <a href="#light.distance" class="pluginattrib">distance</a>="0.0"
+         <a href="#light.mapurl" class="pluginattrib">mapurl</a>=""
+         <span class="xmlattrnote">☞ shadows</span>
+         <a href="#light.castshadow" class="pluginattrib">castshadow</a>="false"
+         <a href="#light.shadowmapnear" class="pluginattrib">shadowmapnear</a>="50"
+         <a href="#light.shadowmapfar" class="pluginattrib">shadowmapfar</a>="50000"
+         <a href="#light.shadowmapbias" class="pluginattrib">shadowmapbias</a>="0.001"
+         <a href="#light.shadowmapnormalbias" class="pluginattrib">shadowmapnormalbias</a>="0.01"
+         <a href="#light.shadowmapres" class="pluginattrib">shadowmapres</a>="512"
+         <span class="xmlattrnote">☞ helper</span>
+         <a href="#light.helper" class="pluginattrib">helper</a>="false"
+         <span class="xmlattrnote">☞ events</span>
+         <a href="../xml.html#hotspot.onloaded" class="pluginattrib">onloaded</a>=""
+         /&gt;</pre>
+
+		<div class="xmlprenote">
+			<ul>
+				<li>The <a href="#spotlight">Spot Light</a> light gets emitted from the <a href="#spotlight.tx">tx, ty, tz</a> position
+					and shines to the <a href="#spotlight.targetx">targetx, targety, targetz</a> position.
+				</li>
+				<li>Along that direction a light cone increases in size the further from the light it gets.
+				</li>
+				
+			</ul>
+			
+		</div>
+		
+	</div>
+	
+	<div class="paragraph" style="margin-bottom:0;">
+
+		<table class="xmlattrdoc" style="padding-left:1px;padding-top:0;margin-top:0;">
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.tx"></a><a name="light.ty"></a><a name="light.tz"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.tx" class="selflink">tx</a>, <a href="#light.ty" class="selflink">ty</a>, <a href="#light.tz" class="selflink">tz</a><br></th><th>Number</th><th>0.0</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>The light source position.</li>
+				<li>Only for <a href="#directionallight">Directional</a>, <a href="#pointlight">Point</a> and <a href="#spotlight">Spot</a> lights.</li>
+				<li>For <a href="#sunlight">Sun</a> lights, this can be the center of the shadows-area (only for <a href="#light.atview">atview=false</a>).</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.targetx"></a><a name="light.targety"></a><a name="light.targetz"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.targetx" class="selflink">targetx</a>, <a href="#light.targety" class="selflink">targety</a>, <a href="#light.targetz" class="selflink">targetz</a><br></th><th>Number</th><th>0.0</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>The light target position.</li>
+				<li>Only for <a href="#directionallight">Directional</a> and <a href="#spotlight">Spot</a> lights.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.atview"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.atview" class="selflink">atview</a></th><th>Boolean</th><th>true</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>Only for <a href="#sunlight">Sun</a> lights: the sun itself is basically infinity far away and has only a direction (ath/atv) and no position, 
+					but the <a href="#light.shadowmaprange">shadowmap</a> (an area where shadows can be rendered) can only at/around a certain position.
+				</li>
+				<li>If true (default): the center of the shadowmap will be always at the <a href="docu_xml.view">view</a> position.</li>
+				<li>If false: the center of the shadowmap will be at the <a href="#light.tx">tx, ty, tz</a> position.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.color"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.color" class="selflink">color</a></th>
+				<th>int</th><th>0xFFFFFF</tr>
+			<tr><td colspan="4"><ul>
+				<li>The color of the light.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.colortemperature"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.colortemperature" class="selflink">colortemperature</a></th>
+				<th>Number</th><th>0</tr>
+			<tr><td colspan="4"><ul>
+				<li>An alternative method for setting the color of the light.</li>
+				<li>Define the color by setting the <a href="https://en.wikipedia.org/wiki/Color_temperature" target="_blank">color temperature</a> in Kelvin (1000-40000).</li>
+				<li>When this will be set to a non-0 value, the <a href="#light.color">color</a> setting will be automatically set to a corresponding value.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.color2"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.color" class="selflink">color2</a></th>
+				<th>int</th><th>0x000000</tr>
+			<tr><td colspan="4"><ul>
+				<li>The second color for <a href="#hemispherelight">Hemisphere Lights</a>.</li>
+			</ul></td></tr>
+				
+			
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.intensity"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.intensity" class="selflink">intensity</a></th><th>Number</th><th>1.0</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>The intensity of the light.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.decay"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.decay" class="selflink">decay</a></th><th>Number</th><th>2.0</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>The amount the light dims along the distance of the light.</li>
+				<li>When set to 0.0, the light wil not decay.</li>
+				<li>When set to 1.0, the light will decay linearly with the distance.</li>
+				<li>When set to 2.0 (the default), the light will decay 'physically correct' according to the
+					<a href="https://en.wikipedia.org/wiki/Inverse-square_law" target="_blank">Inverse Square Law</a>.
+				</li>
+				<li>Only for <a href="#pointlight">Point</a> and <a href="#spotlight">Spot</a> lights.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.distance"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.distance" class="selflink">distance</a></th><th>Number</th><th>0.0</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>When distance is set to 0.0, the <a href="#light.decay">decay</a> setting will be used to calculate the light intensity falloff.</li>
+				<li>When distance is set to a value greater than 0.0, then the light intensity will falloff
+					according to <a href="https://en.wikipedia.org/wiki/Inverse-square_law" target="_blank">Inverse Square Law</a> until near the distance cutoff, 
+					where it will then attenuate quickly and smoothly to 0.
+					Inherently, cutoffs are not physically correct.
+				</li>
+				<li>Only for <a href="#pointlight">Point</a> and <a href="#spotlight">Spot</a> lights.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.angle"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.angle" class="selflink">angle</a></th><th>Number</th><th>60.0</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>The opening angle of the spotlight cone in degrees.</li>
+				<li>Only for <a href="#spotlight">Spot</a> lights.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.penumbra"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.penumbra" class="selflink">penumbra</a></th><th>Number</th><th>0.5</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>Percent of the spotlight cone that is attenuated due to penumbra (0.0 to 1.0).</li>
+				<li>Only for <a href="#spotlight">Spot</a> lights.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.mapurl"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.mapurl" class="selflink">mapurl</a></th><th>String</th><th>null</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>An image used to modulate the color of the light.</li>
+				<li>The Spot Light color is mixed with the RGB values of the image, with a ratio corresponding to its alpha value.</li>
+				<li>Note - <a href="#light.castshadow">castshadow</a> need to be enabled for this effect.</li>
+				<li>Only for <a href="#spotlight">Spot</a> lights.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.castshadow"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.castshadow" class="selflink">castshadow</a></th><th>Boolean</th><th>false</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>Should the light cast shadows?</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.shadowmaprange"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.shadowmaprange" class="selflink">shadowmaprange</a></th><th>Number</th><th>500</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>The range of the from the light-ray into all directions around, that should be included into the shadowmap rendering.</li>
+				<li>The unit is cm.</li>
+				<li>Only for <a href="#directionallight">Directional</a> and <a href="#sunlight">Sun</a> lights.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.shadowmapnear"></a><a name="light.shadowmapfar"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2">
+					<a href="#light.shadowmapnear" class="selflink">shadowmapnear</a><br>
+					<a href="#light.shadowmapfar" class="selflink">shadowmapfar</a><br>
+				</th>
+				<th>Number<br>Number</th><th>50<br>50000</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>These settings control the distance range when rendering the shadowmap.</li>
+				<li>The units are cm.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.shadowmapbias"></a><a name="light.shadowmapnormalbias"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2">
+					<a href="#light.shadowmapbias" class="selflink">shadowmapbias</a><br>
+					<a href="#light.shadowmapnormalbias" class="selflink">shadowmapnormalbias</a><br>
+				</th>
+				<th>Number<br>Number</th><th>0.001<br>0.01</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>The Shadowmaps bias settings are for fine-tuning the shadow rendering.</li>
+				<li>It controls kind of how an elements affects its self-shadowing.</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.shadowmapres"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.shadowmapres" class="selflink">shadowmapres</a></th><th>int</th><th>256 <span class="smallcomment">or</span> 512</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>The resolution of the internal shadowmap.</li>
+				<li>This affects the quality of the shadows, but also the memory need and the rendering performance!
+				</li>
+				<li>The default is 256 for <a href="#pointlight">point</a> lights (because point-lights use a cubemap where six maps with that size are used) and
+					512 for all other lights (there only one map).</li>
+			</ul></td></tr>
+			
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.shadowmaphelper"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.shadowmaphelper" class="selflink">shadowmaphelper</a></th><th>Boolean</th><th>false</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>When enabled a helper object to visualize the range of the shadowmap will be displayed (<a href="#sunlight">Sun Light</a> only).</li>
+			</ul></td></tr>
+			
+			<tr class="xmlattrdocdesc"><td colspan="2" style="width:50%;"><a name="light.helper"></a>Variable name</td><td>Type</td><td>Default&nbsp;value</td></tr>
+			<tr><th colspan="2"><a href="#light.helper" class="selflink">helper</a></th><th>Boolean</th><th>false</th></tr>
+			<tr><td colspan="4"><ul>
+				<li>When enabled a helper object for the Light will be displayed.</li>
+			</ul></td></tr>
+			
+		</table>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	
+	<div class="paragraph">
+		<h1><a name="examples" href="#examples" class="selflink">Examples</a></h1>
+		<table style="width:100%;table-layout: fixed;">
+		<tr>
+		<td style="width:30%;"><div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+			<a href="../examples.html#threejs_dancingcat" class="prop504x310"><img src="../images/threejs_dancingcat.jpg" class="outlineimage prop_inner" /></a>
+			<div style="padding-top:3px;">Dancing Cat</div>
+		</div></td>
+		<td style="width:30%;"><div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+			<a href="../examples.html#threejs_envmap" class="prop504x310"><img src="../images/threejs_envmap.jpg" class="outlineimage prop_inner" /></a>
+			<div style="padding-top:3px;">Environment Maps</div>
+		</div></td>
+		<td style="width:30%;"><div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+			<a href="../examples.html#threejs_thirdpersoncontrols" class="prop504x310"><img src="../images/threejs_thirdpersoncontrols.jpg" class="outlineimage prop_inner" /></a>
+			<div style="padding-top:3px;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;">Third Person Controls</div>
+		</div></td>
+		</tr>
+		<tr>
+		<td style="width:30%;"><div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+			<a href="../examples.html#threejs_tuscany" class="prop504x310"><img src="../images/threejs_tuscany.jpg" class="outlineimage prop_inner" /></a>
+			<div style="padding-top:3px;">Tuscany</div>
+		</div></td>
+		<td style="width:30%;"><div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+			<a href="../examples.html#threejs_tesla" class="prop504x310"><img src="../images/threejs_tesla.jpg" class="outlineimage prop_inner" /></a>
+			<div style="padding-top:3px;">Tesla</div>
+		</div></td>
+		<td style="width:30%;"><div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+			<a href="../examples.html#threejs_opensource" class="prop504x310"><img src="../images/threejs_opensource.jpg" class="outlineimage prop_inner" /></a>
+			<div style="padding-top:3px;">Open Source</div>
+		</div></td>
+		</tr>
+		</table>
+	</div>
+	
+	<br>
+	<br>
+	<br>
+	
+	
+	<div class="paragraph">
+		<h1><a name="opensource" href="#opensource" class="selflink">krpano ThreeJS Plugin - Open Source Version</a>
+		</h1>
+		
+		The Open Source version is a simplified and stripped down version of the <a href="#top">krpano ThreeJS Plugin</a>.
+		It shows how the renderer and hittest integration works and how to use 3D Models as hotspots.<br>
+		<br>
+		Plugin Source code:<br>
+		<pre><a href="../../viewer/examples/threejs/opensource/threejs_krpanoplugin_opensource.js" class="selflink2">threejs_krpanoplugin_opensource.js</a></pre>
+		<br>
+		Differences to the normal plugin:
+		<ul>
+			<li class="lisd">No embedded ThreeJS library</li>
+			<li class="lisd">No module loader</li>
+			<li class="lisd">No krpano-compatible OBJ/MTL loader</li>
+			<li class="lisd">No Light Hotspots</li>
+			<li class="lisd">No Shadow Floor</li>
+			<li class="lisd">No Environment Mapping</li>
+			<li class="lisd">No Animations</li>
+			<li class="lisd">No Material conversions</li>
+			<li class="lisd">No pano/scene management</li>
+			<li class="lisd">Fewer settings and APIs</li>
+		</ul>
+		<br>
+		Example:
+		<div class="hlbox" style="padding:5px;margin-bottom:0;padding-bottom:2px;">
+			<a href="../examples.html#threejs_opensource" class="prop504x310"><img src="../images/threejs_opensource.jpg" class="outlineimage prop_inner" /></a>
+			<div style="padding-top:3px;">ThreeJS: Open Source Plugin</div>
+		</div>
+		
+	</div>
+	
+	
+	<br>
+	<br>
+	
+	
+
+
+				</div>
+			</div>
+		</div>
+		<div id="krpano_footerwrapper">
+			<div id="krpano_footer">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="right">Copyright &copy; 2025 krpano.com</td></tr></tbody></table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

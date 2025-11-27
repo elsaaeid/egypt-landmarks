@@ -1,0 +1,40 @@
+﻿<krpano>
+
+	<!-- Plugins used by the viewer (absolute paths reference public/krpano/plugins) -->
+	<plugin name="soundinterface" url="/krpano/plugins/soundinterface.js" />
+	<plugin name="pp_blur" url="/krpano/plugins/pp_blur.js" />
+	<plugin name="pp_sharpen" url="/krpano/plugins/pp_sharpen.js" />
+	<plugin name="threejs_krpanoplugin" url="/krpano/plugins/threejs_krpanoplugin.js" />
+
+	<!-- default view settings -->
+	<view hlookat="0" vlookat="0" fovtype="VFOV" fov="90" fovmin="30" fovmax="150" />
+
+	<action name="startup">
+		loadscene(scene1, null, MERGE);
+	</action>
+
+	<scene name="scene1" title="Pyramid Museum">
+		<view fov="90" hlookat="0" vlookat="0" />
+		<image>
+			<sphere url="/assets/images/1.jpg" />
+			<depthmap url="/krpano/depthmaps/scene1_depth.svg" />
+		</image>
+		<hotspot name="toScene2" style="skin_hotspotstyle" ath="10" atv="0" onclick="loadscene(scene2,null,MERGE);" />
+	</scene>
+
+	<scene name="scene2" title="Statue Museum">
+		<image>
+			<sphere url="/assets/images/2.jfif" />
+		</image>
+		<hotspot name="toScene1" style="skin_hotspotstyle" ath="-10" atv="0" onclick="loadscene(scene1,null,MERGE);" />
+		<hotspot name="toScene3" style="skin_hotspotstyle" ath="0" atv="15" onclick="loadscene(scene3,null,MERGE);" />
+	</scene>
+
+	<scene name="scene3" title="Statues row Museum">
+		<image>
+			<sphere url="/assets/images/3.jfif" />
+		</image>
+		<hotspot name="toScene2" style="skin_hotspotstyle" ath="20" atv="0" onclick="loadscene(scene2,null,MERGE);" />
+	</scene>
+
+</krpano>
