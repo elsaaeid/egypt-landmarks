@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   title: "معالم مصر",
   description: "اكتشف جمال وتاريخ مصر من خلال جولات افتراضية ومعالم مميزة.",
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico'
+    icon: '/assets/images/logo.png',
+    shortcut: '/assets/images/logo.png',
+    apple: '/assets/images/logo.png'
   }
 };
 
@@ -30,6 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/assets/images/logo.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
