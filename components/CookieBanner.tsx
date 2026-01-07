@@ -33,7 +33,7 @@ export default function CookieBanner() {
   return (
     <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 max-w-3xl w-[92%] sm:w-3/4 bg-white border border-gray-200 rounded-lg shadow-lg p-4 flex items-center gap-4 rtl" dir="rtl">
       <div className="flex-1 text-sm text-gray-700">
-        نستخدم ملفات تعريف الارتباط (الكوكيز) لتحسين تجربتك على الموقع. باستخدامك لهذا الموقع، فإنك توافق على سياسة الخصوصية واستخدام الكوكيز.
+        .نستخدم ملفات تعريف الارتباط (الكوكيز) لتحسين تجربتك على الموقع. باستخدامك لهذا الموقع، فإنك توافق على سياسة الخصوصية واستخدام الكوكيز.
       </div>
 
       <div className="flex gap-2">

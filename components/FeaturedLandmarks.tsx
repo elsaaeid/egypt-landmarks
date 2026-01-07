@@ -20,7 +20,7 @@ const landmarks: Landmark[] = [
   {
     id: 1,
     name: 'معبد أبو سمبل',
-    description: 'معبد تاريخي منحوت في الصخر',
+    description: '.معبد تاريخي منحوت في الصخر',
     image: '/assets/images/gallery4.png',
     xml: '/krpano/viewer/examples/depthmap/abu-simbel-tempel-tour/tour.xml',
   },
