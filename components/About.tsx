@@ -1,7 +1,8 @@
-// components/AboutEgypt.tsx
+// components/About.tsx
+import "../styles/about.css";
 import React from 'react';
 
-const AboutEgypt: React.FC = () => {
+const About: React.FC = () => {
   return (
     <section id='about' className="py-12 bg-gray-100 w-full">
       <div className="container mx-auto px-4">
@@ -19,4 +20,4 @@ const AboutEgypt: React.FC = () => {
   );
 };
 
-export default AboutEgypt;
+export default About;
