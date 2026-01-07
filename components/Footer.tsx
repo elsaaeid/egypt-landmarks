@@ -2,7 +2,6 @@
 import React from "react";
 import styles from '../styles/Footer.module.css'; // Import the CSS module
 import { FaYoutube, FaWhatsapp, FaFacebookF, } from 'react-icons/fa';
-import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi';
 import Link from "next/link";
 
 const Footer: React.FC = () => {
@@ -36,7 +35,14 @@ const Footer: React.FC = () => {
 
       {/* Bottom */}
       <div className={styles.bottom}>
-        <p className={styles.copyright}> جميع الحقوق محفوظة 2025 © لدى <Link className={styles.author} target="_blank" href="https://alsaaeid-ellithy.vercel.app">Alsaaeid Ellithy</Link></p>
+        <div className={styles.privacyRights}>
+          <p className={styles.copyright}> 
+            جميع الحقوق محفوظة 2025 © لدى 
+          </p>
+          <Link className={styles.author} target="_blank" href="https://alsaaeid-ellithy.vercel.app">
+            <img src="/assets/images/author-logo.png" alt="Author Logo" className={styles.authorLogo} />
+          </Link>
+        </div>
         <div className={styles.bottomLinks}>
           <Link href="/policy" className={styles.bottomLink}>سياسة الخصوصية</Link>
           <Link href="/terms" className={styles.bottomLink}>الشروط والأحكام</Link>
