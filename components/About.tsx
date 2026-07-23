@@ -9,7 +9,7 @@ const About: React.FC = () => {
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-lg text-gray-700 mb-4 direction-rtl" dir="rtl">
             مصر هي مهد الحضارة، حيث يعود تاريخها إلى آلاف السنين. من النيل إلى الصحراء، تروي مصر قصصاً عن الفراعنة والآلهة والإنجازات 
-            .العلمية
+            العلمية.
           </p>
           <p className="text-lg text-gray-700">
             .اكتشف الكنوز الأثرية التي جعلت مصر وجهة سياحية عالمية
