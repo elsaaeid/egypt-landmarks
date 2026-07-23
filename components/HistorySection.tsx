@@ -10,7 +10,7 @@ const HistorySection: React.FC = () => {
           <div className='flex flex-col justify-center items-center'>
             <h3 className="text-2xl font-semibold mb-4">العصر القديم</h3>
             <p className="text-gray-700 text-center">
-              .بدأت الحضارة المصرية القديمة حوالي 3100 قبل الميلاد مع توحيد المملكة العليا والسفلى و شهدت بناء الأهرامات والمعابد الضخمة
+              بدأت الحضارة المصرية القديمة حوالي 3100 قبل الميلاد مع توحيد المملكة العليا والسفلى و شهدت بناء الأهرامات والمعابد. الضخمة
             </p>
           </div>
           <div className='flex flex-col justify-center items-center'>
