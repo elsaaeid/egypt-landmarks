@@ -20,14 +20,14 @@ const landmarks: Landmark[] = [
   {
     id: 1,
     name: 'معبد أبو سمبل',
-    description: '.معبد تاريخي منحوت في الصخر',
+    description: 'معبد تاريخي منحوت في الصخر',
     image: '/assets/images/gallery4.png',
     xml: '/krpano/viewer/examples/depthmap/abu-simbel-tempel-tour/tour.xml',
   },
   {
     id: 2,
     name: 'المتحف المصرى الكبير',
-    description: '.أكبر متحف أثري في العالم يعرض تاريخ مصر الفرعوني',
+    description: 'أكبر متحف أثري في العالم يعرض تاريخ مصر الفرعوني',
     image: '/assets/images/grand-egyptian-museum.png',
     // xml: '/krpano/viewer/examples_landmarks/landmark-1/demotour-apartment/tour.xml',
     status: 'coming-soon',
@@ -35,7 +35,7 @@ const landmarks: Landmark[] = [
   {
     id: 3,
     name: 'أبو الهول',
-    description: '.الحارس الصامت للأهرامات',
+    description: 'الحارس الصامت للأهرامات',
     image: '/assets/images/sphinx.png',
     // xml: '/krpano/viewer/examples_landmarks/landmark-2/control-mode/example.xml',
     status: 'coming-soon',
