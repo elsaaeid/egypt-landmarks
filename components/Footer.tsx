@@ -37,11 +37,11 @@ const Footer: React.FC = () => {
       <div className={styles.bottom}>
         <div className={styles.privacyRights}>
           <p className={styles.copyright}> 
-            جميع الحقوق محفوظة 2025 © لدى 
+           {" "} جميع الحقوق محفوظة 2025 © لدى 
           </p>
           
-          <Link className={styles.author} target="_blank" href="https://alsaaeid-ellithy.vercel.app">
-            Alsaeed Ellithy{" "}
+          <Link className={styles.author} target="_blank" href="https://alsaeed-ellithy.com">
+            Alsaeed Ellithy
           </Link>
         </div>
         <div className={styles.bottomLinks}>
