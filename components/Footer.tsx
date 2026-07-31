@@ -36,10 +36,9 @@ const Footer: React.FC = () => {
       {/* Bottom */}
       <div className={styles.bottom}>
         <div className={styles.privacyRights}>
-          <p className={styles.copyright}> 
-           {" "} جميع الحقوق محفوظة 2025 © لدى 
+          <p className={styles.copyright}>
+            جميع الحقوق محفوظة 2025 © لدى
           </p>
-          
           <Link className={styles.author} target="_blank" href="https://alsaeed-ellithy.com">
             Alsaeed Ellithy
           </Link>
