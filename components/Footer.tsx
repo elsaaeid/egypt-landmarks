@@ -39,8 +39,9 @@ const Footer: React.FC = () => {
           <p className={styles.copyright}> 
             جميع الحقوق محفوظة 2025 © لدى 
           </p>
+          
           <Link className={styles.author} target="_blank" href="https://alsaaeid-ellithy.vercel.app">
-            <img src="/assets/images/author-logo.png" alt="Author Logo" className={styles.authorLogo} />
+            Alsaeed Ellithy{" "}
           </Link>
         </div>
         <div className={styles.bottomLinks}>

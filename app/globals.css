@@ -5,8 +5,8 @@
   --background: var(--base-accent);
   --foreground: #171717;
   --gray-color: #6b7280; /* approx Tailwind gray-600 */
-  --main-accent: #db8924;
-  --hover-accent: #b76b1f;
+  --main-accent: #db2424;
+  --hover-accent: #b71f1f;
   --overlay-color: #00000080;
 }
 
