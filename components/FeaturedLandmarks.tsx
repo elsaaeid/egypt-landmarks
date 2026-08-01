@@ -110,7 +110,7 @@ const FeaturedLandmarks: React.FC = () => {
                 {xmlStatus === 'missing' && (
                   <div className="p-6 text-center">
                     <h3 className="text-2xl font-bold">cooming-soon</h3>
-                    <p className="text-gray-600">الجولة غير متوفرة حالياً.</p>
+                    <p className="text-gray-600">الجولة غير متوفرة حالياً</p>
                   </div>
                 )}
                 {xmlStatus === 'available' && <KrpanoTour xml={selected?.xml} />}
